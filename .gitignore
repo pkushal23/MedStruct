@@ -1,0 +1,4 @@
+.venv_scispacy/
+
+.env
+/docsdata/processed/*.csv

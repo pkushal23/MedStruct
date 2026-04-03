@@ -1,0 +1,91 @@
+entity,label,start,end
+sunitinib,CHEMICAL,342,351
+diabetes mellitus,DISEASE,571,588
+hypertension,DISEASE,590,602
+prostatic hyperplasia,DISEASE,615,636
+abnormal liver function,DISEASE,910,933
+abdominal pain,DISEASE,1047,1061
+nausea vomiting,DISEASE,1066,1081
+Ativan,CHEMICAL,1133,1139
+anxiety,DISEASE,1150,1157
+confusion,DISEASE,1215,1224
+greasy,CHEMICAL,1273,1279
+hematuria,DISEASE,1666,1675
+flank pain,DISEASE,1703,1713
+hernia,DISEASE,1997,2003
+adenopathy,DISEASE,2049,2059
+renal cell carcinoma,DISEASE,2260,2280
+glomerulosclerosis,DISEASE,2605,2623
+renal cell carcinoma - : CT Torso - mediastinal and hilar nodes and pulmonary lesions,DISEASE,3038,3123
+thrombocytopenia,DISEASE,3270,3286
+leukopenia,DISEASE,3315,3325
+hypothyroidism,DISEASE,3451,3465
+mediastinal lymphadenopathy,DISEASE,3581,3608
+hilar lymphadenopathy,DISEASE,3620,3641
+RECIST,DISEASE,3698,3704
+rash,DISEASE,3796,3800
+blistering,DISEASE,3805,3815
+cancer,DISEASE,4807,4813
+Hyperlipidemia,DISEASE,4899,4913
+rectal/colon cancer,DISEASE,4988,5007
+cancers,DISEASE,5020,5027
+diabetes,DISEASE,5040,5048
+ovarian cancer,DISEASE,5078,5092
+liver cancer,DISEASE,5131,5143
+hairy cell leukemia,DISEASE,5178,5197
+NAD,CHEMICAL,5298,5301
+icterus,DISEASE,5421,5428
+CTAB,CHEMICAL,5466,5470
+respiratory distress,DISEASE,5485,5505
+pitting edema,DISEASE,5582,5595
+tremors,DISEASE,5616,5623
+rashes,DISEASE,5633,5639
+liver lesions,DISEASE,7306,7319
+choledocholithiasis,DISEASE,7533,7552
+pancreatic cystic lesions,DISEASE,7841,7866
+pancreatitis,DISEASE,8562,8574
+Pt,CHEMICAL,8616,8618
+asterixis,DISEASE,8680,8689
+encephalopathy,DISEASE,8727,8741
+intra/extrahepatic biliary ductal dilatation,DISEASE,8774,8818
+anemia,DISEASE,8858,8864
+hemolysis,DISEASE,8885,8894
+stricture,DISEASE,8933,8942
+post-ercp pancreatitis,DISEASE,9067,9089
+non-occlusive,DISEASE,9303,9316
+thrombus,DISEASE,9375,9383
+lovenox,CHEMICAL,9454,9461
+papillary mucinous neoplasm,DISEASE,9761,9788
+Macrocytic Anemia,DISEASE,9920,9937
+Folate,CHEMICAL,9991,9997
+Depressed mood/anxiety,DISEASE,10026,10048
+cariprazine,CHEMICAL,10056,10067
+fluoxetine,CHEMICAL,10098,10108
+glipizide,CHEMICAL,10156,10165
+amlodipine,CHEMICAL,10187,10197
+atenolol,CHEMICAL,10199,10207
+lisinopril,CHEMICAL,10209,10219
+statin/fibrate,CHEMICAL,10231,10245
+levothyroxine,CHEMICAL,10288,10301
+TSH WNL,DISEASE,10303,10310
+FEN,CHEMICAL,10356,10359
+diabetic diet DVT,DISEASE,10377,10394
+HSQ,CHEMICAL,10408,10411
+PCP,CHEMICAL,10457,10460
+Fenofibrate,CHEMICAL,10761,10772
+Gabapentin,CHEMICAL,10820,10830
+U-100,CHEMICAL,10893,10898
+glargine,CHEMICAL,10916,10924
+Levothyroxine Sodium,CHEMICAL,10954,10974
+Ondansetron,CHEMICAL,11038,11049
+Q8H,CHEMICAL,11058,11061
+nausea,DISEASE,11066,11072
+Prochlorperazine,CHEMICAL,11077,11093
+Simvastatin,CHEMICAL,11121,11132
+Tamsulosin,CHEMICAL,11150,11160
+QHS,CHEMICAL,11171,11174
+Ascorbic Acid,CHEMICAL,11179,11192
+Vitamin D,CHEMICAL,11211,11220
+Omeprazole,CHEMICAL,11244,11254
+Sodium,CHEMICAL,11402,11408
+abnormal liver enzymes.,DISEASE,12770,12793

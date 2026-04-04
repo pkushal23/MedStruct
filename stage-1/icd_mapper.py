@@ -16,7 +16,7 @@ def load_gem_crosswalk(gem_csv_path: str) -> dict:
         logger.warning(f"GEM crosswalk file not found at {gem_csv_path}. Mapping will be skipped.")
         return {}
 
-def map_icd_codes(df_diagnoses: pd.DataFrame, gem_csv_path: str = '../data/external/gem_icd9_to_icd10.csv') -> pd.DataFrame:
+def map_icd_codes(df_diagnoses: pd.DataFrame, gem_csv_path: str = 'data/external/gem_icd9_to_icd10.csv') -> pd.DataFrame:
     """
     Converts ICD-9 codes to ICD-10. Flags unmapped codes.
     """

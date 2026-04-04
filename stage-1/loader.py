@@ -34,10 +34,11 @@ class MimicLoader:
         return df
 
     def fetch_diagnoses_icd(self) -> pd.DataFrame:
-        """Loads the diagnoses_icd table for Step 1.2."""
         query = """
         SELECT subject_id, hadm_id, seq_num, icd_code, icd_version
         FROM `physionet-data.mimiciv_3_1_hosp.diagnoses_icd`
         WHERE hadm_id IS NOT NULL
+        LIMIT 5000 
         """
+        logger.info("Loading 5000 real ICD codes for the prototype...")
         return self.client.query(query).to_dataframe()

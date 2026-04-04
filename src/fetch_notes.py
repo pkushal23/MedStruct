@@ -1,4 +1,4 @@
-from src.bigquery_client import get_bq_client
+from bigquery_client import get_bq_client
 
 def fetch_one_note():
     client = get_bq_client()
@@ -16,3 +16,4 @@ def fetch_one_note():
 
     df = client.query(query).to_dataframe()
     return df
+print(fetch_one_note())

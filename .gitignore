@@ -2,3 +2,6 @@
 
 .env
 /docsdata/processed/*.csv
+
+venv/
+__pycache__

@@ -1,4 +1,4 @@
-"icd9cm","icd10cm","flags","approximate","no_map","combination","scenario","choice_list"
+"icd9_code","icd10_code","flags","approximate","no_map","combination","scenario","choice_list"
 "0010","A000","00000",0,0,0,0,0
 "0011","A001","00000",0,0,0,0,0
 "0019","A009","00000",0,0,0,0,0

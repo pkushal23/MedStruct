@@ -1,0 +1,3672 @@
+raw_text,label,start_char,end_char
+Albuterol,CHEMICAL,141,150
+CAD,DISEASE,40,43
+chills,DISEASE,115,121
+CAD,DISEASE,22,25
+neuropathy,DISEASE,45,55
+retinopathy,DISEASE,56,67
+Charcot,DISEASE,69,76
+osteoarthritis,DISEASE,84,98
+emphysema,DISEASE,99,108
+depression,DISEASE,109,119
+left hip fracture s/p,DISEASE,120,141
+depression,DISEASE,220,230
+GEN- NAD,CHEMICAL,341,349
+CTAB,CHEMICAL,397,401
+DP,CHEMICAL,502,504
+L-,CHEMICAL,517,519
+hematoma,DISEASE,537,545
+Phos-3.2,CHEMICAL,876,884
+oxycodone,CHEMICAL,28,37
+pain,DISEASE,69,73
+fever,DISEASE,40,45
+infection,DISEASE,88,97
+keflex,CHEMICAL,45,51
+incion,DISEASE,4,10
+hematoma,DISEASE,41,49
+swelling,DISEASE,53,61
+DEID,CHEMICAL,3,7
+heparin,CHEMICAL,47,54
+pain,DISEASE,76,80
+Atorvastatin,CHEMICAL,26,38
+Citalopram Hydrobromide,CHEMICAL,85,108
+Clopidogrel,CHEMICAL,128,139
+Esomeprazole Magnesium,CHEMICAL,159,181
+Humalog,CHEMICAL,200,207
+Metoprolol Succinate,CHEMICAL,240,260
+Pregabalin,CHEMICAL,280,290
+Ramipril,CHEMICAL,309,317
+Aspirin,CHEMICAL,335,342
+Keflex,CHEMICAL,349,355
+DEID,CHEMICAL,357,361
+Bactroban ointment R,CHEMICAL,364,384
+atorvastatin,CHEMICAL,0,12
+aspirin,CHEMICAL,0,7
+metoprolol succinate,CHEMICAL,0,20
+citalopram,CHEMICAL,0,10
+oxycodone,CHEMICAL,0,9
+Q4H,CHEMICAL,45,48
+pain,DISEASE,80,84
+Tablet(s,DISEASE,9,17
+bupropion HCl,CHEMICAL,0,13
+pregabalin,CHEMICAL,0,10
+Keflex,CHEMICAL,0,6
+DEID,CHEMICAL,8,12
+Bactroban,CHEMICAL,0,9
+clopidogrel,CHEMICAL,0,11
+aspart,CHEMICAL,8,14
+Colace,CHEMICAL,0,6
+constipation,DISEASE,73,85
+amputation,DISEASE,21,31
+Redness,DISEASE,0,7
+infection,DISEASE,32,41
+fever,DISEASE,13,18
+chills,DISEASE,46,52
+redness,DISEASE,64,71
+bleeding,DISEASE,35,43
+pain,DISEASE,42,46
+pain,DISEASE,23,27
+constipating,DISEASE,40,52
+Milk of Magnesia,DISEASE,43,59
+Appetite,DISEASE,0,8
+NO,CHEMICAL,0,2
+Smoking,CHEMICAL,0,7
+smoke,CHEMICAL,8,13
+amputation,DISEASE,23,33
+appetite,DISEASE,5,13
+cholesterol,CHEMICAL,56,67
+saturated,CHEMICAL,126,135
+cholesterol,CHEMICAL,147,158
+cholesterol,CHEMICAL,52,63
+cholesterol,CHEMICAL,84,95
+cholesterol,CHEMICAL,30,41
+saturated,CHEMICAL,107,116
+cholesterol,CHEMICAL,125,136
+cholesterol,CHEMICAL,156,167
+cholesterol,CHEMICAL,210,221
+cholesterol,CHEMICAL,68,79
+diabetes,DISEASE,12,20
+Be,CHEMICAL,0,2
+diabetes,DISEASE,34,42
+cholesterol,CHEMICAL,53,64
+Malignant obstruction,DISEASE,17,38
+squamous cell lung cancer,DISEASE,176,201
+airway obstruction,DISEASE,218,236
+SOB,DISEASE,289,292
+SOB,DISEASE,75,78
+COPD,DISEASE,76,80
+moxifloxacin,CHEMICAL,99,111
+steroids,CHEMICAL,117,125
+SOB,DISEASE,12,15
+albuterol,CHEMICAL,18,27
+ipratropium,CHEMICAL,33,44
+pain,DISEASE,64,68
+steroids,CHEMICAL,67,75
+pain,DISEASE,21,25
+ROS,CHEMICAL,0,3
+squamous cell lung cancer s/p,DISEASE,36,65
+Respiratory failure s/p,DISEASE,93,116
+mainstem bronchus obstruction s/p,DISEASE,179,212
+COPD,DISEASE,261,265
+Hypertension,DISEASE,269,281
+Hyperlipidemia,DISEASE,285,299
+Atrial Fibrillation s/p,DISEASE,303,326
+cancer,DISEASE,411,417
+DEID,CHEMICAL,527,531
+NAD,CHEMICAL,533,536
+wheezing,DISEASE,666,674
+normoactive bowel sounds,DISEASE,729,753
+erythema,DISEASE,1036,1044
+tenderness,DISEASE,1292,1302
+organomegaly,DISEASE,1319,1331
+clubbing,DISEASE,1373,1381
+cyanosis,DISEASE,1383,1391
+edema,DISEASE,1396,1401
+DEID,CHEMICAL,1663,1667
+Hct-36.8,DISEASE,1907,1915
+HCO3,CHEMICAL,2037,2041
+DEID,CHEMICAL,4,8
+atelectasis,DISEASE,33,44
+upper lobe atelectasis,DISEASE,31,53
+pleural effusion,DISEASE,13,29
+tumor,DISEASE,35,40
+tracheal stoma,DISEASE,96,110
+squamous cell lung cancer,DISEASE,61,86
+malignant airway obstruction,DISEASE,106,134
+NSCLC,DISEASE,13,18
+"squamous cell 
+lung cancer",DISEASE,51,77
+XRT,CHEMICAL,11,14
+SOB,DISEASE,50,53
+steroid,CHEMICAL,26,33
+Avelox,CHEMICAL,68,74
+hypoxia,DISEASE,88,95
+Vancomycin,CHEMICAL,39,49
+Cefepime,CHEMICAL,54,62
+HCAP,DISEASE,95,99
+Prednisone,CHEMICAL,24,34
+O2,CHEMICAL,96,98
+desaturate,CHEMICAL,21,31
+pneumonia,DISEASE,47,56
+steroids,CHEMICAL,75,83
+leukocytosis,DISEASE,74,86
+steroids,CHEMICAL,97,105
+Floor,DISEASE,0,5
+augmentin,CHEMICAL,19,28
+Vancomycin,CHEMICAL,72,82
+Cefepime,CHEMICAL,87,95
+DEID,CHEMICAL,97,101
+HCAP,DISEASE,116,120
+Cefepime,CHEMICAL,25,33
+[DEID],CHEMICAL,35,41
+leukocytosis,DISEASE,80,92
+COPD,DISEASE,1,5
+COPD,DISEASE,21,25
+stem bronchus compression,DISEASE,77,102
+wheezing,DISEASE,31,39
+wheezing,DISEASE,29,37
+prednisone,CHEMICAL,48,58
+Steroids,CHEMICAL,0,8
+wheezing,DISEASE,65,73
+albuterol,CHEMICAL,96,105
+metoprolol,CHEMICAL,84,94
+Metoprolol Tartrate,CHEMICAL,25,44
+Diltiazem,CHEMICAL,66,75
+metoprolol,CHEMICAL,119,129
+hypotension,DISEASE,204,215
+Diltiazem,CHEMICAL,32,41
+metoprolol tartrate,CHEMICAL,60,79
+hypotension,DISEASE,164,175
+metoprolol succinate,CHEMICAL,24,44
+Bupropion,CHEMICAL,10,19
+Escitalopram,CHEMICAL,21,33
+lorazepam,CHEMICAL,44,53
+PCP,CHEMICAL,38,41
+PCP,CHEMICAL,298,301
+Lorazepam,CHEMICAL,0,9
+anxiety,DISEASE,26,33
+Cardizem,CHEMICAL,0,8
+Sodium,CHEMICAL,9,15
+ipratropium-albuterol,CHEMICAL,8,29
+Q6H,CHEMICAL,73,76
+shortness of breath,DISEASE,81,100
+Escitalopram Oxalate,CHEMICAL,0,20
+QHS,CHEMICAL,30,33
+Symbicort,CHEMICAL,0,9
+budesonide-formoterol,CHEMICAL,11,32
+Simvastatin 10 mg PO QPM,CHEMICAL,0,24
+Aspirin,CHEMICAL,0,7
+Metoprolol Tartrate,CHEMICAL,0,19
+Q4H,CHEMICAL,43,46
+pain,DISEASE,51,55
+Guaifenesin,CHEMICAL,0,11
+Q12H,CHEMICAL,26,30
+Aspirin,CHEMICAL,0,7
+Cardizem,CHEMICAL,0,8
+Sodium,CHEMICAL,9,15
+Escitalopram Oxalate,CHEMICAL,0,20
+QHS,CHEMICAL,30,33
+Guaifenesin,CHEMICAL,0,11
+Q12H,CHEMICAL,26,30
+Lorazepam,CHEMICAL,0,9
+anxiety,DISEASE,26,33
+Q4H,CHEMICAL,43,46
+pain,DISEASE,51,55
+Simvastatin 10 mg PO QPM,CHEMICAL,0,24
+ipratropium-albuterol,CHEMICAL,8,29
+Q6H,CHEMICAL,73,76
+shortness of breath,DISEASE,81,100
+Symbicort,CHEMICAL,0,9
+budesonide-formoterol,CHEMICAL,11,32
+Albuterol,CHEMICAL,0,9
+Neb Soln 1 NEB IH,CHEMICAL,17,34
+wheezing,DISEASE,50,58
+albuterol sulfate,CHEMICAL,64,81
+Polyethylene Glycol 17 g PO,CHEMICAL,0,27
+polyethylene glycol 3350,CHEMICAL,39,63
+Metoprolol Succinate,CHEMICAL,0,20
+metoprolol succinate,CHEMICAL,44,64
+Malignant airway obstruction,DISEASE,255,283
+Squamous cell lung cancer,DISEASE,308,333
+COPD,DISEASE,336,340
+Pneumonia,DISEASE,343,352
+lung cancer,DISEASE,52,63
+pneumonia,DISEASE,88,97
+steroids,CHEMICAL,14,22
+DEID,CHEMICAL,11,15
+diltiazem,CHEMICAL,126,135
+metoprolol,CHEMICAL,139,149
+PCP,CHEMICAL,257,260
+Adverse Drug Reactions,DISEASE,167,189
+fracture,DISEASE,238,246
+[DEID] s/p restrained driver,CHEMICAL,354,382
+fracture,DISEASE,68,76
+pain,DISEASE,10,14
+numbness,DISEASE,16,24
+tingling or weakness of the bilateral upper extremities,DISEASE,26,81
+pain,DISEASE,20,24
+numbness,DISEASE,89,97
+numbness,DISEASE,34,42
+numbness,DISEASE,116,124
+numbness,DISEASE,167,175
+urinary incontinence,DISEASE,39,59
+DEID,CHEMICAL,80,84
+lumbar back pain,DISEASE,168,184
+D B T,CHEMICAL,8,13
+"[DEID] G
+R 5 5 5 5 5 4 4 5- 5 5 5
+L 5 5 5 5 5 4 5 5 5 5 5
+
+",CHEMICAL,30,89
+DEID,CHEMICAL,40,44
+fracture,DISEASE,69,77
+paralysis,DISEASE,12,21
+Valium,CHEMICAL,22,28
+Dilaudid,CHEMICAL,30,38
+Oxycodone,CHEMICAL,44,53
+agitation,DISEASE,65,74
+pain,DISEASE,79,83
+agitation,DISEASE,24,33
+pain,DISEASE,25,29
+agitation,DISEASE,89,98
+agitation,DISEASE,37,46
+fracture,DISEASE,147,155
+fracture,DISEASE,58,66
+paralysis,DISEASE,79,88
+nerve damage,DISEASE,94,106
+Aspirin,CHEMICAL,68,75
+Ibuprofen,CHEMICAL,78,87
+Plavix,CHEMICAL,89,95
+Coumadin,CHEMICAL,97,105
+Motrin,CHEMICAL,29,35
+pain,DISEASE,40,44
+Acetaminophen,CHEMICAL,13,26
+Tylenol,CHEMICAL,28,35
+pain,DISEASE,55,59
+Pain,DISEASE,0,4
+constipation,DISEASE,27,39
+Allergies,DISEASE,165,174
+Diarrhea,DISEASE,17,25
+abdominal pain,DISEASE,30,44
+DEID,CHEMICAL,137,141
+Amoxicillin,CHEMICAL,86,97
+QID,CHEMICAL,102,105
+watery,DISEASE,96,102
+diarrhea,DISEASE,104,112
+BRBPR,CHEMICAL,207,212
+bloody,DISEASE,10,16
+Amoxicillin,CHEMICAL,31,42
+sudden diarrhea,DISEASE,23,38
+fever,DISEASE,11,16
+lightheadedness,DISEASE,5,20
+vomiting,DISEASE,37,45
+hemorrhoids,DISEASE,27,38
+diarrhea,DISEASE,57,65
+ductal carcinoma,DISEASE,44,60
+[DEID,CHEMICAL,62,67
+Cytoxan,CHEMICAL,13,20
+Adriamycin,CHEMICAL,26,36
+Arimidex,CHEMICAL,13,21
+DEID,CHEMICAL,26,30
+Arimidex,CHEMICAL,13,21
+hearing impairment,DISEASE,32,50
+Hypercholesterolemia,DISEASE,0,20
+Depression,DISEASE,0,10
+Osteopenia,DISEASE,0,10
+bowel disease,DISEASE,62,75
+GEN,CHEMICAL,157,160
+rashes,DISEASE,223,229
+lymphadenopathy,DISEASE,3,18
+wheeze,DISEASE,30,36
+tenderness,DISEASE,14,24
+peripheral edema,DISEASE,77,93
+cyanosis,DISEASE,108,116
+clubbing,DISEASE,122,130
+Glucose,CHEMICAL,440,447
+Urea Nitrogen,CHEMICAL,469,482
+Creatinine,CHEMICAL,499,509
+Sodium,CHEMICAL,531,537
+Potassium,CHEMICAL,559,568
+Bicarbonate,CHEMICAL,620,631
+Calcium,CHEMICAL,670,677
+Phosphate,CHEMICAL,707,716
+Magnesium,CHEMICAL,738,747
+diarrhea,DISEASE,811,819
+BRBPR,CHEMICAL,842,847
+Abx,CHEMICAL,866,869
+diarrhea,DISEASE,6,14
+Abx,CHEMICAL,52,55
+diarrhea,DISEASE,104,112
+abdominal pain,DISEASE,14,28
+colitis,DISEASE,31,38
+Abx,CHEMICAL,88,91
+Abx,CHEMICAL,141,144
+Flagyl,CHEMICAL,33,39
+Cipro,CHEMICAL,66,71
+diarrhea,DISEASE,128,136
+pain,DISEASE,78,82
+diarrhea,DISEASE,26,34
+dehydration,DISEASE,54,65
+anemia,DISEASE,150,156
+abscess,DISEASE,30,37
+swelling,DISEASE,135,143
+inflammation,DISEASE,214,226
+abscess,DISEASE,235,242
+ARIMIDEX-1MG,CHEMICAL,0,12
+3.Calcium Carbonate,CHEMICAL,75,94
+Metronidazole,CHEMICAL,0,13
+Tablet(s,CHEMICAL,9,17
+Ciprofloxacin,CHEMICAL,0,13
+Q12H,CHEMICAL,51,55
+Anastrozole,CHEMICAL,0,11
+Calcium Carbonate,CHEMICAL,3,20
+Cholecalciferol,CHEMICAL,0,15
+Vitamin D3,CHEMICAL,17,27
+Trazodone,CHEMICAL,0,9
+Escitalopram,CHEMICAL,0,12
+Bupropion,CHEMICAL,0,9
+Simvastatin 10 mg,CHEMICAL,0,17
+Colitis,DISEASE,0,7
+diarrhea,DISEASE,13,21
+diarrhea,DISEASE,101,109
+diarrhea,DISEASE,37,45
+C-diff infection,DISEASE,50,66
+colitis,DISEASE,77,84
+Adverse Drug Reactions,DISEASE,162,184
+Abdominal Pain,DISEASE,224,238
+w/,CHEMICAL,334,336
+pain,DISEASE,461,465
+nausea,DISEASE,65,71
+vomiting,DISEASE,76,84
+constipation,DISEASE,37,49
+softeners,CHEMICAL,69,78
+lightheadedness,DISEASE,21,36
+dizziness,DISEASE,44,53
+pain,DISEASE,62,66
+SOB,DISEASE,68,71
+melena,DISEASE,118,124
+dysuria,DISEASE,164,171
+myalgias,DISEASE,173,181
+arthralgias,DISEASE,184,195
+ROS,CHEMICAL,214,217
+hypertension,DISEASE,27,39
+Hyperlipidemia,DISEASE,40,54
+ADHD,DISEASE,55,59
+uric acid nephrolithiasis,CHEMICAL,91,116
+CP,CHEMICAL,160,162
+DEID] bladder stones,DISEASE,184,204
+"[DEID]
+Multiple foot",CHEMICAL,206,226
+Cancer,DISEASE,317,323
+uric acid stones,CHEMICAL,332,348
+[DEID] syndrome,CHEMICAL,380,395
+O2,CHEMICAL,448,450
+RA,CHEMICAL,455,457
+organomegaly,DISEASE,585,597
+edema,DISEASE,626,631
+customized orthotic boots,DISEASE,672,697
+DEID,CHEMICAL,455,459
+"Dilated and fecalized small bowel loops measuring up to 3.4 cm 
+with a probable transition",DISEASE,462,552
+small bowel obstruction,DISEASE,43,66
+Mildly dilated small bowel loop left,DISEASE,12,48
+Gastrografin,CHEMICAL,23,35
+Cefazolin,CHEMICAL,0,9
+TOBRAMYCIN------------,CHEMICAL,395,417
+partial small bowel obstruction,DISEASE,551,582
+bowel obstruction,DISEASE,73,90
+abdominal pain,DISEASE,66,80
+pain,DISEASE,80,84
+Diazepam,CHEMICAL,0,8
+Q12H,CHEMICAL,17,21
+anxiety,DISEASE,26,33
+Fexofenadine,CHEMICAL,0,12
+Hydrochlorothiazide,CHEMICAL,0,19
+Lisinopril,CHEMICAL,0,10
+Simvastatin,CHEMICAL,0,11
+Vitamin D,CHEMICAL,0,9
+Diazepam,CHEMICAL,67,75
+Q12H,CHEMICAL,84,88
+anxiety,DISEASE,93,100
+Fexofenadine,CHEMICAL,0,12
+Hydrochlorothiazide,CHEMICAL,0,19
+Lisinopril,CHEMICAL,0,10
+Simvastatin,CHEMICAL,0,11
+Vitamin D,CHEMICAL,0,9
+Small bowel obstruction,DISEASE,84,107
+DEID,CHEMICAL,46,50
+abdominal pain,DISEASE,57,71
+small bowel obstruction,DISEASE,109,132
+abdominal pain,DISEASE,5,19
+chest pain,DISEASE,131,141
+tightness,DISEASE,167,176
+cough,DISEASE,18,23
+shortness of breath,DISEASE,25,44
+wheeze,DISEASE,49,55
+vomiting,DISEASE,12,20
+vomiting,DISEASE,45,53
+diarrhea,DISEASE,55,63
+dehydration,DISEASE,9,20
+dry mouth,DISEASE,29,38
+vomit,DISEASE,47,52
+pain,DISEASE,6,10
+pain,DISEASE,35,39
+chills,DISEASE,18,24
+fever,DISEASE,29,34
+Adverse Drug Reactions,DISEASE,164,186
+agitation,DISEASE,17,26
+seizures,DISEASE,37,45
+DEID,CHEMICAL,138,142
+toxoplasmosis,DISEASE,174,187
+intellectual disability,DISEASE,193,216
+"[DEID] with 
+gait
+difficulties and",CHEMICAL,218,252
+visual loss,DISEASE,253,264
+agitation,DISEASE,321,330
+agitations,DISEASE,47,57
+infections,DISEASE,127,137
+agitation,DISEASE,55,64
+encephalopathy,DISEASE,150,164
+DEID,CHEMICAL,25,29
+DEID,CHEMICAL,25,29
+vomiting,DISEASE,43,51
+lactate,CHEMICAL,74,81
+UA,CHEMICAL,116,118
+dehydration,DISEASE,30,41
+agitation,DISEASE,26,35
+grunting,DISEASE,70,78
+sinemet,CHEMICAL,26,33
+orofacial dyskinesia,DISEASE,70,90
+toxoplasmosis,DISEASE,35,48
+intellectual disability,DISEASE,56,79
+hearing loss,DISEASE,173,185
+hypertension,DISEASE,188,200
+CKD,DISEASE,209,212
+colitis,DISEASE,243,250
+NAD,CHEMICAL,407,410
+edema,DISEASE,544,549
+scabs,DISEASE,617,622
+Hypophonia,DISEASE,81,91
+dyskinesia,DISEASE,23,33
+sinemet,CHEMICAL,127,134
+VF,DISEASE,15,17
+droop,DISEASE,67,72
+Palate,DISEASE,7,13
+parkinsonian tremor,DISEASE,29,48
+hypophonic,DISEASE,82,92
+brady,DISEASE,105,110
+tremor,DISEASE,5,11
+SP,CHEMICAL,65,67
+DEID,CHEMICAL,69,73
+LEUK-TR,CHEMICAL,189,196
+TOP,CHEMICAL,327,330
+GLUCOSE-77,CHEMICAL,373,383
+CO2,CHEMICAL,451,454
+ALK,CHEMICAL,511,514
+DEID,CHEMICAL,849,853
+sinemet,CHEMICAL,40,47
+seizure,DISEASE,14,21
+amantadine,CHEMICAL,61,71
+carbidopa-levodopa,CHEMICAL,26,44
+DEID,CHEMICAL,46,50
+QID,CHEMICAL,52,55
+Aricept,CHEMICAL,79,86
+omeprazole,CHEMICAL,100,110
+potassium chloride,CHEMICAL,123,141
+simvastatin 10 mg,CHEMICAL,158,175
+venlafaxine,CHEMICAL,189,200
+Effexor,CHEMICAL,202,209
+docusate sodium,CHEMICAL,243,258
+constipation,DISEASE,274,286
+Amantadine,CHEMICAL,0,10
+MG,CHEMICAL,15,17
+amantadine HCl,CHEMICAL,32,46
+tablet(s,CHEMICAL,56,64
+Aspirin,CHEMICAL,0,7
+[DEID]) 1 TAB PO TID,CHEMICAL,20,40
+carbidopa-levodopa,CHEMICAL,46,64
+tablet(s,CHEMICAL,80,88
+Docusate Sodium,CHEMICAL,0,15
+Donepezil,CHEMICAL,0,9
+Lansoprazole,CHEMICAL,0,12
+lansoprazole,CHEMICAL,57,69
+Prevacid,CHEMICAL,71,79
+Polyethylene Glycol 17 g PO,CHEMICAL,0,27
+Constipation,DISEASE,38,50
+polyethylene glycol 3350,CHEMICAL,56,80
+sennosides [senna],CHEMICAL,24,42
+Simvastatin 10 mg PO DAILY,CHEMICAL,0,26
+DEID] disease,DISEASE,111,124
+seizures,DISEASE,21,29
+dystonia,DISEASE,43,51
+sinemet,CHEMICAL,83,90
+sinemet,CHEMICAL,27,34
+amantadine,CHEMICAL,75,85
+Propoxyphene,CHEMICAL,142,154
+abdominal pain,DISEASE,17,31
+coronary artery disease,DISEASE,144,167
+STEMI,CHEMICAL,228,233
+hypertension,DISEASE,299,311
+hyperlipidemia,DISEASE,313,327
+smoking,CHEMICAL,329,336
+shortness of breath,DISEASE,46,65
+RUQ pain,DISEASE,67,75
+pain,DISEASE,87,91
+Pain,DISEASE,0,4
+pain,DISEASE,10,14
+chills,DISEASE,33,39
+dysuria,DISEASE,43,50
+loose stools,DISEASE,82,94
+showedmoderate disease,DISEASE,73,95
+RUQ pain,DISEASE,43,51
+CHEM,CHEMICAL,87,91
+EtOH,CHEMICAL,178,182
+UA,CHEMICAL,216,218
+lactate,CHEMICAL,220,227
+infarction,DISEASE,47,57
+pleural effusion,DISEASE,63,79
+lorazepam,CHEMICAL,18,27
+thiamine,CHEMICAL,44,52
+ASA,CHEMICAL,61,64
+morphine,CHEMICAL,74,82
+nicotine,CHEMICAL,96,104
+pain,DISEASE,77,81
+Denies fever,DISEASE,67,79
+chills,DISEASE,81,87
+night sweats,DISEASE,89,101
+cough,DISEASE,7,12
+shortness,DISEASE,14,23
+CAD,DISEASE,44,47
+STEMIs,DISEASE,61,67
+COPD,DISEASE,79,83
+Osteonecrosis,DISEASE,84,97
+pain,DISEASE,120,124
+Congenial deafness,DISEASE,125,143
+hypertension,DISEASE,144,156
+myocardial infarction,DISEASE,37,58
+"[DEID] 
+",CHEMICAL,73,81
+occlusion of the mid right coronary artery,DISEASE,157,199
+PTCA,CHEMICAL,25,29
+DEID,CHEMICAL,34,38
+DEID,CHEMICAL,5,9
+chest pain,DISEASE,37,47
+stenosis,DISEASE,25,33
+stenosis,DISEASE,57,65
+stenosis,DISEASE,26,34
+depression,DISEASE,32,42
+schizophrenia,DISEASE,47,60
+psychosis,DISEASE,102,111
+visual illusions,DISEASE,152,168
+anger,DISEASE,243,248
+psychiatric,DISEASE,15,26
+risperidone,CHEMICAL,46,57
+depressed,DISEASE,143,152
+EtOH,CHEMICAL,236,240
+CAD,DISEASE,245,248
+O2,CHEMICAL,342,344
+tenderness,DISEASE,747,757
+organomegaly,DISEASE,774,786
+clubbing,DISEASE,828,836
+cyanosis,DISEASE,838,846
+edema,DISEASE,851,856
+asterixis,DISEASE,868,877
+O2,CHEMICAL,947,949
+RA,DISEASE,955,957
+tenderness,DISEASE,1313,1323
+organomegaly,DISEASE,1340,1352
+clubbing,DISEASE,1394,1402
+cyanosis,DISEASE,1404,1412
+edema,DISEASE,1417,1422
+tremors,DISEASE,1437,1444
+focal neurologic deficits,DISEASE,1455,1480
+asterixis,DISEASE,1486,1495
+CO2,CHEMICAL,1627,1630
+SP,CHEMICAL,2026,2028
+DEID,CHEMICAL,2030,2034
+CO2,CHEMICAL,2250,2253
+DEID,CHEMICAL,2662,2666
+HCO3,CHEMICAL,3074,3078
+alcohol abuse,DISEASE,3119,3132
+CAD,DISEASE,3134,3137
+congenital deafness,DISEASE,3139,3158
+hypertension,DISEASE,3161,3173
+HL,DISEASE,3175,3177
+tobacco abuse,DISEASE,3179,3192
+pain,DISEASE,3221,3225
+RUQ pain,DISEASE,2,10
+RUQ pain,DISEASE,32,40
+tenderness,DISEASE,36,46
+leukocytosis,DISEASE,18,30
+fever,DISEASE,34,39
+transaminitis,DISEASE,75,88
+pantoprazole,CHEMICAL,19,31
+emesis,DISEASE,21,27
+melena,DISEASE,31,37
+bleeding ulcer,DISEASE,74,88
+pain,DISEASE,112,116
+pain,DISEASE,7,11
+gastritis,DISEASE,31,40
+Chest pain,DISEASE,2,12
+troponins,CHEMICAL,40,49
+Pain,DISEASE,0,4
+ETOH abuse,DISEASE,31,41
+Hepatitis,DISEASE,0,9
+hepatitis,DISEASE,11,20
+benzodiazepine,CHEMICAL,116,130
+thiamine,CHEMICAL,24,32
+folate,CHEMICAL,34,40
+extensive cardiac history,DISEASE,20,45
+albuterol,CHEMICAL,103,112
+Tobacco abuse - given,DISEASE,2,23
+nicotine,CHEMICAL,24,32
+Depression/Schizophrenia,DISEASE,59,83
+schizophrenia,DISEASE,127,140
+psychosis,DISEASE,170,179
+risperidone,CHEMICAL,25,36
+hypertension-,DISEASE,2,15
+lisinopril,CHEMICAL,51,61
+statin,CHEMICAL,26,32
+PCP,CHEMICAL,94,97
+Hepatitis,DISEASE,0,9
+Albuterol Inhaler,CHEMICAL,0,17
+Q6H,CHEMICAL,28,31
+shortness of breath,DISEASE,36,55
+Atenolol,CHEMICAL,0,8
+Atorvastatin,CHEMICAL,0,12
+Clopidogrel,CHEMICAL,0,11
+250/50,CHEMICAL,31,37
+INH,CHEMICAL,41,44
+Lisinopril,CHEMICAL,0,10
+Nitroglycerin,CHEMICAL,0,13
+chest pain,DISEASE,31,41
+Pantoprazole,CHEMICAL,0,12
+Ranitidine,CHEMICAL,0,10
+Risperidone,CHEMICAL,0,11
+Ultram,CHEMICAL,10,16
+QID,CHEMICAL,27,30
+pain,DISEASE,35,39
+Zolpidem Tartrate,CHEMICAL,0,17
+Aspirin,CHEMICAL,0,7
+Capsaicin,CHEMICAL,0,9
+pain,DISEASE,31,35
+Cetirizine,CHEMICAL,0,10
+Multivitamins,CHEMICAL,0,13
+Nicotine,CHEMICAL,0,8
+Thiamine,CHEMICAL,0,8
+Aspirin,CHEMICAL,0,7
+Atenolol,CHEMICAL,0,8
+Atorvastatin,CHEMICAL,0,12
+Clopidogrel,CHEMICAL,0,11
+250/50,CHEMICAL,31,37
+INH,CHEMICAL,41,44
+Lisinopril,CHEMICAL,0,10
+Multivitamins,CHEMICAL,0,13
+Nicotine,CHEMICAL,0,8
+Ranitidine,CHEMICAL,0,10
+Risperidone,CHEMICAL,0,11
+Thiamine,CHEMICAL,0,8
+Albuterol Inhaler,CHEMICAL,0,17
+Q6H,CHEMICAL,28,31
+shortness of breath,DISEASE,36,55
+Capsaicin,CHEMICAL,0,9
+pain,DISEASE,31,35
+Nitroglycerin,CHEMICAL,0,13
+chest pain,DISEASE,31,41
+abdominal pain,DISEASE,125,139
+alcohol intoxication,DISEASE,140,160
+abdominal pain,DISEASE,62,76
+alcohol,CHEMICAL,41,48
+Allergies,DISEASE,191,200
+abdominal pain,DISEASE,17,31
+abdominal pain,DISEASE,187,201
+pain,DISEASE,41,45
+pain,DISEASE,95,99
+renal calculi,DISEASE,120,133
+pain,DISEASE,178,182
+dilaudid,CHEMICAL,22,30
+nausea,DISEASE,119,125
+pain,DISEASE,24,28
+dilaudid,CHEMICAL,13,21
+nausea or vomiting,DISEASE,11,29
+endometriosis,DISEASE,152,165
+fibroids,DISEASE,167,175
+infertility,DISEASE,180,191
+interstitial cystitis,DISEASE,216,237
+pain,DISEASE,7,11
+TOCO,CHEMICAL,35,39
+WBC-10.8 RBC-3.36 Hgb-9.5 Hct-28.6 MCV-85 Plt-278,DISEASE,213,262
+[DEID] WBC-6.0 RBC-2.82,CHEMICAL,263,286
+DEID] Glucose-89 UreaN-10,CHEMICAL,321,346
+Na-137 K-4.0,CHEMICAL,357,369
+"Albumin-3.6
+
+",CHEMICAL,440,453
+pH-7.0,CHEMICAL,548,554
+NO,CHEMICAL,595,597
+pain,DISEASE,703,707
+nephrolithiasis,DISEASE,740,755
+pain,DISEASE,29,33
+tenderness,DISEASE,35,45
+preterm labor,DISEASE,32,45
+nausea,DISEASE,24,30
+pain,DISEASE,36,40
+vitamins,CHEMICAL,35,43
+Ondansetron,CHEMICAL,0,11
+nausea,DISEASE,116,122
+nephrolithiasis,DISEASE,135,150
+pain,DISEASE,5,9
+pain,DISEASE,35,39
+fevers,DISEASE,69,75
+vaginal bleeding,DISEASE,131,147
+Penicillins,CHEMICAL,142,153
+Media,CHEMICAL,191,196
+aspirin,CHEMICAL,199,206
+metronidazole,CHEMICAL,210,223
+Abdominal pain,DISEASE,17,31
+cirrhosis,DISEASE,217,226
+HCC,DISEASE,239,242
+ascites,DISEASE,290,297
+cipro,CHEMICAL,306,311
+encephalopathy,DISEASE,332,346
+TIPS reduction,DISEASE,448,462
+TIPS occlusion,DISEASE,482,496
+abdominal pain,DISEASE,514,528
+dyspnea,DISEASE,545,552
+nausea,DISEASE,39,45
+pain,DISEASE,116,120
+dyspnea,DISEASE,18,25
+cough,DISEASE,53,58
+pain,DISEASE,68,72
+lactulose,CHEMICAL,39,48
+ondansetron,CHEMICAL,92,103
+nausea,DISEASE,156,162
+"vomiting, abdominal pain",DISEASE,164,188
+ascites,DISEASE,109,116
+Abdominal pain,DISEASE,51,65
+CTAB,CHEMICAL,149,153
+pain,DISEASE,233,237
+asterixis,DISEASE,52,61
+edema,DISEASE,81,86
+Na,CHEMICAL,126,128
+K,CHEMICAL,133,134
+K,CHEMICAL,17,18
+Coags,DISEASE,69,74
+Lactate,CHEMICAL,107,114
+occlusion of the TIPS,DISEASE,89,110
+Cirrhotic liver,DISEASE,0,15
+volume ascites,DISEASE,30,44
+splenomegaly,DISEASE,54,66
+intra-abdominal,DISEASE,9,24
+bowel obstruction,DISEASE,16,33
+cirrhotic liver,DISEASE,21,36
+hypertension,DISEASE,60,72
+volume ascites,DISEASE,89,103
+splenomegaly,DISEASE,113,125
+opacity,DISEASE,27,34
+pleural effusion,DISEASE,19,35
+pneumothorax,DISEASE,51,63
+Morphine,CHEMICAL,183,191
+Dilaudid,CHEMICAL,223,231
+pain,DISEASE,302,306
+morphine,CHEMICAL,21,29
+dilaudid,CHEMICAL,59,67
+abdominal pain,DISEASE,47,61
+constipation,DISEASE,76,88
+Cirrhosis,DISEASE,0,9
+ETOH,CHEMICAL,25,29
+ascites,DISEASE,58,65
+hepatic encephalopathy,DISEASE,80,102
+Lung cancer,DISEASE,0,11
+[DEID] Stage,CHEMICAL,26,38
+DEID,CHEMICAL,89,93
+Depression,DISEASE,0,10
+Hypertension,DISEASE,0,12
+Obesity,DISEASE,0,7
+S/p,DISEASE,0,3
+colitis,DISEASE,54,61
+mesalamine,CHEMICAL,66,76
+emphysema,DISEASE,198,207
+[DEID] secondary,CHEMICAL,17,33
+stroke,DISEASE,39,45
+GI bleed,DISEASE,26,34
+hepatitis,DISEASE,49,58
+overdose,DISEASE,15,23
+O2,CHEMICAL,201,203
+O2,CHEMICAL,223,225
+RA,DISEASE,236,238
+dry lips,DISEASE,336,344
+CTAB,CHEMICAL,435,439
+TTP,DISEASE,479,482
+edema,DISEASE,518,523
+asterixis,DISEASE,540,549
+dry lips,DISEASE,699,707
+CTAB,CHEMICAL,798,802
+TTP,DISEASE,0,3
+edema,DISEASE,59,64
+asterixis,DISEASE,81,90
+AbsNeut-2.81,CHEMICAL,373,385
+ALT-33 AST-147,CHEMICAL,552,566
+NO,CHEMICAL,0,2
+NO,CHEMICAL,174,176
+NO,CHEMICAL,33,35
+cirrhosis,DISEASE,462,471
+HCC,DISEASE,484,487
+ascites,DISEASE,535,542
+cipro,CHEMICAL,551,556
+encephalopathy,DISEASE,577,591
+TIPS reduction,DISEASE,693,707
+TIPS occlusion,DISEASE,727,741
+abdominal pain,DISEASE,762,776
+dyspnea,DISEASE,820,827
+ascites,DISEASE,866,873
+constipation,DISEASE,878,890
+lactulose,CHEMICAL,67,76
+volume ascites,DISEASE,220,234
+Decompensated cirrhosis,DISEASE,238,261
+Abdominal pain,DISEASE,264,278
+cirrhosis,DISEASE,322,331
+HCC,DISEASE,344,347
+pain,DISEASE,55,59
+intra-abdominal,DISEASE,20,35
+ascites,DISEASE,77,84
+Afebrile,DISEASE,0,8
+HDS,DISEASE,13,16
+abdominal pain,DISEASE,99,113
+ciprofloxacin,CHEMICAL,9,22
+rifaximin,CHEMICAL,9,18
+hepatic encephalopathy,DISEASE,38,60
+lactulose,CHEMICAL,9,18
+DEID] bowel movements,DISEASE,51,72
+lactulose,CHEMICAL,107,116
+q2h,CHEMICAL,261,264
+abdominal pain,DISEASE,68,82
+Tylenol,CHEMICAL,0,7
+abdominal pain,DISEASE,24,38
+Folic acid thiamine,CHEMICAL,0,19
+multivitamin,CHEMICAL,36,48
+DEID,CHEMICAL,1,5
+Cr,CHEMICAL,17,19
+prerenal,DISEASE,97,105
+Creatinine,CHEMICAL,0,10
+Constipation,DISEASE,2,14
+lactulose,CHEMICAL,44,53
+nausea,DISEASE,61,67
+Lactulose,CHEMICAL,0,9
+Zofran,CHEMICAL,68,74
+constipation,DISEASE,106,118
+hydroxyzine,CHEMICAL,144,155
+bowel obstruction,DISEASE,15,32
+lactulose,CHEMICAL,10,19
+Shortness of breath,DISEASE,2,21
+DDX,CHEMICAL,0,3
+cirrhosis,DISEASE,44,53
+portopulmonary hypertension,DISEASE,58,85
+heart failure,DISEASE,21,34
+Ascites,DISEASE,0,7
+SOB,DISEASE,12,15
+Thrombocytopenia,DISEASE,33,49
+hypertension,DISEASE,119,131
+Macrocytosis,DISEASE,2,14
+liver disease,DISEASE,29,42
+iron,CHEMICAL,21,25
+anemia,DISEASE,38,44
+iron,CHEMICAL,81,85
+Depression,DISEASE,2,12
+Paroxetine,CHEMICAL,29,39
+Acetaminophen,CHEMICAL,0,13
+Q6H,CHEMICAL,24,27
+Pain,DISEASE,32,36
+Ciprofloxacin HCl,CHEMICAL,0,17
+Lactulose,CHEMICAL,0,9
+QID,CHEMICAL,19,22
+Pantoprazole,CHEMICAL,0,12
+Spironolactone,CHEMICAL,0,14
+Multivitamins,CHEMICAL,0,13
+Thiamine,CHEMICAL,0,8
+Vitamin D,CHEMICAL,0,9
+Furosemide,CHEMICAL,0,10
+Magnesium,CHEMICAL,0,9
+Meclizine,CHEMICAL,0,9
+vertigo,DISEASE,29,36
+Ondansetron,CHEMICAL,0,11
+Simethicone,CHEMICAL,0,11
+bloating,DISEASE,26,34
+vit A-vit,CHEMICAL,0,9
+Acetaminophen,CHEMICAL,0,13
+Q6H,CHEMICAL,24,27
+Pain,DISEASE,32,36
+Ciprofloxacin HCl,CHEMICAL,0,17
+Furosemide,CHEMICAL,0,10
+Lactulose,CHEMICAL,0,9
+QID,CHEMICAL,19,22
+Magnesium,CHEMICAL,0,9
+Meclizine,CHEMICAL,0,9
+vertigo,DISEASE,29,36
+Multivitamins,CHEMICAL,0,13
+Ondansetron,CHEMICAL,0,11
+Pantoprazole,CHEMICAL,0,12
+Simethicone,CHEMICAL,0,11
+bloating,DISEASE,26,34
+Spironolactone,CHEMICAL,0,14
+Thiamine,CHEMICAL,0,8
+vit A-vit,CHEMICAL,0,9
+Vitamin D,CHEMICAL,0,9
+Cirrhosis,DISEASE,116,125
+Ascites,DISEASE,126,133
+Constipation,DISEASE,134,146
+Abdominal pain,DISEASE,74,88
+lactulose,CHEMICAL,15,24
+pain,DISEASE,89,93
+confusion,DISEASE,98,107
+bowel movements,DISEASE,69,84
+lactulose,CHEMICAL,169,178
+DEID] bowel,CHEMICAL,28,39
+lactulose,CHEMICAL,91,100
+Allergies,DISEASE,130,139
+Ibuprofen,CHEMICAL,142,151
+Syncope,DISEASE,17,24
+dementia,DISEASE,131,139
+tachy-brady syndrome,DISEASE,141,161
+syncope,DISEASE,232,239
+dizziness,DISEASE,94,103
+dizziness,DISEASE,30,39
+lightheadedness,DISEASE,44,59
+head injury,DISEASE,40,51
+PCP,CHEMICAL,24,27
+syncope,DISEASE,26,33
+ASA,CHEMICAL,6,9
+dizziness,DISEASE,35,44
+confusion,DISEASE,48,57
+ROS,CHEMICAL,0,3
+Denies fever,DISEASE,5,17
+chills,DISEASE,19,25
+night sweats,DISEASE,27,39
+headache,DISEASE,41,49
+rhinorrhea,DISEASE,68,78
+congestion,DISEASE,80,90
+sore throat,DISEASE,92,103
+cough,DISEASE,105,110
+shortness,DISEASE,112,121
+chest pain,DISEASE,134,144
+abdominal pain,DISEASE,146,160
+"nausea,",DISEASE,162,169
+vomiting,DISEASE,170,178
+diarrhea,DISEASE,181,189
+constipation,DISEASE,191,203
+dysuria,DISEASE,234,241
+hematuria,DISEASE,244,253
+atrial flutter,DISEASE,24,38
+coronary artery disease,DISEASE,161,184
+coumadin,CHEMICAL,300,308
+DEID,CHEMICAL,316,320
+GI bleeding,DISEASE,329,340
+hypertension,DISEASE,343,355
+hyperlipidemia,DISEASE,358,372
+aortic stenosis,DISEASE,380,395
+CVA,CHEMICAL,398,401
+syncope,DISEASE,527,534
+Peripheral Neuropathy,DISEASE,574,595
+Carcinoma,DISEASE,641,650
+Arthritis,DISEASE,689,698
+Cataract,DISEASE,753,761
+NAD,CHEMICAL,951,954
+AAO,CHEMICAL,956,959
+CTAB,CHEMICAL,1030,1034
+organomegaly,DISEASE,1060,1072
+edema,DISEASE,1081,1086
+AAO,CHEMICAL,1117,1120
+HCO3,CHEMICAL,440,444
+Syncope,DISEASE,753,760
+Orthostatic,DISEASE,0,11
+orthostatic hypotension,DISEASE,64,87
+infarction,DISEASE,12,22
+troponins,CHEMICAL,56,65
+dizziness,DISEASE,36,45
+confusion,DISEASE,49,58
+Acute Renal Failure,DISEASE,2,21
+creatinine,CHEMICAL,19,29
+creatinine,CHEMICAL,76,86
+Dementia,DISEASE,2,10
+dementia,DISEASE,67,75
+donepezil,CHEMICAL,39,48
+duloxetine,CHEMICAL,53,63
+Hypertension,DISEASE,0,12
+lisinopril,CHEMICAL,106,116
+terazosin,CHEMICAL,121,130
+Coronary Artery Disease,DISEASE,0,23
+aspirin,CHEMICAL,44,51
+simvastatin,CHEMICAL,56,67
+omeprazole,CHEMICAL,33,43
+Anemia,DISEASE,0,6
+ferrous sulfate,CHEMICAL,24,39
+qhs,CHEMICAL,43,46
+furosemide,CHEMICAL,73,83
+lisinopril,CHEMICAL,98,108
+omeprazole,CHEMICAL,123,133
+simvastatin,CHEMICAL,148,159
+terazosin,CHEMICAL,174,183
+docusate,CHEMICAL,217,225
+ferrous sulfate,CHEMICAL,232,247
+multivitamin,CHEMICAL,261,273
+Donepezil,CHEMICAL,0,9
+Duloxetine,CHEMICAL,0,10
+Lisinopril,CHEMICAL,0,10
+Omeprazole,CHEMICAL,0,10
+Simvastatin,CHEMICAL,0,11
+Terazosin,CHEMICAL,0,9
+Aspirin,CHEMICAL,0,7
+Sodium,CHEMICAL,9,15
+Ferrous Sulfate,CHEMICAL,0,15
+Iron,CHEMICAL,30,34
+Syncope,DISEASE,0,7
+Acute renal failure,DISEASE,0,19
+syncope,DISEASE,259,266
+arrthymia,DISEASE,56,65
+infection,DISEASE,71,80
+PCP,CHEMICAL,32,35
+PCP,CHEMICAL,124,127
+stools or vomiting,DISEASE,27,45
+acute renal failure,DISEASE,28,47
+lasix,CHEMICAL,5,10
+PCP,CHEMICAL,114,117
+lisinopril,CHEMICAL,5,15
+PCP,CHEMICAL,29,32
+chest pain,DISEASE,18,28
+"shorteness of breath, loss of 
+consciousness",DISEASE,30,74
+stools or vomiting,DISEASE,83,101
+PCP,CHEMICAL,185,188
+Lower back pain,DISEASE,17,32
+bowel/bladder incontinence,DISEASE,34,60
+RLE weakness,CHEMICAL,86,98
+pain,DISEASE,232,236
+bowel and,DISEASE,238,247
+bladder incontinence,DISEASE,248,268
+RLE,CHEMICAL,293,296
+headaches,DISEASE,35,44
+pain,DISEASE,55,59
+headaches,DISEASE,66,75
+viral meningitis,DISEASE,39,55
+headache,DISEASE,15,23
+headache,DISEASE,82,90
+DEID,CHEMICAL,106,110
+lower back pain,DISEASE,52,67
+pain,DISEASE,81,85
+fecal incontinence,DISEASE,56,74
+incontinence,DISEASE,45,57
+urinary incontinence,DISEASE,13,33
+DEID,CHEMICAL,35,39
+RLE weakness,CHEMICAL,53,65
+incontinence,DISEASE,67,79
+[DEID] lumbosacral pain,CHEMICAL,85,108
+urinary incontinence,DISEASE,25,45
+L-spine MR,DISEASE,163,173
+DEID,CHEMICAL,129,133
+O2 sat,CHEMICAL,86,92
+RA,DISEASE,101,103
+Pain,DISEASE,0,4
+Dilaudid,CHEMICAL,23,31
+Diphenhydramine,CHEMICAL,86,101
+incontinence,DISEASE,81,93
+pain,DISEASE,191,195
+pain,DISEASE,58,62
+pain,DISEASE,68,72
+RLE weakness,DISEASE,97,109
+incontinence,DISEASE,74,86
+pain,DISEASE,18,22
+pain,DISEASE,55,59
+pain,DISEASE,164,168
+pain,DISEASE,250,254
+nausea,DISEASE,8,14
+emesis,DISEASE,19,25
+abdominal pain,DISEASE,52,66
+chills,DISEASE,12,18
+appetite,CHEMICAL,49,57
+headache,DISEASE,11,19
+neck stiffness,DISEASE,21,35
+weight loss,DISEASE,42,53
+orbital blowout fracture,DISEASE,58,82
+compartment syndrome,DISEASE,102,122
+dermoid cyst,DISEASE,140,152
+Viral meningitis,DISEASE,201,217
+headache,DISEASE,331,339
+syncope,DISEASE,685,692
+headache,DISEASE,833,841
+tremor,DISEASE,843,849
+urinary hesitancy,DISEASE,851,868
+B12,CHEMICAL,884,887
+APL,CHEMICAL,898,901
+DEID,CHEMICAL,30,34
+depression,DISEASE,76,86
+liver laceration,DISEASE,144,160
+Hashimoto thyroiditis,DISEASE,2,23
+encephalopathy,DISEASE,28,42
+Pyelonephritis,DISEASE,64,78
+Tremor,DISEASE,82,88
+Depression,DISEASE,92,102
+DEID] [DEID] infection,CHEMICAL,119,141
+chest pain,DISEASE,154,164
+Insomnia,DISEASE,168,176
+colitis,DISEASE,187,194
+vancomycin,CHEMICAL,211,221
+sinusitis,DISEASE,233,242
+PTSD,DISEASE,246,250
+Pancytopenia,DISEASE,271,283
+Imuran,CHEMICAL,299,305
+Alopecia universalis,DISEASE,310,330
+"[DEID], regrowth",CHEMICAL,345,361
+"[DEID] 
+- Breast Cysts",CHEMICAL,392,414
+cholelithiasis,DISEASE,528,542
+aneurysm,DISEASE,28,36
+reiter syndrome,DISEASE,66,81
+Alive,DISEASE,189,194
+O2 sat,CHEMICAL,275,281
+legs trembling,DISEASE,319,333
+anicteric,DISEASE,374,383
+CTAB,CHEMICAL,585,589
+hepatosplenomegaly,DISEASE,763,781
+cyanosis,DISEASE,799,807
+edema,DISEASE,811,816
+LLE,CHEMICAL,1034,1037
+pain,DISEASE,1214,1218
+excoriations,DISEASE,33,45
+rashes,DISEASE,62,68
+VitB12,CHEMICAL,475,481
+"UCG-NEGATIVE
+
+",DISEASE,817,831
+Glucose,CHEMICAL,939,946
+Ag,CHEMICAL,1058,1060
+ALL,DISEASE,1158,1161
+DEID,CHEMICAL,1,5
+DEID,CHEMICAL,1,5
+meningitis,DISEASE,52,62
+pain,DISEASE,107,111
+incontinence,DISEASE,128,140
+RLE numbness,CHEMICAL,145,157
+[DEID] patch [DEID] done,CHEMICAL,164,188
+headache,DISEASE,220,228
+Lower back pain,DISEASE,1,16
+bowel and,DISEASE,18,27
+bladder incontinence,DISEASE,28,48
+RLE weakness,CHEMICAL,74,86
+back pain,DISEASE,102,111
+DEID,CHEMICAL,119,123
+bladder and bowel incontinence,DISEASE,28,58
+numbness,DISEASE,63,71
+DEID,CHEMICAL,52,56
+sacral sprain,DISEASE,127,140
+incontinence,DISEASE,46,58
+UA,CHEMICAL,0,2
+incontinence,DISEASE,39,51
+pain,DISEASE,4,8
+Toradol,CHEMICAL,27,34
+allergy,DISEASE,74,81
+Acetaminophen,CHEMICAL,149,162
+Cyclobenzaprine,CHEMICAL,173,188
+Acetaminophen,CHEMICAL,21,34
+Ibuprofen,CHEMICAL,40,49
+pain,DISEASE,54,58
+Cyclobenzaprine,CHEMICAL,84,99
+muscle spasm,DISEASE,105,117
+Constipation,DISEASE,2,14
+incontinence,DISEASE,41,53
+docusate,CHEMICAL,65,73
+senna,CHEMICAL,78,83
+constipation,DISEASE,98,110
+GERD,DISEASE,1,5
+Omeprazole,CHEMICAL,16,26
+Hashimoto thyroiditis,DISEASE,35,56
+Levothyroxine,CHEMICAL,72,85
+Insomnia,DISEASE,88,96
+Trazadone,CHEMICAL,112,121
+Ambien,CHEMICAL,128,134
+lower back pain,DISEASE,195,210
+numbness,DISEASE,16,24
+incontinence,DISEASE,60,72
+Omeprazole,CHEMICAL,0,10
+linaclotide,CHEMICAL,9,20
+Zolpidem Tartrate,CHEMICAL,0,17
+QHS,CHEMICAL,26,29
+TraZODone,CHEMICAL,0,9
+QHS,CHEMICAL,19,22
+insomnia,DISEASE,27,35
+Levothyroxine Sodium,CHEMICAL,0,20
+Acetaminophen,CHEMICAL,0,13
+Q8H,CHEMICAL,25,28
+Cyclobenzaprine,CHEMICAL,0,15
+pain,DISEASE,36,40
+cyclobenzaprine,CHEMICAL,46,61
+tablet(s,CHEMICAL,83,91
+Levothyroxine Sodium,CHEMICAL,0,20
+Omeprazole,CHEMICAL,0,10
+TraZODone,CHEMICAL,0,9
+QHS,CHEMICAL,19,22
+insomnia,DISEASE,27,35
+Zolpidem Tartrate,CHEMICAL,0,17
+QHS,CHEMICAL,26,29
+Disposition,CHEMICAL,44,55
+lumbar back pain,DISEASE,110,126
+DEID,CHEMICAL,64,68
+pain,DISEASE,91,95
+pain,DISEASE,53,57
+incontinence,DISEASE,58,70
+Tylenol,CHEMICAL,30,37
+DEID,CHEMICAL,39,43
+q8h,CHEMICAL,48,51
+Ibuprofen,CHEMICAL,18,27
+q8h,CHEMICAL,40,43
+muscle relaxer Cyclobenzaprine,DISEASE,14,44
+QHS,CHEMICAL,54,57
+Lidocaine,CHEMICAL,13,22
+Vancomycin,CHEMICAL,142,152
+Amoxicillin,CHEMICAL,165,176
+Ciprofloxacin,CHEMICAL,179,192
+Atorvastatin,CHEMICAL,196,208
+Bactrim,CHEMICAL,211,218
+pravastatin,CHEMICAL,232,243
+Headache,DISEASE,17,25
+CAD,DISEASE,149,152
+DES,CHEMICAL,157,160
+migraines,DISEASE,169,178
+ocular myasthenia,DISEASE,180,197
+T1DM,DISEASE,206,210
+gastroparesis,DISEASE,212,225
+bipolar 2,DISEASE,227,236
+hypertension,DISEASE,238,250
+hyperlipidemia,DISEASE,252,266
+headache,DISEASE,325,333
+DEID,CHEMICAL,336,340
+headache,DISEASE,349,357
+migraine,DISEASE,413,421
+headache,DISEASE,4,12
+Excedrin migraine,CHEMICAL,14,31
+Tylenol,CHEMICAL,21,28
+migraine,DISEASE,65,73
+CAD,DISEASE,145,148
+headache,DISEASE,168,176
+URI symptoms,DISEASE,19,31
+chills,DISEASE,71,77
+fever,DISEASE,85,90
+cough,DISEASE,22,27
+chest pain,DISEASE,33,43
+shortness of breath,DISEASE,45,64
+fevers,DISEASE,66,72
+chills,DISEASE,76,82
+headache,DISEASE,5,13
+migraine,DISEASE,38,46
+photophobia,DISEASE,67,78
+phonophobia,DISEASE,84,95
+nausea,DISEASE,101,107
+vomiting,DISEASE,115,123
+numbness,DISEASE,7,15
+weakness,DISEASE,17,25
+paresthesias,DISEASE,29,41
+dizziness,DISEASE,62,71
+alcohol,CHEMICAL,55,62
+DEID,CHEMICAL,38,42
+chest pain,DISEASE,48,58
+angina,DISEASE,80,86
+amlodipine,CHEMICAL,13,23
+isosorbide,CHEMICAL,58,68
+ranolazine,CHEMICAL,116,126
+isosorbide,CHEMICAL,33,43
+headache,DISEASE,117,125
+ranolazine,CHEMICAL,29,39
+hypertension,DISEASE,70,82
+tenderness,DISEASE,28,38
+kernig,DISEASE,101,107
+rigidity,DISEASE,138,146
+glucose,CHEMICAL,95,102
+prochlorperazine,CHEMICAL,32,48
+Tylenol,CHEMICAL,50,57
+acyclovir 400,CHEMICAL,62,75
+headache,DISEASE,144,152
+Diabetes,DISEASE,198,206
+hypertension,DISEASE,209,221
+Gastroparesis,DISEASE,230,243
+Depression,DISEASE,256,266
+Anxiety,DISEASE,269,276
+Myasthenia,DISEASE,279,289
+DEID,CHEMICAL,291,295
+CAD,DISEASE,346,349
+DM,CHEMICAL,365,367
+CAD,DISEASE,383,386
+DM,CHEMICAL,418,420
+DM,CHEMICAL,440,442
+RA,DISEASE,545,547
+PERRL,CHEMICAL,0,5
+rhonchi,DISEASE,12,19
+organomegaly,DISEASE,3,15
+tenderness,DISEASE,24,34
+CVA tenderness,DISEASE,3,17
+"clubbing, cyanosis",DISEASE,3,21
+edema,DISEASE,26,31
+rash,DISEASE,3,7
+nuchal rigidity,DISEASE,3,18
+NAD,CHEMICAL,0,3
+CTAB,CHEMICAL,6,10
+rhonchi,DISEASE,12,19
+organomegaly,DISEASE,3,15
+rash,DISEASE,3,7
+Neuts-82.7,CHEMICAL,214,224
+Na-140,CHEMICAL,397,403
+NO,CHEMICAL,885,887
+NO,CHEMICAL,0,2
+NO,CHEMICAL,174,176
+NO,CHEMICAL,42,44
+NO,CHEMICAL,0,2
+NO,CHEMICAL,174,176
+DEID,CHEMICAL,1,5
+[DEID] [DEID] 09:46PM,CHEMICAL,62,83
+CAD,DISEASE,450,453
+DES,CHEMICAL,458,461
+migraine,DISEASE,470,478
+ocular myasthenia,DISEASE,480,497
+T1DM,DISEASE,506,510
+gastroparesis,DISEASE,512,525
+bipolar 2,DISEASE,527,536
+hypertension,DISEASE,538,550
+hyperlipidemia,DISEASE,552,566
+migraine,DISEASE,615,623
+topiramate,CHEMICAL,31,41
+migraine,DISEASE,46,54
+baclofen,CHEMICAL,78,86
+muscle spasms,DISEASE,91,104
+occipital pain,DISEASE,131,145
+isosorbide mononitrate,CHEMICAL,234,256
+ranolazine,CHEMICAL,277,287
+headache,DISEASE,344,352
+Migraine,DISEASE,123,131
+occipital headache,DISEASE,175,193
+migraines,DISEASE,219,228
+glucose,CHEMICAL,99,106
+migraine,DISEASE,46,54
+pain,DISEASE,87,91
+leukocytosis,DISEASE,10,22
+chills,DISEASE,65,71
+meningitis,DISEASE,121,131
+Migraine,DISEASE,0,8
+isosorbide,CHEMICAL,91,101
+ranolazine,CHEMICAL,121,131
+Herpes,DISEASE,0,6
+Compazine,CHEMICAL,41,50
+baclofen,CHEMICAL,55,63
+migraines,DISEASE,68,77
+muscle spasm,DISEASE,92,104
+pain,DISEASE,126,130
+Tylenol,CHEMICAL,38,45
+baclofen,CHEMICAL,50,58
+topiramate,CHEMICAL,13,23
+migraine,DISEASE,29,37
+CAD,DISEASE,46,49
+DM Type,CHEMICAL,1,8
+glargine,CHEMICAL,27,35
+CAD,DISEASE,136,139
+DES,CHEMICAL,144,147
+amlodipine,CHEMICAL,180,190
+ranolazine,CHEMICAL,197,207
+mononitrate,CHEMICAL,10,21
+migraine,DISEASE,150,158
+hypertension,DISEASE,194,206
+lisinopril,CHEMICAL,223,233
+amlodipine,CHEMICAL,235,245
+metoprolol,CHEMICAL,247,257
+ezetimibe,CHEMICAL,11,20
+statin,CHEMICAL,22,28
+GERD,DISEASE,1,5
+pantoprazole,CHEMICAL,17,29
+Aspirin,CHEMICAL,0,7
+Clopidogrel,CHEMICAL,0,11
+Ezetimibe,CHEMICAL,0,9
+Rosuvastatin Calcium,CHEMICAL,0,20
+Isosorbide,CHEMICAL,0,10
+LamoTRIgine,CHEMICAL,0,11
+Lisinopril,CHEMICAL,0,10
+Metoprolol Succinate,CHEMICAL,0,20
+Pantoprazole,CHEMICAL,0,12
+Prochlorperazine,CHEMICAL,0,16
+Q6H,CHEMICAL,26,29
+Vascepa,CHEMICAL,0,7
+icosapent ethyl,CHEMICAL,9,24
+Ranolazine,CHEMICAL,0,10
+Glargine,CHEMICAL,0,8
+Glargine,CHEMICAL,28,36
+Q8H,CHEMICAL,173,176
+Pain,DISEASE,181,185
+tablet(s,CHEMICAL,281,289
+Acetaminophen,CHEMICAL,0,13
+Q8H,CHEMICAL,25,28
+acetaminophen,CHEMICAL,34,47
+tablet(s,CHEMICAL,57,65
+Baclofen,CHEMICAL,0,8
+Pain,DISEASE,25,29
+baclofen,CHEMICAL,46,54
+tablet(s,CHEMICAL,62,70
+Benzonatate,CHEMICAL,0,11
+cough,DISEASE,26,31
+benzonatate,CHEMICAL,37,48
+Topiramate,CHEMICAL,0,10
+Topamax,CHEMICAL,12,19
+topiramate,CHEMICAL,41,51
+tablet(s,CHEMICAL,60,68
+Glargine,CHEMICAL,0,8
+Glargine,CHEMICAL,28,36
+Aspirin,CHEMICAL,0,7
+Clopidogrel,CHEMICAL,0,11
+Ezetimibe,CHEMICAL,0,9
+Isosorbide,CHEMICAL,0,10
+LamoTRIgine,CHEMICAL,0,11
+Lisinopril,CHEMICAL,0,10
+Metoprolol Succinate,CHEMICAL,0,20
+Pantoprazole,CHEMICAL,0,12
+Prochlorperazine,CHEMICAL,0,16
+Q6H,CHEMICAL,26,29
+Ranolazine,CHEMICAL,0,10
+Rosuvastatin Calcium,CHEMICAL,0,20
+Vascepa,CHEMICAL,0,7
+icosapent ethyl,CHEMICAL,9,24
+Migraine,DISEASE,138,146
+headaches,DISEASE,24,33
+meningitis,DISEASE,50,60
+infection,DISEASE,71,80
+bleeding,DISEASE,148,156
+brain disease,DISEASE,180,193
+headaches,DISEASE,265,274
+migraine,DISEASE,303,311
+muscle spasms,DISEASE,328,341
+migraines,DISEASE,394,403
+spasm,DISEASE,416,421
+migraines,DISEASE,494,503
+Adverse Drug Reactions,DISEASE,162,184
+diverticulitis,DISEASE,56,70
+hernia,DISEASE,89,95
+stoma,DISEASE,110,115
+hernia,DISEASE,298,304
+thrombocytopenia,DISEASE,103,119
+diverticulitis,DISEASE,127,141
+abdominal swelling,DISEASE,212,230
+hernia,DISEASE,341,347
+Anxiety,DISEASE,27,34
+Ovarian Tumor,DISEASE,67,80
+Diarrhea,DISEASE,125,133
+GERD,DISEASE,172,176
+Hyperlipidemia,DISEASE,178,192
+Loss of Vision,DISEASE,245,259
+Pain,DISEASE,280,284
+Osteoporosis,DISEASE,286,298
+Thrombocytopenia,DISEASE,300,316
+GEN,CHEMICAL,580,583
+NAD,CHEMICAL,590,593
+icterus,DISEASE,612,619
+normoactive bowel,DISEASE,764,781
+erythema,DISEASE,46,54
+DEID,CHEMICAL,9,13
+edema,DISEASE,15,20
+[DEID] warm,CHEMICAL,22,33
+hernia,DISEASE,409,415
+dilaudid,CHEMICAL,28,36
+pain,DISEASE,72,76
+pain,DISEASE,67,71
+GU,CHEMICAL,0,2
+fever,DISEASE,40,45
+infection,DISEASE,88,97
+VAC,CHEMICAL,16,19
+Bleed,DISEASE,219,224
+[ ] Congestive,CHEMICAL,225,239
+[ ] ARF,CHEMICAL,255,262
+[ ] Acute,CHEMICAL,263,272
+Urinary retention,DISEASE,273,290
+"failure to void after Foley D/C'd
+[ ] Acute Urinary Retention",DISEASE,292,353
+Pneumonia,DISEASE,407,416
+DEID,CHEMICAL,36,40
+Alendronate Sodium,CHEMICAL,0,18
+Citalopram,CHEMICAL,0,10
+Diclofenac Sodium,CHEMICAL,0,17
+DEID] 4 mg PO TID,CHEMICAL,19,36
+Omeprazole,CHEMICAL,0,10
+Pravastatin,CHEMICAL,0,11
+Calcium Carbonate,CHEMICAL,0,17
+Sodium,CHEMICAL,9,15
+Alendronate Sodium,CHEMICAL,68,86
+Calcium Carbonate,CHEMICAL,0,17
+Citalopram,CHEMICAL,0,10
+Diclofenac Sodium,CHEMICAL,0,17
+DEID] 4 mg PO TID,CHEMICAL,19,36
+Sodium,CHEMICAL,9,15
+Omeprazole,CHEMICAL,0,10
+Pravastatin,CHEMICAL,0,11
+Q4H,CHEMICAL,43,46
+pain,DISEASE,51,55
+oxycodone,CHEMICAL,61,70
+DEID,CHEMICAL,77,81
+tablet(s,CHEMICAL,83,91
+Acetaminophen,CHEMICAL,0,13
+Q6H,CHEMICAL,28,31
+pain,DISEASE,36,40
+acetaminophen,CHEMICAL,67,80
+tablet(s,CHEMICAL,95,103
+diverticulitis,DISEASE,282,296
+hernia,DISEASE,315,321
+stoma,DISEASE,336,341
+hernia,DISEASE,221,227
+pain,DISEASE,57,61
+pain,DISEASE,81,85
+infection,DISEASE,55,64
+redness,DISEASE,88,95
+pain,DISEASE,149,153
+fever,DISEASE,253,258
+constipation,DISEASE,127,139
+loose,CHEMICAL,5,10
+pain,DISEASE,27,31
+constipation,DISEASE,85,97
+Colace,CHEMICAL,56,62
+incontinence,DISEASE,121,133
+pain,DISEASE,369,373
+"nausea,",DISEASE,375,382
+loose stool,CHEMICAL,443,454
+constipation,DISEASE,459,471
+infection,DISEASE,55,64
+redness,DISEASE,88,95
+pain,DISEASE,149,153
+fever,DISEASE,253,258
+pain,DISEASE,45,49
+dilaudid,CHEMICAL,62,70
+Tylenol,CHEMICAL,14,21
+pain,DISEASE,41,45
+Tylenol,CHEMICAL,40,47
+alcohol,CHEMICAL,68,75
+pain,DISEASE,99,103
+Tylenol,CHEMICAL,118,125
+pain,DISEASE,49,53
+Allergies,DISEASE,130,139
+Compazine,CHEMICAL,142,151
+Morphine,CHEMICAL,154,162
+Verapamil,CHEMICAL,165,174
+aspirin,CHEMICAL,177,184
+Oxycodone,CHEMICAL,187,196
+tramadol,CHEMICAL,200,208
+vomiting,DISEASE,26,34
+ADPKD,DISEASE,146,151
+HD,DISEASE,155,157
+hypertensive,DISEASE,169,181
+hypothyroidism,DISEASE,195,209
+ascites,DISEASE,220,227
+nausea and vomiting,DISEASE,309,328
+myalgias,DISEASE,373,381
+HD,CHEMICAL,34,36
+nausea,DISEASE,106,112
+congestion,DISEASE,22,32
+fatigue,DISEASE,37,44
+muscle cramps,DISEASE,57,70
+HD,CHEMICAL,31,33
+nausea,DISEASE,35,41
+chills,DISEASE,33,39
+rash,DISEASE,4,8
+diarrhea,DISEASE,3,11
+abdominal pain,DISEASE,3,17
+cough,DISEASE,3,8
+shortness of breath,DISEASE,10,29
+chest pain,DISEASE,34,44
+RA,DISEASE,49,51
+lactate,CHEMICAL,181,188
+NSR,DISEASE,288,291
+cardiomegaly,DISEASE,14,26
+pneumonia,DISEASE,12,21
+edema,DISEASE,25,30
+pleural effusions,DISEASE,4,21
+Ondansetron,CHEMICAL,115,126
+Hyperkalemia,DISEASE,210,222
+ROS,CHEMICAL,0,3
+Dominant Polycystic Kidney Disease,DISEASE,34,68
+DEID,CHEMICAL,76,80
+dilated cardiomyopathy,DISEASE,77,99
+"[DEID], with cardiac",CHEMICAL,104,124
+ascites,DISEASE,125,132
+Hypertension,DISEASE,136,148
+Migraine headaches,DISEASE,152,170
+cerebral aneurysm,DISEASE,198,215
+DEID,CHEMICAL,225,229
+cerebral aneurysms,DISEASE,247,265
+UGIB,DISEASE,273,277
+PRBC,DISEASE,288,292
+EGD,CHEMICAL,300,303
+tear + small,DISEASE,334,346
+ulcer,DISEASE,347,352
+GERD,DISEASE,19,23
+Hyperparathyroidism,DISEASE,27,46
+DEID] kidney disease,DISEASE,48,68
+[DEID] kidney disease,CHEMICAL,141,162
+ESRD,DISEASE,34,38
+"DEID] [DEID] 
+ 
+Physical Exam",CHEMICAL,40,69
+NAD,CHEMICAL,249,252
+peripheral edema,DISEASE,55,71
+NAD,CHEMICAL,278,281
+peripheral edema,DISEASE,76,92
+Na-140,CHEMICAL,551,557
+cTropnT-0.14,CHEMICAL,670,682
+cTropnT-0.14,CHEMICAL,880,892
+cardiomegaly,DISEASE,1510,1522
+pneumonia,DISEASE,12,21
+edema,DISEASE,26,31
+pleural effusions,DISEASE,3,20
+ADPKD,DISEASE,57,62
+HD,DISEASE,66,68
+hypertensive,DISEASE,80,92
+hypothyroidism,DISEASE,106,120
+ascites,DISEASE,131,138
+nausea and vomiting,DISEASE,220,239
+myalgias,DISEASE,284,292
+nausea,DISEASE,139,145
+pain,DISEASE,63,67
+ischemia,DISEASE,45,53
+nausea,DISEASE,50,56
+ESRD,DISEASE,2,6
+DEID] ADPKD,CHEMICAL,8,19
+HD,CHEMICAL,48,50
+nausea,DISEASE,137,143
+ascites,DISEASE,159,166
+UF,CHEMICAL,22,24
+HD,CHEMICAL,40,42
+HD,CHEMICAL,35,37
+Ascites,DISEASE,2,9
+cirrhosis,DISEASE,63,72
+"liver 
+disease [DEID] her polycystic disease",DISEASE,27,71
+ESRD,DISEASE,48,52
+ischemia,DISEASE,94,102
+aspirin,CHEMICAL,16,23
+statin,CHEMICAL,25,31
+carvedilol,CHEMICAL,33,43
+anemia,DISEASE,96,102
+DEID,CHEMICAL,104,108
+ESRD,DISEASE,110,114
+DEID,CHEMICAL,127,131
+pericardial effusion,DISEASE,13,33
+tamponade,DISEASE,48,57
+hypertension,DISEASE,148,160
+carvedilol,CHEMICAL,178,188
+DEID,CHEMICAL,304,308
+ascites,DISEASE,375,382
+ascites,DISEASE,434,441
+cardiac ascites,DISEASE,471,486
+pericardial effusions,DISEASE,499,520
+hernia,DISEASE,665,671
+Acetaminophen,CHEMICAL,0,13
+Q8H,CHEMICAL,25,28
+Pain,DISEASE,33,37
+Aspirin,CHEMICAL,0,7
+Atorvastatin,CHEMICAL,0,12
+Bisacodyl,CHEMICAL,0,9
+constipation,DISEASE,25,37
+Carvedilol,CHEMICAL,0,10
+Isosorbide,CHEMICAL,0,10
+Lactulose,CHEMICAL,0,9
+constipation,DISEASE,29,41
+Omeprazole,CHEMICAL,0,10
+sevelamer,CHEMICAL,0,9
+TraZODone,CHEMICAL,0,9
+QHS,CHEMICAL,19,22
+insomnia,DISEASE,27,35
+Sodium,CHEMICAL,9,15
+Levothyroxine Sodium,CHEMICAL,0,20
+nitroglycerin,CHEMICAL,0,13
+chest pain,DISEASE,89,99
+Ondansetron,CHEMICAL,0,11
+Q8H,CHEMICAL,24,27
+nausea,DISEASE,32,38
+Temazepam,CHEMICAL,44,53
+DEID,CHEMICAL,55,59
+QHS,CHEMICAL,67,70
+insomnia,DISEASE,75,83
+Vitamin D,CHEMICAL,0,9
+Acetaminophen,CHEMICAL,0,13
+Q8H,CHEMICAL,25,28
+Pain,DISEASE,33,37
+Aspirin,CHEMICAL,0,7
+aspirin,CHEMICAL,28,35
+tablet(s,CHEMICAL,44,52
+Atorvastatin,CHEMICAL,0,12
+atorvastatin,CHEMICAL,31,43
+tablet(s,CHEMICAL,52,60
+Bisacodyl,CHEMICAL,0,9
+constipation,DISEASE,25,37
+Carvedilol,CHEMICAL,0,10
+carvedilol,CHEMICAL,29,39
+tablet(s,CHEMICAL,48,56
+Sodium,CHEMICAL,9,15
+Isosorbide,CHEMICAL,0,10
+isosorbide mononitrate,CHEMICAL,62,84
+tablet(s,CHEMICAL,93,101
+Lactulose,CHEMICAL,0,9
+constipation,DISEASE,29,41
+lactulose,CHEMICAL,47,56
+Levothyroxine Sodium,CHEMICAL,0,20
+levothyroxine,CHEMICAL,42,55
+tablet(s,CHEMICAL,65,73
+nitroglycerin,CHEMICAL,0,13
+chest pain,DISEASE,89,99
+Omeprazole,CHEMICAL,0,10
+omeprazole,CHEMICAL,31,41
+Ondansetron,CHEMICAL,0,11
+Q8H,CHEMICAL,24,27
+nausea,DISEASE,32,38
+ondansetron,CHEMICAL,44,55
+tablet(s,CHEMICAL,63,71
+sennosides [senna],CHEMICAL,25,43
+sevelamer,CHEMICAL,0,9
+sevelamer carbonate,CHEMICAL,47,66
+tablet(s,CHEMICAL,76,84
+Temazepam,CHEMICAL,0,9
+DEID,CHEMICAL,11,15
+QHS,CHEMICAL,23,26
+insomnia,DISEASE,31,39
+TraZODone,CHEMICAL,0,9
+QHS,CHEMICAL,19,22
+insomnia,DISEASE,27,35
+trazodone,CHEMICAL,41,50
+tablet(s,CHEMICAL,59,67
+Vitamin D,CHEMICAL,0,9
+Nausea,DISEASE,122,128
+DEID,CHEMICAL,157,161
+Autosomal dominant polycystic kidney disease,DISEASE,188,232
+anemia,DISEASE,257,263
+DEID,CHEMICAL,265,269
+ESRD,DISEASE,271,275
+pericardial effusion,DISEASE,289,309
+Hypertension,DISEASE,312,324
+chills,DISEASE,150,156
+nausea,DISEASE,161,167
+nausea,DISEASE,5,11
+Adverse Drug Reactions,DISEASE,162,184
+traumatic mydriasis,DISEASE,138,157
+hyphema,DISEASE,181,188
+fracture,DISEASE,30,38
+APNEA,CHEMICAL,28,33
+NAD,CHEMICAL,174,177
+wheezing,DISEASE,3,11
+edema,DISEASE,14,19
+[DEID] stitch,CHEMICAL,21,34
+right orbital floor fracture,DISEASE,147,175
+pain,DISEASE,52,56
+pain,DISEASE,99,103
+pain,DISEASE,68,72
+unasyn,CHEMICAL,55,61
+augmentin,CHEMICAL,84,93
+infection,DISEASE,60,69
+pain,DISEASE,170,174
+Acetaminophen,CHEMICAL,0,13
+Q6H,CHEMICAL,24,27
+Amoxicillin-Clavulanic Acid,CHEMICAL,0,27
+DEID,CHEMICAL,29,33
+Q12H,CHEMICAL,41,45
+clavulanate,CHEMICAL,92,103
+Sodium,CHEMICAL,186,192
+docusate sodium,CHEMICAL,212,227
+Erythromycin,CHEMICAL,0,12
+QID,CHEMICAL,46,49
+erythromycin,CHEMICAL,55,67
+mg/gram,CHEMICAL,70,77
+Q4H,CHEMICAL,43,46
+pain,DISEASE,51,55
+oxycodone,CHEMICAL,61,70
+DEID,CHEMICAL,77,81
+tablet(s,CHEMICAL,83,91
+Right orbital floor fracture,DISEASE,207,235
+pain,DISEASE,31,35
+pain,DISEASE,71,75
+Tylenol,CHEMICAL,18,25
+Tylenol,CHEMICAL,44,51
+pain,DISEASE,62,66
+pain,DISEASE,20,24
+pain,DISEASE,41,45
+tylenol,CHEMICAL,63,70
+Colace,CHEMICAL,7,13
+pain,DISEASE,79,83
+infection,DISEASE,75,84
+fever,DISEASE,86,91
+chills,DISEASE,97,103
+redness,DISEASE,115,122
+swelling,DISEASE,125,133
+tenderness,DISEASE,145,155
+bleeding,DISEASE,20,28
+Fever,DISEASE,2,7
+pain,DISEASE,41,45
+vomiting,DISEASE,40,48
+chills,DISEASE,22,28
+fever,DISEASE,30,35
+redness,DISEASE,97,104
+swelling,DISEASE,106,114
+chest pain,DISEASE,144,154
+shortness of breath,DISEASE,156,175
+pain,DISEASE,69,73
+constipation,DISEASE,13,25
+pain,DISEASE,48,52
+oxycodone,CHEMICAL,66,75
+hydrocodone,CHEMICAL,97,108
+dilaudid,CHEMICAL,110,118
+Motrin,CHEMICAL,202,208
+Aspirin,CHEMICAL,210,217
+Advil,CHEMICAL,219,224
+Ibuprofen,CHEMICAL,228,237
+Sneeze,DISEASE,2,8
+swelling,DISEASE,78,86
+Adverse Drug Reactions,DISEASE,164,186
+Right ankle ulcer,DISEASE,17,34
+ulcer,DISEASE,125,130
+ESRD,DISEASE,37,41
+HD,DISEASE,45,47
+CAD,DISEASE,49,52
+hypertension,DISEASE,78,90
+EtOH,CHEMICAL,98,102
+Gout,DISEASE,115,119
+colon adenoma,DISEASE,121,134
+"prostate CA
+
+PSH",DISEASE,136,152
+"[DEID]), R IHR",CHEMICAL,163,177
+cataracts,DISEASE,191,200
+[DEID,CHEMICAL,202,207
+[DEID] NAD,CHEMICAL,302,312
+normoactive bs,DISEASE,361,375
+R ankle ulcer,DISEASE,0,13
+TOBRAMYCIN------------,CHEMICAL,255,277
+NO,CHEMICAL,319,321
+NO,CHEMICAL,33,35
+right ankle ulcer,DISEASE,175,192
+HD,CHEMICAL,41,43
+VAC,CHEMICAL,73,76
+nausea,DISEASE,18,24
+DEID,CHEMICAL,14,18
+VAC,CHEMICAL,34,37
+Coumadin,CHEMICAL,35,43
+Pravastatin,CHEMICAL,52,63
+Norvasc,CHEMICAL,69,76
+Doxazosin,CHEMICAL,83,92
+Sevelamer,CHEMICAL,97,106
+NaHCO3 650,CHEMICAL,115,125
+Cinacalcet,CHEMICAL,128,138
+Allopurinol,CHEMICAL,167,178
+DEID,CHEMICAL,180,184
+Citalopram,CHEMICAL,187,197
+Acetaminophen,CHEMICAL,0,13
+Q6H,CHEMICAL,25,28
+pain,DISEASE,33,37
+Allopurinol,CHEMICAL,0,11
+DEID,CHEMICAL,13,17
+Amlodipine,CHEMICAL,0,10
+Cinacalcet,CHEMICAL,0,10
+Ciprofloxacin HCl,CHEMICAL,0,17
+ciprofloxacin,CHEMICAL,38,51
+tablet(s,CHEMICAL,61,69
+Citalopram,CHEMICAL,0,10
+Sodium,CHEMICAL,9,15
+Pravastatin,CHEMICAL,0,11
+Sodium Bicarbonate,CHEMICAL,0,18
+Vitamin D,CHEMICAL,0,9
+Warfarin,CHEMICAL,0,8
+Warfarin,CHEMICAL,0,8
+sevelamer,CHEMICAL,0,9
+Polyethylene Glycol 17 g PO,CHEMICAL,0,27
+constipation,DISEASE,34,46
+Q8H,CHEMICAL,33,36
+metronidazole,CHEMICAL,42,55
+tablet(s,CHEMICAL,65,73
+Doxazosin,CHEMICAL,0,9
+Acetaminophen,CHEMICAL,0,13
+DEID,CHEMICAL,25,29
+Q6H,CHEMICAL,38,41
+pain,DISEASE,46,50
+acetaminophen-codeine,CHEMICAL,56,77
+Tylenol-Codeine,CHEMICAL,79,94
+tablet(s,CHEMICAL,120,128
+Necrotic right leg ulceration,DISEASE,261,290
+Allergies,DISEASE,178,187
+pain,DISEASE,28,32
+melanoma,DISEASE,189,197
+pain,DISEASE,230,234
+pain,DISEASE,86,90
+paroxysms,DISEASE,8,17
+pain,DISEASE,22,26
+pleural effusion,DISEASE,86,102
+DEID,CHEMICAL,125,129
+effusion,DISEASE,66,74
+opiate abuse,DISEASE,33,45
+suboxone,CHEMICAL,63,71
+oxycodone,CHEMICAL,102,111
+pain,DISEASE,126,130
+suboxone,CHEMICAL,30,38
+pain,DISEASE,64,68
+pleural effusion,DISEASE,25,41
+pain,DISEASE,46,50
+dilaudid,CHEMICAL,84,92
+pain,DISEASE,6,10
+Abx,CHEMICAL,68,71
+morphine,CHEMICAL,26,34
+dilaudid,CHEMICAL,57,65
+fevers/chills,DISEASE,23,36
+chest pain,DISEASE,77,87
+shortness of breath,DISEASE,89,108
+"nausea,",DISEASE,110,117
+vomiting,DISEASE,118,126
+diarrhea,DISEASE,129,137
+constipation,DISEASE,139,151
+abdominal pain,DISEASE,153,167
+numbness,DISEASE,205,213
+weakness,DISEASE,217,225
+DEID,CHEMICAL,59,63
+primary melanoma,DISEASE,159,175
+DEID,CHEMICAL,215,219
+melanoma,DISEASE,4,12
+IIIB,CHEMICAL,37,41
+melanoma,DISEASE,132,140
+high-dose,CHEMICAL,78,87
+toxicities,DISEASE,101,111
+anorexia,DISEASE,134,142
+weight loss,DISEASE,144,155
+depression,DISEASE,157,167
+insomnia,DISEASE,173,181
+cutaneous lesions,DISEASE,40,57
+melanoma,DISEASE,20,28
+PET-CT,CHEMICAL,0,6
+FDG,CHEMICAL,49,52
+high-dose IL-2,CHEMICAL,42,56
+brain mets,DISEASE,29,39
+SRS,DISEASE,80,83
+XRT,CHEMICAL,52,55
+steroids,CHEMICAL,33,41
+narcotic abuse,DISEASE,80,94
+DEID,CHEMICAL,218,222
+DEID,CHEMICAL,277,281
+paroxysms,DISEASE,321,330
+pain,DISEASE,334,338
+excoriations,DISEASE,410,422
+rashes,DISEASE,439,445
+hepatosplenomegaly,DISEASE,83,101
+cyanosis,DISEASE,139,147
+clubbing,DISEASE,149,157
+edema,DISEASE,162,167
+pain,DISEASE,274,278
+pain,DISEASE,372,376
+cough,DISEASE,69,74
+excoriations,DISEASE,145,157
+rashes,DISEASE,174,180
+hepatosplenomegaly,DISEASE,83,101
+cyanosis,DISEASE,139,147
+clubbing,DISEASE,149,157
+edema,DISEASE,162,167
+pain,DISEASE,274,278
+pain,DISEASE,372,376
+pain,DISEASE,3,7
+pulmonary embolus,DISEASE,44,61
+pleural effusion,DISEASE,82,98
+fracture,DISEASE,83,91
+tumor,DISEASE,19,24
+MART-1,DISEASE,173,179
+malignant melanoma,DISEASE,50,68
+fracture,DISEASE,264,272
+canal stenosis,DISEASE,302,316
+pleural metastatic disease,DISEASE,15,41
+lymphadenopathy,DISEASE,24,39
+tumor,DISEASE,200,205
+pneumonia,DISEASE,218,227
+T2 hyperintensity,DISEASE,0,17
+pleural effusion,DISEASE,108,124
+atelectasis,DISEASE,148,159
+lymphadenopathy,DISEASE,29,44
+melanoma,DISEASE,89,97
+Glucose,CHEMICAL,141,148
+Na K Cl HCO3,CHEMICAL,161,173
+Calcium,CHEMICAL,213,220
+Mg,CHEMICAL,226,228
+melanoma,DISEASE,268,276
+pain,DISEASE,379,383
+pleural effusion,DISEASE,392,408
+left lung mets,DISEASE,44,58
+pleural effusion,DISEASE,70,86
+effusion,DISEASE,130,138
+PE,CHEMICAL,24,26
+oxygen,CHEMICAL,38,44
+Pain,DISEASE,2,6
+pain,DISEASE,19,23
+cord compression,DISEASE,9,25
+fracture,DISEASE,29,37
+Pain,DISEASE,0,4
+up-titration,CHEMICAL,18,30
+methadone,CHEMICAL,34,43
+dilaudid,CHEMICAL,69,77
+pain,DISEASE,82,86
+melanoma,DISEASE,13,21
+mets,DISEASE,74,78
+melanoma,DISEASE,55,63
+[DEID] will,CHEMICAL,4,15
+Temodar,CHEMICAL,34,41
+"DEID] [DEID] 
+[DEID], Son [DEID] [DEID], daughter [DEID] 
+[DEID",CHEMICAL,72,135
+Suboxone,CHEMICAL,167,175
+oxycodone,CHEMICAL,202,211
+Acetaminophen,CHEMICAL,0,13
+Sodium,CHEMICAL,9,15
+constipation,DISEASE,78,90
+Lactulose,CHEMICAL,0,9
+Q6H,CHEMICAL,53,56
+constipation,DISEASE,88,100
+Bisacodyl,CHEMICAL,0,9
+constipation,DISEASE,123,135
+Clonazepam,CHEMICAL,0,10
+Lorazepam,CHEMICAL,0,9
+anxiety,DISEASE,82,89
+Tablet(s,CHEMICAL,10,18
+Gabapentin,CHEMICAL,0,10
+Hydromorphone,CHEMICAL,0,13
+Q4H,CHEMICAL,49,52
+pain,DISEASE,84,88
+Simethicone,CHEMICAL,0,11
+QID,CHEMICAL,74,77
+Codeine-Guaifenesin,CHEMICAL,0,19
+DEID,CHEMICAL,21,25
+Syrup,CHEMICAL,35,40
+Q6H,CHEMICAL,61,64
+cough,DISEASE,95,100
+Methadone,CHEMICAL,0,9
+Benzonatate,CHEMICAL,0,11
+cough,DISEASE,86,91
+Omeprazole,CHEMICAL,0,10
+Albuterol Sulfate,CHEMICAL,0,17
+Inhaler,CHEMICAL,47,54
+shortness of breath,DISEASE,121,140
+wheezing,DISEASE,144,152
+"O2
+4L continuous",CHEMICAL,5,21
+oxygen,CHEMICAL,27,33
+melanoma,DISEASE,103,111
+"O2, Pain",CHEMICAL,167,175
+pain,DISEASE,276,280
+melanoma,DISEASE,305,313
+tumors,DISEASE,27,33
+pain,DISEASE,38,42
+Temodar,CHEMICAL,62,69
+melanoma,DISEASE,153,161
+pain,DISEASE,204,208
+dilaudid,CHEMICAL,223,231
+pain,DISEASE,249,253
+docusate,CHEMICAL,268,276
+senna,CHEMICAL,287,292
+bisacodyl,CHEMICAL,294,303
+lactulose,CHEMICAL,305,314
+constipation,DISEASE,330,342
+pain,DISEASE,59,63
+"nausea,",DISEASE,74,81
+constipation,DISEASE,82,94
+diarrhea,DISEASE,96,104
+"shortness of 
+breath",DISEASE,116,136
+chest pain,DISEASE,138,148
+metoprolol succinate,CHEMICAL,149,169
+renal artery stenosis,DISEASE,17,38
+hypertension,DISEASE,182,194
+renal artery stenosis,DISEASE,228,249
+hypertension,DISEASE,34,46
+stenosis,DISEASE,76,84
+left renal artery stenosis,DISEASE,148,174
+mesenteric artery stenosis,DISEASE,194,220
+throbbing,DISEASE,68,77
+pain,DISEASE,79,83
+headaches,DISEASE,117,126
+arthritis,DISEASE,13,22
+pain,DISEASE,43,47
+strokes,DISEASE,39,46
+Hypertension,DISEASE,22,34
+Renal artery stenosis,DISEASE,42,63
+Atrial fibrillation,DISEASE,64,83
+Arthritis,DISEASE,104,113
+fibromuscular dysplasia,DISEASE,195,218
+aneurysm,DISEASE,222,230
+O2 96%RA,CHEMICAL,49,57
+GEN,CHEMICAL,59,62
+DEID,CHEMICAL,1,5
+Palpable,DISEASE,0,8
+rash,DISEASE,69,73
+GEN,CHEMICAL,215,218
+normocephalic,DISEASE,29,42
+MMM,DISEASE,44,47
+erythema,DISEASE,56,64
+hematoma,DISEASE,44,52
+rash,DISEASE,94,98
+renal artery stenosis,DISEASE,325,346
+lower back pain,DISEASE,50,65
+pain,DISEASE,40,44
+pain,DISEASE,32,36
+erythema,DISEASE,54,62
+hematoma,DISEASE,106,114
+plavix,CHEMICAL,35,41
+"[DEID] 
+services for blood pressure",CHEMICAL,46,81
+PCP,CHEMICAL,49,52
+Losartan Potassium,CHEMICAL,0,18
+Zolpidem Tartrate,CHEMICAL,0,17
+QHS,CHEMICAL,26,29
+Labetalol,CHEMICAL,0,9
+Rosuvastatin Calcium,CHEMICAL,0,20
+Spironolactone,CHEMICAL,0,14
+Pain,DISEASE,26,30
+meloxicam,CHEMICAL,0,9
+fluticasone furoate,CHEMICAL,0,19
+Aspirin,CHEMICAL,0,7
+Clopidogrel,CHEMICAL,0,11
+Aspirin,CHEMICAL,0,7
+fluticasone furoate,CHEMICAL,0,19
+Labetalol,CHEMICAL,0,9
+Losartan Potassium,CHEMICAL,0,18
+meloxicam,CHEMICAL,0,9
+Rosuvastatin Calcium,CHEMICAL,0,20
+Spironolactone,CHEMICAL,0,14
+Pain,DISEASE,26,30
+Zolpidem Tartrate,CHEMICAL,0,17
+QHS,CHEMICAL,26,29
+Renal artery stenosis,DISEASE,116,137
+Endovascular Renal Artery Stenosis,DISEASE,46,80
+Renal artery stenosis,DISEASE,131,152
+PCP,CHEMICAL,59,62
+tenderness,DISEASE,27,37
+fullness,DISEASE,58,66
+swelling,DISEASE,199,207
+bruise,DISEASE,217,223
+painless,DISEASE,37,45
+swelling,DISEASE,25,33
+swelling,DISEASE,4,12
+•Look,CHEMICAL,0,5
+infection,DISEASE,28,37
+redness,DISEASE,27,34
+pain,DISEASE,46,50
+green,CHEMICAL,119,124
+fever,DISEASE,129,134
+aspirin,CHEMICAL,173,180
+Tylenol,CHEMICAL,182,189
+fever,DISEASE,200,205
+bleeding,DISEASE,445,453
+swelling,DISEASE,457,465
+groin,DISEASE,470,475
+DEID,CHEMICAL,584,588
+bleeding,DISEASE,6,14
+bleeding,DISEASE,4,12
+aspirin,CHEMICAL,18,25
+Aspirin,CHEMICAL,0,7
+aspirin,CHEMICAL,49,56
+stenosis,DISEASE,154,162
+Be,CHEMICAL,0,2
+pain,DISEASE,48,52
+sore,DISEASE,35,39
+pain,DISEASE,45,49
+appetite,CHEMICAL,5,13
+•Eat,CHEMICAL,0,4
+pain,DISEASE,71,75
+bleeding,DISEASE,77,85
+constipation,DISEASE,25,37
+pain,DISEASE,64,68
+constipation,DISEASE,11,23
+smoke,CHEMICAL,16,21
+smoking,CHEMICAL,16,23
+vascular disease,DISEASE,30,46
+•Pain,DISEASE,34,39
+pain,DISEASE,100,104
+redness,DISEASE,156,163
+•New,CHEMICAL,192,196
+green,CHEMICAL,271,276
+•Any,CHEMICAL,287,291
+bleeding,DISEASE,296,304
+bleeding,DISEASE,20,28
+DEID,CHEMICAL,50,54
+bleeding,DISEASE,8,16
+abdominal cramps,DISEASE,164,180
+diarrhea,DISEASE,182,190
+constipation,DISEASE,194,206
+•Any,CHEMICAL,207,211
+pain,DISEASE,222,226
+Dizziness,DISEASE,703,712
+Abdominal pain,DISEASE,188,202
+adenocarcinoma disease,DISEASE,344,366
+LAR,CHEMICAL,371,374
+[DEID,CHEMICAL,376,381
+irinotecan,CHEMICAL,517,527
+DVT,DISEASE,551,554
+rivaroxaban,CHEMICAL,558,569
+malignant bowel obstruction,DISEASE,574,601
+pain,DISEASE,636,640
+diarrhea,DISEASE,37,45
+pain,DISEASE,61,65
+irinotecan,CHEMICAL,116,126
+colitis,DISEASE,55,62
+diverticulitis,DISEASE,64,78
+bowel obstruction,DISEASE,83,100
+abdominal pain,DISEASE,24,38
+ache,DISEASE,103,107
+bowel movements,DISEASE,19,34
+tarry,DISEASE,58,63
+fevers,DISEASE,3,9
+chills,DISEASE,13,19
+|60 |151/90 |18,DISEASE,34,49
+RA,DISEASE,55,57
+Glucose,CHEMICAL,441,448
+Na,CHEMICAL,492,494
+K,CHEMICAL,500,501
+Lactate,CHEMICAL,677,684
+diverticulitis,DISEASE,53,67
+appendicitis,DISEASE,90,102
+hydroureteronephrosis,DISEASE,53,74
+malignant obstruction,DISEASE,88,109
+Stable hepatic hypodense lesions,DISEASE,0,32
+ascites,DISEASE,22,29
+Morphine,CHEMICAL,35,43
+Ondansetron,CHEMICAL,74,85
+Morphine,CHEMICAL,108,116
+Morphine,CHEMICAL,147,155
+Dilaudid,CHEMICAL,230,238
+Morphine,CHEMICAL,263,271
+Dilaudid,CHEMICAL,317,325
+Ciprofloxacin,CHEMICAL,350,363
+RA,DISEASE,439,441
+abdominal pain,DISEASE,8,22
+Pain,DISEASE,0,4
+dilaudid,CHEMICAL,29,37
+pain,DISEASE,13,17
+vomiting,DISEASE,21,29
+fever,DISEASE,10,15
+chills,DISEASE,19,25
+pain,DISEASE,16,20
+Colon cancer stage,DISEASE,22,40
+KRAS,CHEMICAL,113,117
+weight loss,DISEASE,162,173
+adenocarcinoma,DISEASE,23,37
+tumor,DISEASE,120,125
+obstruction,DISEASE,29,40
+T3 disease,CHEMICAL,23,33
+Intrapelvic lymphadenopathy,DISEASE,0,27
+tumor,DISEASE,95,100
+LAR,CHEMICAL,20,23
+adenocarcinoma,DISEASE,23,37
+Tumor,DISEASE,0,5
+adenocarcinoma,DISEASE,30,44
+tumor,DISEASE,87,92
+tumor,DISEASE,205,210
+adenocarcinoma,DISEASE,62,76
+DEID,CHEMICAL,13,17
+abdominal pain,DISEASE,32,46
+abcess,DISEASE,159,165
+abdominal pain,DISEASE,22,36
+XELOX,CHEMICAL,99,104
+Xeloda,CHEMICAL,106,112
+DEID,CHEMICAL,138,142
+pain,DISEASE,170,174
+bilious,DISEASE,42,49
+XELOX,CHEMICAL,14,19
+Xeloda,CHEMICAL,21,27
+pain,DISEASE,77,81
+constipation,DISEASE,86,98
+aggressive bowel regimen,DISEASE,24,48
+XELOX,CHEMICAL,14,19
+Xeloda,CHEMICAL,21,27
+XELOX,CHEMICAL,54,59
+Xeloda,CHEMICAL,61,67
+XELOX,CHEMICAL,94,99
+Xeloda,CHEMICAL,101,107
+Xeloda,CHEMICAL,141,147
+Xeloda,CHEMICAL,181,187
+abdominal pain,DISEASE,472,486
+abdominal pain,DISEASE,535,549
+liver lesion,DISEASE,582,594
+liver lesion,DISEASE,632,644
+polyp,DISEASE,684,689
+adenoma,DISEASE,717,724
+colon cancer,DISEASE,202,214
+adenocarcinoma,DISEASE,382,396
+FOLFOX,CHEMICAL,613,619
+oxaliplatin,CHEMICAL,621,632
+neuropathy,DISEASE,646,656
+FOLFOX,CHEMICAL,672,678
+oxaliplatin,CHEMICAL,680,691
+DEID] neuropathy,DISEASE,699,715
+oxaliplatin,CHEMICAL,827,838
+neuropathy,DISEASE,853,863
+Irinotecan,CHEMICAL,5,15
+Irinotecan,CHEMICAL,77,87
+Meckel's diverticulum,DISEASE,121,142
+malignancy,DISEASE,178,188
+Sigmoid adenocarcinoma,DISEASE,213,235
+DVT,DISEASE,236,239
+colon cancer,DISEASE,294,306
+inflammatory bowel disease,DISEASE,308,334
+cancer,DISEASE,345,351
+lipomas,DISEASE,24,31
+O2,CHEMICAL,143,145
+O2,CHEMICAL,165,167
+NAD,CHEMICAL,191,194
+anicteric,DISEASE,210,219
+CTAB,CHEMICAL,307,311
+hepatosplenomegaly,DISEASE,488,506
+cyanosis,DISEASE,521,529
+clubbing,DISEASE,531,539
+edema,DISEASE,544,549
+excoriations,DISEASE,614,626
+rashes,DISEASE,642,648
+O2,CHEMICAL,914,916
+O2,CHEMICAL,944,946
+NAD,CHEMICAL,970,973
+anicteric,DISEASE,989,998
+CTAB,CHEMICAL,1086,1090
+hepatosplenomegaly,DISEASE,1277,1295
+cyanosis,DISEASE,1311,1319
+clubbing,DISEASE,1321,1329
+edema,DISEASE,1334,1339
+excoriations,DISEASE,1404,1416
+rashes,DISEASE,1432,1438
+CO2,CHEMICAL,605,608
+WBC-7.4,CHEMICAL,894,901
+[DEID] 7:38,CHEMICAL,60,71
+diverticulitis,DISEASE,53,67
+appendicitis,DISEASE,78,90
+hydroureteronephrosis,DISEASE,54,75
+malignant obstruction,DISEASE,89,110
+Stable hepatic hypodense lesions,DISEASE,0,32
+ascites,DISEASE,22,29
+"[DEID] 2:54 [DEID]
+1.",CHEMICAL,43,64
+perforation,DISEASE,15,26
+hydroureter,DISEASE,97,108
+adenocarcinoma disease,DISEASE,89,111
+LAR,CHEMICAL,116,119
+[DEID,CHEMICAL,121,126
+irinotecan,CHEMICAL,264,274
+DVT,DISEASE,298,301
+rivaroxaban,CHEMICAL,305,316
+malignant bowel obstruction,DISEASE,322,349
+abdominal pain,DISEASE,370,384
+inflamed appendix,DISEASE,410,427
+tumor,DISEASE,488,493
+contin,CHEMICAL,22,28
+pain,DISEASE,33,37
+Diverticulitis,DISEASE,2,16
+malignancy,DISEASE,47,57
+obstruction of tubular blind-ending,DISEASE,66,101
+Meckel's diverticulum,DISEASE,129,150
+inflammation,DISEASE,180,192
+Meckel's diverticulum,DISEASE,246,267
+carcinomatosis,DISEASE,324,338
+diverticulitis,DISEASE,46,60
+malignancy,DISEASE,77,87
+hydromorphone,CHEMICAL,36,49
+oxycontin,CHEMICAL,104,113
+hydromorphone,CHEMICAL,33,46
+[DEID,CHEMICAL,7,12
+prerenal,DISEASE,74,82
+Constipation,DISEASE,1,13
+constipation,DISEASE,31,43
+senna,CHEMICAL,43,48
+adenocarcinoma,DISEASE,20,34
+irinotecan,CHEMICAL,61,71
+Irinotecan,CHEMICAL,0,10
+DVT,DISEASE,39,42
+rivaroxaban,CHEMICAL,60,71
+contin,CHEMICAL,293,299
+hydromorphone,CHEMICAL,328,341
+pain,DISEASE,18,22
+opioid pain,DISEASE,49,60
+opioid pain,DISEASE,225,236
+Diphenoxylate-Atropine,CHEMICAL,0,22
+Q6H,CHEMICAL,32,35
+diarrhea,DISEASE,40,48
+Acetaminophen,CHEMICAL,0,13
+Q8H,CHEMICAL,24,27
+Dilaudid,CHEMICAL,15,23
+Q4H,CHEMICAL,38,41
+Pain,DISEASE,46,50
+Ondansetron,CHEMICAL,0,11
+Q8H,CHEMICAL,20,23
+nausea,DISEASE,28,34
+Prochlorperazine,CHEMICAL,0,16
+Q6H,CHEMICAL,26,29
+Rivaroxaban,CHEMICAL,0,11
+Sodium,CHEMICAL,9,15
+Constipation,DISEASE,34,46
+Constipation,DISEASE,102,114
+Constipation,DISEASE,24,36
+Ciprofloxacin HCl,CHEMICAL,0,17
+Q12H,CHEMICAL,28,32
+ciprofloxacin HCl,CHEMICAL,38,55
+tablet(s,CHEMICAL,65,73
+Q8H,CHEMICAL,24,27
+metronidazole,CHEMICAL,33,46
+tablet(s,CHEMICAL,56,64
+Morphine,CHEMICAL,0,8
+Q12H,CHEMICAL,32,36
+morphine,CHEMICAL,42,50
+tablet(s,CHEMICAL,70,78
+Phenazopyridine,CHEMICAL,0,15
+phenazopyridine,CHEMICAL,60,75
+tablet(s,CHEMICAL,85,93
+Acetaminophen,CHEMICAL,0,13
+Q8H,CHEMICAL,24,27
+Pain,DISEASE,32,36
+Sodium,CHEMICAL,9,15
+Constipation,DISEASE,34,46
+Dilaudid,CHEMICAL,15,23
+Q4H,CHEMICAL,38,41
+Pain,DISEASE,46,50
+hydromorphone,CHEMICAL,67,80
+Dilaudid,CHEMICAL,82,90
+tablet(s,CHEMICAL,104,112
+Ondansetron,CHEMICAL,0,11
+Q8H,CHEMICAL,20,23
+nausea,DISEASE,28,34
+Polyethylene Glycol 17 g PO,CHEMICAL,0,27
+Constipation,DISEASE,38,50
+Prochlorperazine,CHEMICAL,0,16
+Q6H,CHEMICAL,26,29
+Rivaroxaban,CHEMICAL,0,11
+Constipation,DISEASE,24,36
+Diphenoxylate-Atropine,CHEMICAL,6,28
+Q6H,CHEMICAL,38,41
+diarrhea,DISEASE,46,54
+Diphenoxylate-Atropine,CHEMICAL,97,119
+diverticulitis,DISEASE,69,83
+Colon adenocarcinoma,DISEASE,117,137
+abdominal pain,DISEASE,88,102
+infection,DISEASE,118,127
+inflammation,DISEASE,83,95
+cancer,DISEASE,154,160
+pain,DISEASE,33,37
+pain,DISEASE,58,62
+Adverse Drug Reactions,DISEASE,163,185
+Overdose,DISEASE,17,25
+epilepsy,DISEASE,126,134
+depression,DISEASE,139,149
+overdose,DISEASE,176,184
+paroxetine,CHEMICAL,71,81
+ibuprofen,CHEMICAL,183,192
+alcohol,CHEMICAL,11,18
+charcoal,CHEMICAL,23,31
+DEID,CHEMICAL,64,68
+coags,DISEASE,47,52
+carbamazapine,CHEMICAL,84,97
+somnolent,DISEASE,160,169
+vomit,DISEASE,36,41
+seizure,DISEASE,45,52
+Ativan,CHEMICAL,4,10
+RA,DISEASE,107,109
+RA,DISEASE,162,164
+Depression,DISEASE,218,228
+infantile meningitis,DISEASE,271,291
+depression,DISEASE,357,367
+MMM,DISEASE,537,540
+rhonchi,DISEASE,672,679
+tenderness,DISEASE,824,834
+organomegaly,DISEASE,851,863
+clubbing,DISEASE,905,913
+cyanosis,DISEASE,915,923
+edema,DISEASE,928,933
+rashes,DISEASE,944,950
+"upper extremity muscle 
+weakness",DISEASE,1009,1041
+RA,DISEASE,1139,1141
+rhonchi,DISEASE,1338,1345
+tenderness,DISEASE,1496,1506
+organomegaly,DISEASE,1523,1535
+clubbing,DISEASE,1577,1585
+cyanosis,DISEASE,1587,1595
+edema,DISEASE,1600,1605
+"upper extremity muscle 
+weakness",DISEASE,1704,1736
+[DEID] 11:25PM,CHEMICAL,2002,2016
+K-3.5 Cl-98 HCO3,CHEMICAL,2062,2078
+[DEID] 11:25PM,CHEMICAL,2091,2105
+[DEID] 11:25PM,CHEMICAL,2149,2163
+pO2,CHEMICAL,2328,2331
+pH-7.34,CHEMICAL,2344,2351
+Na-140,CHEMICAL,2735,2741
+DEID] s/p overdose,DISEASE,24,42
+ibuprofen,CHEMICAL,68,77
+AMS,DISEASE,108,111
+seizure,DISEASE,35,42
+charcoal,CHEMICAL,78,86
+TCAs,CHEMICAL,106,110
+SSRI,CHEMICAL,114,118
+Seratonin syndrome,DISEASE,78,96
+carbazapine,CHEMICAL,30,41
+Carbazapine,CHEMICAL,112,123
+overdose,DISEASE,30,38
+poisoning,DISEASE,21,30
+seizures,DISEASE,54,62
+hyponatremia,DISEASE,67,79
+seizure,DISEASE,46,53
+hyponatremia,DISEASE,18,30
+PCP,CHEMICAL,75,78
+psychiatric,DISEASE,115,126
+Seizure + vomiting,DISEASE,2,20
+seizure,DISEASE,38,45
+overdose,DISEASE,89,97
+seizures,DISEASE,25,33
+oxcarbazepine,CHEMICAL,21,34
+carbazepine,CHEMICAL,9,20
+AMS,CHEMICAL,2,5
+Ativan,CHEMICAL,27,33
+seizure,DISEASE,51,58
+overdose,DISEASE,64,72
+Depression,DISEASE,2,12
+overdosed,DISEASE,22,31
+psychiatric,DISEASE,16,27
+depression,DISEASE,158,168
+[DEID] patient,CHEMICAL,324,338
+PCP,CHEMICAL,415,418
+psychiatric,DISEASE,452,463
+Trileptal,CHEMICAL,475,484
+Paroxetine,CHEMICAL,0,10
+Carbamazepine,CHEMICAL,0,13
+Carbamazepine,CHEMICAL,0,13
+Acetaminophen,CHEMICAL,0,13
+Q6H,CHEMICAL,24,27
+overdose,DISEASE,168,176
+Depression,DISEASE,196,206
+upper extremity weakness,DISEASE,270,294
+seizures,DISEASE,81,89
+psychiatric,DISEASE,21,32
+psychiatric,DISEASE,134,145
+depression,DISEASE,205,215
+Adverse Drug Reactions,DISEASE,162,184
+lower extremity claudication,DISEASE,27,55
+"peripheral 
+arterial disease",DISEASE,178,206
+claudication,DISEASE,245,257
+cellulitis,DISEASE,53,63
+claudication,DISEASE,79,91
+coumadin,CHEMICAL,26,34
+LLE DVT,CHEMICAL,39,46
+pain,DISEASE,34,38
+Peripheral vascular disease,DISEASE,33,60
+Hyperlipidemia,DISEASE,0,14
+Hypertension,DISEASE,0,12
+Chronic renal insufficiency,DISEASE,0,27
+Pericarditis,DISEASE,0,12
+lower extremity DVT,DISEASE,5,24
+iliac stenosis,DISEASE,53,67
+SFA occlusion,DISEASE,23,36
+colitis,DISEASE,11,18
+Angioplasty,DISEASE,0,11
+angioplasty,DISEASE,68,79
+angioplasty,DISEASE,157,168
+/110,DISEASE,357,361
+AOx3 NAD,CHEMICAL,406,414
+respiratory distress,DISEASE,427,447
+hallux,DISEASE,2,8
+redness,DISEASE,13,20
+edema,DISEASE,32,37
+fluctuance,DISEASE,41,51
+CTAB,CHEMICAL,0,4
+HCO3,CHEMICAL,311,315
+OBL,CHEMICAL,789,792
+[DEID,CHEMICAL,800,805
+osteomyelitis,DISEASE,847,860
+ventricular hypertrophy,DISEASE,66,89
+Anterolateral T wave abnormalities,DISEASE,0,34
+ST-T wave abnormalities,DISEASE,0,23
+ischemia,DISEASE,49,57
+lower extremity claudication,DISEASE,181,209
+non-healing,DISEASE,214,225
+right hallux ulcer,DISEASE,227,245
+pain,DISEASE,62,66
+pain,DISEASE,11,15
+chronic pain,DISEASE,29,41
+Oxycontin,CHEMICAL,0,9
+pain,DISEASE,58,62
+claudication,DISEASE,141,153
+coumadin,CHEMICAL,52,60
+heparin,CHEMICAL,45,52
+coumadin,CHEMICAL,83,91
+axillary-to-profunda femoris bypass,DISEASE,16,51
+pain,DISEASE,41,45
+claudication,DISEASE,83,95
+Hydrochlorothiazide,CHEMICAL,0,19
+Rosuvastatin Calcium,CHEMICAL,0,20
+Warfarin,CHEMICAL,0,8
+Warfarin,CHEMICAL,0,8
+Acetaminophen,CHEMICAL,0,13
+Q6H,CHEMICAL,28,31
+pain,DISEASE,36,40
+Sodium,CHEMICAL,9,15
+Sodium,CHEMICAL,11,17
+Q12H,CHEMICAL,27,31
+Gabapentin,CHEMICAL,0,10
+Q12H,CHEMICAL,21,25
+Q4H,CHEMICAL,43,46
+pain,DISEASE,51,55
+cilostazol,CHEMICAL,8,18
+constipation,DISEASE,24,36
+Warfarin,CHEMICAL,0,8
+constipation,DISEASE,25,37
+Rosuvastatin Calcium,CHEMICAL,0,20
+cilostazol,CHEMICAL,8,18
+Q12H,CHEMICAL,34,38
+oxycodone,CHEMICAL,44,53
+OxyContin,CHEMICAL,55,64
+Q3H,CHEMICAL,39,42
+pain,DISEASE,61,65
+oxycodone,CHEMICAL,71,80
+tablet(s,CHEMICAL,89,97
+pain,DISEASE,150,154
+Gabapentin,CHEMICAL,0,10
+Hydrochlorothiazide,CHEMICAL,0,19
+Sodium,CHEMICAL,9,15
+Acetaminophen,CHEMICAL,0,13
+Q6H,CHEMICAL,24,27
+Bisacodyl,CHEMICAL,0,9
+constipation,DISEASE,30,42
+sulfamethoxazole-trimethoprim,CHEMICAL,44,73
+Bactrim,CHEMICAL,75,82
+tablet(s,CHEMICAL,100,108
+warfarin,CHEMICAL,209,217
+Coumadin,CHEMICAL,219,227
+DEID,CHEMICAL,235,239
+tablet(s,CHEMICAL,241,249
+lower extremity claudication,DISEASE,400,428
+increase pain,DISEASE,61,74
+infection,DISEASE,80,89
+toenail,DISEASE,85,92
+infection,DISEASE,101,110
+pain,DISEASE,16,20
+pain,DISEASE,62,66
+pain,DISEASE,59,63
+pain,DISEASE,31,35
+constipating,DISEASE,59,71
+senna,CHEMICAL,55,60
+BE,CHEMICAL,20,22
+DEID,CHEMICAL,27,31
+Allergies,DISEASE,182,191
+stenosis,DISEASE,24,32
+H+P,CHEMICAL,32,35
+H+P,CHEMICAL,87,90
+H+P,CHEMICAL,118,121
+H+P,CHEMICAL,153,156
+TEDs/pnemoboots,CHEMICAL,0,15
+postoperative DVT,DISEASE,31,48
+Keflex,CHEMICAL,0,6
+infection,DISEASE,61,70
+pain,DISEASE,15,19
+pain,DISEASE,38,42
+pain,DISEASE,95,99
+acetaminophen,CHEMICAL,0,13
+Q6H,CHEMICAL,51,54
+fever,DISEASE,86,91
+pain,DISEASE,93,97
+diazepam,CHEMICAL,0,8
+Q6H,CHEMICAL,44,47
+spasm,DISEASE,79,84
+simvastatin 40 mg Tablet,CHEMICAL,0,24
+oxycodone,CHEMICAL,0,9
+Q3H,CHEMICAL,45,48
+pain,DISEASE,80,84
+docusate sodium,CHEMICAL,0,15
+calcium carbonate,CHEMICAL,3,20
+QID,CHEMICAL,88,91
+oxycodone,CHEMICAL,0,9
+Q12H,CHEMICAL,97,101
+omeprazole,CHEMICAL,0,10
+bisacodyl,CHEMICAL,0,9
+Suppository,CHEMICAL,16,27
+Suppository,CHEMICAL,41,52
+constipation,DISEASE,89,101
+cephalexin,CHEMICAL,0,10
+Q6H,CHEMICAL,50,53
+Lumbar stenosis,DISEASE,0,15
+Lumbar degenerative disk disease status,DISEASE,0,39
+lower extremity,DISEASE,12,27
+radiculopathy,DISEASE,28,41
+DEID,CHEMICAL,83,87
+constipation,DISEASE,19,31
+pain,DISEASE,66,70
+oxycontin,CHEMICAL,62,71
+oxycodone,CHEMICAL,73,82
+pain,DISEASE,46,50
+serous,DISEASE,66,72
+infection,DISEASE,35,44
+Allergies,DISEASE,130,139
+morphine,CHEMICAL,142,150
+Benadryl,CHEMICAL,153,161
+ascites,DISEASE,201,208
+edema,DISEASE,217,222
+cirrhosis,DISEASE,525,534
+ascites,DISEASE,539,546
+hyponatremia,DISEASE,641,653
+weakness,DISEASE,34,42
+fatigue,DISEASE,47,54
+edema,DISEASE,34,39
+edema,DISEASE,54,59
+abdominal distention,DISEASE,65,85
+breast cancer,DISEASE,58,71
+tamoxifen,CHEMICAL,32,41
+DEID,CHEMICAL,47,51
+anastrozole,CHEMICAL,28,39
+faslodex,CHEMICAL,65,73
+Tamoxifen,CHEMICAL,0,9
+zoledronic,CHEMICAL,19,29
+exemestane,CHEMICAL,24,34
+capecitabine,CHEMICAL,22,34
+fracture,DISEASE,58,66
+abnormal liver function,DISEASE,43,66
+fatigue,DISEASE,78,85
+DEID,CHEMICAL,155,159
+low back pain,DISEASE,22,35
+numbness,DISEASE,80,88
+Tumor,DISEASE,0,5
+Navelbine,CHEMICAL,37,46
+mets,DISEASE,14,18
+mets,DISEASE,129,133
+XRT,CHEMICAL,148,151
+fracture,DISEASE,254,262
+DEID,CHEMICAL,1,5
+neck pain,DISEASE,22,31
+"enlargement of a right
+C7 metastasis",DISEASE,28,64
+XRT,CHEMICAL,15,18
+XRT,CHEMICAL,87,90
+fracture,DISEASE,116,124
+herpes zoster,DISEASE,15,28
+DEID,CHEMICAL,33,37
+DEID,CHEMICAL,43,47
+fracture,DISEASE,88,96
+abdominal distention,DISEASE,108,128
+ascites,DISEASE,156,163
+anemia,DISEASE,168,174
+vascular bleed,DISEASE,106,120
+endoscopy/colonoscopy,DISEASE,31,52
+--hypothyroidism,CHEMICAL,131,147
+zoster,DISEASE,162,168
+pseudocirrhosis,DISEASE,190,205
+alcoholic cirrhotic liver disease,DISEASE,257,290
+decreased breath,DISEASE,483,499
+wheezes or rhonchi,DISEASE,563,581
+hepatosplenomegaly,DISEASE,642,660
+edema,DISEASE,677,682
+asterixis,DISEASE,756,765
+rashes,DISEASE,851,857
+decreased breath,DISEASE,1096,1112
+wheezes or rhonchi,DISEASE,1176,1194
+hepatosplenomegaly,DISEASE,1271,1289
+edema,DISEASE,1306,1311
+asterixis,DISEASE,1385,1394
+rashes,DISEASE,1480,1486
+DEID,CHEMICAL,2428,2432
+Cirrhotic liver,DISEASE,2436,2451
+ascites,DISEASE,2457,2464
+Nonocclusive thrombus,DISEASE,0,21
+atelectasis,DISEASE,49,60
+infection,DISEASE,77,86
+calcifications,DISEASE,12,26
+breast cancer,DISEASE,126,139
+[DEID,CHEMICAL,5,10
+ALT-33,DISEASE,544,550
+cirrhosis,DISEASE,916,925
+ascites,DISEASE,930,937
+hyponatremia,DISEASE,980,992
+ascites,DISEASE,30,37
+lower extremity edema,DISEASE,42,63
+hyponatremia,DISEASE,83,95
+hyponatremia,DISEASE,48,60
+cirrhosis,DISEASE,80,89
+sodium,CHEMICAL,53,59
+hyponatremia,DISEASE,15,27
+levothyroxine,CHEMICAL,80,93
+cirrhosis,DISEASE,36,45
+cipro,CHEMICAL,57,62
+omeprazole,CHEMICAL,65,75
+sucralfate,CHEMICAL,81,91
+cirrhosis,DISEASE,33,42
+DEID] pseudocirrhosis,CHEMICAL,44,65
+"alcoholic cirrhotic liver 
+disease",DISEASE,114,148
+breast cancer,DISEASE,48,61
+esophageal varices,DISEASE,42,60
+Hypothyroidism,DISEASE,2,16
+hypothyroidism,DISEASE,39,53
+levothyroxine,CHEMICAL,4,17
+sodium,CHEMICAL,40,46
+carafate,CHEMICAL,119,127
+cipro,CHEMICAL,147,152
+omeprazole,CHEMICAL,184,194
+levothyroxine,CHEMICAL,209,222
+Levothyroxine Sodium,CHEMICAL,0,20
+Lorazepam,CHEMICAL,0,9
+anxiety,DISEASE,31,38
+Spironolactone,CHEMICAL,0,14
+Zolpidem Tartrate,CHEMICAL,0,17
+QHS,CHEMICAL,26,29
+insomnia,DISEASE,34,42
+Sodium,CHEMICAL,9,15
+constipation,DISEASE,34,46
+Calcium Carbonate,CHEMICAL,0,17
+Calcium Carbonate,CHEMICAL,72,89
+Sodium,CHEMICAL,9,15
+constipation,DISEASE,34,46
+Levothyroxine Sodium,CHEMICAL,0,20
+levothyroxine,CHEMICAL,43,56
+tablet(s,CHEMICAL,67,75
+Lorazepam,CHEMICAL,0,9
+anxiety,DISEASE,31,38
+Zolpidem Tartrate,CHEMICAL,0,17
+QHS,CHEMICAL,26,29
+insomnia,DISEASE,34,42
+Ciprofloxacin HCl,CHEMICAL,0,17
+ciprofloxacin HCl,CHEMICAL,38,55
+tablet(s,CHEMICAL,65,73
+Dilaudid,CHEMICAL,15,23
+Q6H,CHEMICAL,33,36
+pain,DISEASE,41,45
+hydromorphone,CHEMICAL,51,64
+tablet(s,CHEMICAL,72,80
+q6H,CHEMICAL,91,94
+Omeprazole,CHEMICAL,0,10
+omeprazole,CHEMICAL,31,41
+Sucralfate,CHEMICAL,0,10
+QID,CHEMICAL,19,22
+sucralfate,CHEMICAL,28,38
+QID,CHEMICAL,132,135
+itchy,DISEASE,140,145
+RX *camphor-menthol [Sarna Anti-Itch,CHEMICAL,147,183
+QID,CHEMICAL,210,213
+ascites,DISEASE,325,332
+ascites,DISEASE,65,72
+sodium,CHEMICAL,84,90
+liver disease,DISEASE,120,133
+bleeding,DISEASE,220,228
+sodium,CHEMICAL,137,143
+Adverse Drug Reactions,DISEASE,164,186
+infarction,DISEASE,258,268
+hypertension,DISEASE,78,90
+atrial fibrillation,DISEASE,97,116
+ASA,CHEMICAL,121,124
+left facial droop,DISEASE,179,196
+DEID,CHEMICAL,248,252
+DEID,CHEMICAL,24,28
+right facial droop,DISEASE,123,141
+left facial droop,DISEASE,121,138
+ASA,CHEMICAL,20,23
+DEID,CHEMICAL,53,57
+stroke,DISEASE,65,71
+URI,DISEASE,68,71
+weakness or sensory loss,DISEASE,10,34
+OSA,DISEASE,74,77
+diabetes,DISEASE,15,23
+aspirin,CHEMICAL,14,21
+atrial fibrillation,DISEASE,26,45
+headache,DISEASE,33,41
+frontal headache,DISEASE,72,88
+loss of vision,DISEASE,100,114
+blurred vision,DISEASE,116,130
+diplopia,DISEASE,132,140
+dysarthria,DISEASE,142,152
+dysphagia,DISEASE,154,163
+lightheadedness,DISEASE,165,180
+vertigo,DISEASE,182,189
+tinnitus,DISEASE,191,199
+Denies difficulties,DISEASE,0,19
+Denies focal weakness,DISEASE,0,21
+numbness,DISEASE,23,31
+parasthesiae,DISEASE,33,45
+bladder incontinence,DISEASE,12,32
+fever,DISEASE,56,61
+chills,DISEASE,65,71
+sweats,DISEASE,9,15
+weight loss,DISEASE,26,37
+chest pain,DISEASE,7,17
+tightness,DISEASE,21,30
+palpitations,DISEASE,32,44
+"Denies nausea, vomiting",DISEASE,0,23
+diarrhea,DISEASE,25,33
+constipation,DISEASE,35,47
+abdominal pain,DISEASE,51,65
+dysuria,DISEASE,3,10
+Denies arthralgias,DISEASE,12,30
+myalgias,DISEASE,34,42
+rash,DISEASE,7,11
+Atrial fibrillation,DISEASE,22,41
+atorvastatin,CHEMICAL,156,168
+strokes,DISEASE,241,248
+RA,DISEASE,387,389
+NAD,CHEMICAL,464,467
+icterus,DISEASE,25,32
+nuchal rigidity,DISEASE,3,18
+DEID,CHEMICAL,143,147
+edema,DISEASE,149,154
+stroke,DISEASE,117,123
+dysarthria,DISEASE,26,36
+Left neglect,DISEASE,0,12
+adduct,CHEMICAL,71,77
+nystagmus,DISEASE,13,22
+homonymous,DISEASE,5,15
+Palate,DISEASE,7,13
+tremor,DISEASE,35,41
+asterixis,DISEASE,3,12
+LLE,CHEMICAL,0,3
+RLE,CHEMICAL,8,11
+DEID,CHEMICAL,55,59
+Ach,CHEMICAL,65,68
+ataxia,DISEASE,164,170
+NAD,CHEMICAL,340,343
+stroke,DISEASE,133,139
+Left arm flaccid,DISEASE,0,16
+Stroke,DISEASE,19,25
+infarction,DISEASE,42,52
+intracranial hemorrhage,DISEASE,22,45
+hemorrhage,DISEASE,119,129
+cavernous malformation,DISEASE,134,156
+MCA,CHEMICAL,55,58
+ischemia,DISEASE,78,86
+infarct,DISEASE,99,106
+lymphadenopathy,DISEASE,42,57
+MCA,CHEMICAL,27,30
+infarct,DISEASE,123,130
+hemorrhagic transformation,DISEASE,4,30
+ventricular thrombus,DISEASE,14,34
+stroke,DISEASE,149,155
+stroke,DISEASE,10,16
+atrial fibrillation,DISEASE,63,82
+stroke,DISEASE,107,113
+Infarct,DISEASE,78,85
+left-sided neglect,DISEASE,104,122
+left-sided hemiplegia,DISEASE,125,146
+anosognosia,DISEASE,152,163
+aspirin,CHEMICAL,45,52
+Apixaban,CHEMICAL,23,31
+atrial fibrillation,DISEASE,83,102
+Stroke,DISEASE,0,6
+PFO,DISEASE,131,134
+atorvastatin,CHEMICAL,41,53
+Atrial fibrillation,DISEASE,1,20
+fibrillation,DISEASE,66,78
+diltiazem,CHEMICAL,148,157
+metoprolol,CHEMICAL,31,41
+diltiazem,CHEMICAL,43,52
+digoxin,CHEMICAL,59,66
+metoprolol,CHEMICAL,105,115
+tartrate,CHEMICAL,117,125
+Q6H,CHEMICAL,132,135
+Dysphagia,DISEASE,1,10
+NG,CHEMICAL,58,60
+Hypertension,DISEASE,1,13
+hypertensive,DISEASE,35,47
+lisinopril,CHEMICAL,11,21
+DMII,CHEMICAL,65,69
+Hypertension,DISEASE,83,95
+Stroke,DISEASE,265,271
+Dysphagia,DISEASE,0,9
+DVT,DISEASE,0,3
+heparin,CHEMICAL,43,50
+Aspirin,CHEMICAL,73,80
+statin,CHEMICAL,10,16
+atorvastatin,CHEMICAL,49,61
+Stroke,DISEASE,0,6
+stroke,DISEASE,77,83
+stroke,DISEASE,85,91
+statin,CHEMICAL,14,20
+atorvastatin,CHEMICAL,40,52
+Apixaban,CHEMICAL,118,126
+Apixaban,CHEMICAL,93,101
+Aspirin,CHEMICAL,139,146
+Metoprolol,CHEMICAL,153,163
+Atorvastatin,CHEMICAL,200,212
+Apixaban,CHEMICAL,0,8
+apixaban,CHEMICAL,26,34
+Eliquis,CHEMICAL,36,43
+tablet(s,CHEMICAL,52,60
+Lisinopril,CHEMICAL,0,10
+Metoprolol Tartrate,CHEMICAL,0,19
+Atrial fibrillation,DISEASE,33,52
+Atorvastatin,CHEMICAL,0,12
+Citalopram,CHEMICAL,0,10
+MCA stroke,CHEMICAL,119,129
+left-sided weakness,DISEASE,84,103
+oxygen,CHEMICAL,190,196
+stroke,DISEASE,5,11
+atrial fibrillation,DISEASE,87,106
+Apixaban,CHEMICAL,49,57
+strokes,DISEASE,83,90
+stroke,DISEASE,89,95
+atorvastatin,CHEMICAL,121,133
+cholesterol,CHEMICAL,156,167
+diabetes,DISEASE,74,82
+Apixaban,CHEMICAL,68,76
+atorvastatin,CHEMICAL,7,19
+metoprolol,CHEMICAL,22,32
+lisinopril,CHEMICAL,22,32
+stroke,DISEASE,21,27
+loss of vision,DISEASE,148,162
+Sudden loss of sensation,DISEASE,386,410
+Penicillins,CHEMICAL,146,157
+depression,DISEASE,18,28
+CKD,DISEASE,191,194
+hypertension,DISEASE,206,218
+gout,DISEASE,229,233
+depressive disorder,DISEASE,254,273
+psychosis,DISEASE,311,320
+anxiety,DISEASE,322,329
+OCD,DISEASE,335,338
+psychiatric,DISEASE,36,47
+DEID,CHEMICAL,15,19
+OCD,DISEASE,45,48
+depression,DISEASE,53,63
+mental illness,DISEASE,93,107
+DEID,CHEMICAL,58,62
+Midol,CHEMICAL,89,94
+DEID,CHEMICAL,175,179
+DEID,CHEMICAL,10,14
+Klonopin,CHEMICAL,142,150
+Anafranil,CHEMICAL,152,161
+hypotensive,DISEASE,187,198
+psychosis,DISEASE,29,38
+depression,DISEASE,34,44
+[DEID] and [DEID] (,CHEMICAL,87,106
+DEID,CHEMICAL,130,134
+DEID,CHEMICAL,5,9
+psychosis,DISEASE,23,32
+depression,DISEASE,25,35
+depression,DISEASE,94,104
+delusions of persecution,DISEASE,154,178
+DEID,CHEMICAL,6,10
+DEID,CHEMICAL,85,89
+DEID,CHEMICAL,6,10
+depressive,DISEASE,24,34
+DEID,CHEMICAL,64,68
+AVH,DISEASE,33,36
+benzodiazepines,CHEMICAL,53,68
+gabapentin,CHEMICAL,73,83
+CKD,DISEASE,0,3
+Hypertension,DISEASE,0,12
+Hyperlipidemia,DISEASE,0,14
+Gout,DISEASE,0,4
+[DEID,CHEMICAL,52,57
+pneumonia,DISEASE,18,27
+septic shock,DISEASE,32,44
+ischemia,DISEASE,103,111
+apnea,DISEASE,6,11
+snoring,DISEASE,34,41
+EtOH,CHEMICAL,58,62
+DEID,CHEMICAL,60,64
+alcohol,CHEMICAL,81,88
+OCD,DISEASE,222,225
+polysubstance,DISEASE,235,248
+O2,CHEMICAL,86,88
+NAD,CHEMICAL,178,181
+icterus,DISEASE,258,265
+paraspinal tenderness,DISEASE,294,315
+CVA,CHEMICAL,320,323
+tenderness,DISEASE,324,334
+CTAB,CHEMICAL,342,346
+DEID] systolic murmur,CHEMICAL,371,392
+organomegaly,DISEASE,451,463
+numbness,DISEASE,482,490
+palate,DISEASE,726,732
+Bic,CHEMICAL,837,840
+C6 Tri,CHEMICAL,841,847
+DEID,CHEMICAL,1050,1054
+depressed,DISEASE,1717,1726
+persecutory feelings,DISEASE,1862,1882
+mental illness,DISEASE,1989,2003
+CO2,CHEMICAL,2120,2123
+DEID,CHEMICAL,2632,2636
+AbsMono-0.71,CHEMICAL,2665,2677
+DEID,CHEMICAL,2803,2807
+depression,DISEASE,2863,2873
+DEID,CHEMICAL,6,10
+PCP,CHEMICAL,137,140
+DEID,CHEMICAL,101,105
+Clorazepate Dipotassium,CHEMICAL,0,23
+Anxiety,DISEASE,40,47
+Doxepin HCl,CHEMICAL,0,11
+QHS,CHEMICAL,22,25
+Nortriptyline,CHEMICAL,0,13
+QHS,CHEMICAL,23,26
+Allopurinol,CHEMICAL,0,11
+DEID,CHEMICAL,13,17
+desvenlafaxine succinate,CHEMICAL,9,33
+Levothyroxine Sodium,CHEMICAL,0,20
+QHS,CHEMICAL,19,22
+Gabapentin,CHEMICAL,0,10
+Zolpidem Tartrate,CHEMICAL,0,17
+QHS,CHEMICAL,26,29
+Insomnia,DISEASE,34,42
+QID,CHEMICAL,21,24
+insomnia,DISEASE,29,37
+anxiety,DISEASE,39,46
+Polyethylene Glycol 17 g PO QHS,CHEMICAL,0,31
+QHS,CHEMICAL,17,20
+Sodium,CHEMICAL,9,15
+QHS,CHEMICAL,26,29
+Colchicine,CHEMICAL,0,10
+Gout,DISEASE,29,33
+Hydrochlorothiazide,CHEMICAL,0,19
+Allopurinol,CHEMICAL,0,11
+DEID,CHEMICAL,13,17
+QHS,CHEMICAL,19,22
+Clorazepate Dipotassium,CHEMICAL,0,23
+Anxiety,DISEASE,40,47
+Doxepin HCl,CHEMICAL,0,11
+QHS,CHEMICAL,22,25
+Gabapentin,CHEMICAL,0,10
+QID,CHEMICAL,21,24
+insomnia,DISEASE,29,37
+anxiety,DISEASE,39,46
+Levothyroxine Sodium,CHEMICAL,0,20
+Nortriptyline,CHEMICAL,0,13
+QHS,CHEMICAL,23,26
+Polyethylene Glycol 17 g PO QHS,CHEMICAL,0,31
+desvenlafaxine succinate,CHEMICAL,9,33
+QHS,CHEMICAL,17,20
+Zolpidem Tartrate,CHEMICAL,0,17
+QHS,CHEMICAL,26,29
+Insomnia,DISEASE,34,42
+Sodium,CHEMICAL,9,15
+QHS,CHEMICAL,26,29
+Hydrochlorothiazide,CHEMICAL,0,19
+Depression,DISEASE,90,100
+PTSD,DISEASE,102,106
+depressed,DISEASE,366,375
+anxiety,DISEASE,470,477
+mental illness,DISEASE,584,598
+DEID,CHEMICAL,648,652
+depression,DISEASE,676,686
+PCP,CHEMICAL,38,41
+hypoventilation,DISEASE,55,70
+obesity,DISEASE,75,82
+DEID,CHEMICAL,67,71
+congestive heart failure or renal disease,DISEASE,132,173
+infections,DISEASE,14,24
+venous thrombosis,DISEASE,54,71
+fullness,DISEASE,104,112
+pancreatitis,DISEASE,156,168
+abscess,DISEASE,56,63
+edema,DISEASE,62,67
+hypertension,DISEASE,19,31
+splenomegaly,DISEASE,53,65
+ascites,DISEASE,132,139
+Chronic abnormalities,DISEASE,0,21
+pleural effusion,DISEASE,33,49
+pleural calcifications,DISEASE,51,73
+cancer,DISEASE,77,83
+"degenerative disease of the 
+cervical spine",DISEASE,26,69
+canal stenosis,DISEASE,108,122
+degenerative disease,DISEASE,5,25
+degenerative disease of the lumbar,DISEASE,26,60
+canal stenosis,DISEASE,90,104
+lymphadenopathy,DISEASE,32,47
+adenocarcinoma,DISEASE,30,44
+K-4.7,CHEMICAL,658,663
+DEID,CHEMICAL,859,863
+T2DM,DISEASE,866,870
+retinopathy,DISEASE,875,886
+neuropathy,DISEASE,891,901
+ataxia,DISEASE,925,931
+nausea,DISEASE,936,942
+edema,DISEASE,988,993
+primary lung adenocarcinoma,DISEASE,131,158
+adenocarcinoma,DISEASE,55,69
+lung adenocarcinoma,DISEASE,47,66
+mets,DISEASE,36,40
+Dexamethasone,CHEMICAL,0,13
+omeprazole,CHEMICAL,3,13
+ppx,CHEMICAL,17,20
+dexamethasone,CHEMICAL,48,61
+keppra,CHEMICAL,104,110
+seizure,DISEASE,143,150
+vit B12,CHEMICAL,13,20
+DEID,CHEMICAL,32,36
+pemetrexed,CHEMICAL,78,88
+folic acid,CHEMICAL,116,126
+erythema/edema,DISEASE,103,117
+SVC syndrome,DISEASE,27,39
+Hyperactive,DISEASE,2,13
+Hypoactive Delirium,DISEASE,19,38
+steroids,CHEMICAL,100,108
+keppra,CHEMICAL,110,116
+mets,DISEASE,63,67
+UA,CHEMICAL,0,2
+infection,DISEASE,38,47
+Ativan,CHEMICAL,8,14
+Haldol,CHEMICAL,71,77
+seroquel,CHEMICAL,103,111
+trazodone QHS,CHEMICAL,119,132
+olanzapine,CHEMICAL,142,152
+agitation,DISEASE,164,173
+T2DM,DISEASE,177,181
+glargine,CHEMICAL,5,13
+dexamethasone,CHEMICAL,97,110
+SSI,DISEASE,15,18
+dex,CHEMICAL,95,98
+Finasteride,CHEMICAL,0,11
+carbidopa/levodopa,CHEMICAL,15,33
+donepezil,CHEMICAL,35,44
+CKD,DISEASE,47,50
+creatinine,CHEMICAL,56,66
+diverticulitis,DISEASE,9,23
+microperforation,DISEASE,92,108
+Na-140,CHEMICAL,190,196
+pneumonia,DISEASE,15,24
+[DEID] 10:52 [DEID],CHEMICAL,35,54
+pulmonary artery systolic,DISEASE,5,30
+hypertension,DISEASE,32,44
+thrombus,DISEASE,67,75
+pulmonary embolus,DISEASE,68,85
+osseous deformities,DISEASE,19,38
+fractures,DISEASE,25,34
+expansile lesion,DISEASE,39,55
+opacity,DISEASE,12,19
+pneumonia,DISEASE,108,117
+pulmonary embolism,DISEASE,18,36
+hernia,DISEASE,7,13
+edema,DISEASE,64,69
+"effusions, hiatal 
+hernia",DISEASE,74,99
+hypertrophy,DISEASE,33,44
+mitral regurgitation,DISEASE,5,25
+aortic regurgitation,DISEASE,5,25
+effusion,DISEASE,41,49
+syncope,DISEASE,32,39
+abscess,DISEASE,73,80
+biliary obstruction,DISEASE,82,101
+abdominal pain,DISEASE,131,145
+extrahepatic bile ducts,DISEASE,31,54
+cholangitis,DISEASE,141,152
+splenomegaly,DISEASE,7,19
+pleural effusion,DISEASE,12,28
+ascites,DISEASE,6,13
+hematoma,DISEASE,60,68
+mild decrease,DISEASE,75,88
+hemorrhage,DISEASE,7,17
+pneumatosis,DISEASE,106,117
+barotrauma,DISEASE,77,87
+Small hiatal hernia,DISEASE,3,22
+[DEID] 3:21 [DEID],CHEMICAL,66,84
+emphysema,DISEASE,23,32
+hematoma,DISEASE,182,190
+vascular calcification,DISEASE,32,54
+toxic-metabolic encephalopathies,DISEASE,317,349
+degenerative disorders,DISEASE,351,373
+colitis,DISEASE,5,12
+aneurysm,DISEASE,23,31
+pleural effusion,DISEASE,11,27
+fibrosis,DISEASE,11,19
+Multiple cystic pancreatic lesions,DISEASE,0,34
+Prostate,DISEASE,0,8
+left renal calculi,DISEASE,15,33
+esophagitis,DISEASE,124,135
+hemorrhage,DISEASE,18,28
+infarction,DISEASE,48,58
+left frontal dural,DISEASE,4,22
+Left frontal calvarium lesion,DISEASE,0,29
+cardiomegaly,DISEASE,19,31
+pulmonary edema,DISEASE,55,70
+pleural effusion,DISEASE,72,88
+pulmonary abnormality,DISEASE,102,123
+small bowel,DISEASE,15,26
+intra-abdominal,DISEASE,12,27
+Stable hepatic hemangioma,DISEASE,0,25
+endometriomas,DISEASE,58,71
+DEID,CHEMICAL,56,60
+Second fistulous tract superior and lateral to the suction catheter,DISEASE,0,67
+cholelithiasis,DISEASE,10,24
+acute cholecystitis,DISEASE,33,52
+dilated hepatic veins,DISEASE,10,31
+ascites,DISEASE,16,23
+pleural effusions,DISEASE,38,55
+pneumonia,DISEASE,132,141
+pleural effusion,DISEASE,11,27
+pleural effusion,DISEASE,60,76
+DEID,CHEMICAL,94,98
+pneumonia,DISEASE,14,23
+pulmonary edema,DISEASE,27,42
+steatosis,DISEASE,77,86
+intrahepatic biliary dilatation,DISEASE,99,130
+edema,DISEASE,147,152
+edema,DISEASE,32,37
+hemorrhage,DISEASE,151,161
+enlargement of the cardiac,DISEASE,9,35
+vascular congestion,DISEASE,55,74
+pleural effusion,DISEASE,76,92
+pneumonia,DISEASE,109,118
+pneumothorax,DISEASE,15,27
+Left periorbital hematoma,DISEASE,0,25
+fracture,DISEASE,45,53
+intracranial hemorrhage,DISEASE,69,92
+stenosis,DISEASE,71,79
+cholangitis,DISEASE,40,51
+hemorrhage,DISEASE,66,76
+pleural abnormality,DISEASE,3,22
+scoliosis,DISEASE,14,23
+fractures,DISEASE,19,28
+atelectasis,DISEASE,10,21
+pneumothorax,DISEASE,9,21
+Subtle lucency,DISEASE,0,14
+fractures,DISEASE,135,144
+osteomyelitis,DISEASE,43,56
+acute cardiopulmonary disease,DISEASE,3,32
+hepatitis,DISEASE,64,73
+cholecystitis,DISEASE,15,28
+Splenomegaly,DISEASE,0,12
+pneumonia,DISEASE,15,24
+opacification,DISEASE,113,126
+sinusitis,DISEASE,38,47
+pulmonary embolism,DISEASE,6,24
+Bibasilar atelectases,DISEASE,0,21
+DEID,CHEMICAL,11,15
+fracture,DISEASE,28,36
+inferior fracture,DISEASE,75,92
+edema,DISEASE,145,150
+infarct,DISEASE,25,32
+prostate abscess,DISEASE,9,25
+pseudoaneurysm,DISEASE,27,41
+Cardiomegaly,DISEASE,0,12
+pulmonary edema,DISEASE,17,32
+edema,DISEASE,46,51
+cardiopulmonary disease,DISEASE,44,67
+hemorrhage,DISEASE,69,79
+hemorrhage,DISEASE,104,114
+edema,DISEASE,24,29
+herniation,DISEASE,3,13
+Scalp hematoma,DISEASE,0,14
+fracture,DISEASE,61,69
+Comminuted fracture,DISEASE,0,19
+swelling,DISEASE,82,90
+infarct,DISEASE,53,60
+hemorrhagic,DISEASE,66,77
+hyperemia,DISEASE,97,106
+hemorrhagic,DISEASE,143,154
+infarct,DISEASE,104,111
+encephalomalacia,DISEASE,11,27
+infarcts,DISEASE,132,140
+hemosiderin,DISEASE,168,179
+amyloid angiopathy,DISEASE,34,52
+infarct,DISEASE,69,76
+hemorrhagic transformation,DISEASE,82,108
+hyperemia,DISEASE,113,122
+hemorrhagic mass,DISEASE,159,175
+spondylosis,DISEASE,14,25
+stenosis,DISEASE,54,62
+bibasilar atelectasis,DISEASE,12,33
+[DEID,CHEMICAL,62,67
+"pulmonary 
+vascular congestion",DISEASE,12,42
+pneumothorax,DISEASE,3,15
+hernia,DISEASE,15,21
+pleural effusion,DISEASE,12,28
+pneumothorax,DISEASE,33,45
+Air-fluid,DISEASE,0,9
+Palate,DISEASE,99,105
+egophony,DISEASE,287,295
+edema,DISEASE,470,475
+hernia,DISEASE,600,606
+[ ] Nl genitalia [ ] Nl,CHEMICAL,648,671
+clubbing,DISEASE,921,929
+cyanosis,DISEASE,937,945
+edema,DISEASE,953,958
+tenderness,DISEASE,978,988
+opacity,DISEASE,12,19
+pneumonia,DISEASE,68,77
+emphysema,DISEASE,62,71
+pneumothorax,DISEASE,12,24
+pleural effusions,DISEASE,16,33
+opacity,DISEASE,24,31
+pneumonia,DISEASE,120,129
+Palate,DISEASE,99,105
+Trachea midline [ ] Thyroid nl,DISEASE,152,182
+egophony,DISEASE,297,305
+cough,DISEASE,355,360
+edema,DISEASE,428,433
+hernia,DISEASE,558,564
+[ ] Nl genitalia [ ] Nl,CHEMICAL,606,629
+clubbing,DISEASE,879,887
+cyanosis,DISEASE,895,903
+edema,DISEASE,911,916
+tenderness,DISEASE,936,946
+erythema,DISEASE,18,26
+congestion,DISEASE,56,66
+bleeding,DISEASE,80,88
+ischemic colitis,DISEASE,37,53
+DEID,CHEMICAL,79,83
+pneumatosis,DISEASE,110,121
+[DEID] 9:49 AM,CHEMICAL,33,47
+Streaky opacity,DISEASE,0,15
+atelectasis,DISEASE,63,74
+pleural effusions,DISEASE,14,31
+pneumothorax,DISEASE,35,47
+emphysema,DISEASE,23,32
+hematoma,DISEASE,182,190
+vascular calcification,DISEASE,32,54
+toxic-metabolic encephalopathies,DISEASE,317,349
+degenerative disorders,DISEASE,351,373
+pulmonary edema,DISEASE,19,34
+pleural effusion,DISEASE,3,19
+pneumothorax,DISEASE,23,35
+acute osseous abnormalities,DISEASE,13,40
+DEID,CHEMICAL,1,5
+"[DEID],",CHEMICAL,25,32
+"[DEID], the monitoring",CHEMICAL,32,54
+pulmonary opacification,DISEASE,18,41
+extensive pulmonary fibrosis,DISEASE,73,101
+pneumonia,DISEASE,40,49
+pulmonary edema,DISEASE,53,68
+pleural effusion,DISEASE,3,19
+pneumothorax,DISEASE,23,35
+acute osseous abnormalities,DISEASE,13,40
+steatosis,DISEASE,73,82
+intrahepatic liver lesions,DISEASE,9,35
+central intrahepatic biliary dilatation,DISEASE,14,53
+edema,DISEASE,160,165
+ascites,DISEASE,24,31
+edema,DISEASE,82,87
+liver disease,DISEASE,144,157
+edema,DISEASE,50,55
+hemorrhage,DISEASE,68,78
+Distal intraextrahepatic biliary ducts,DISEASE,0,38
+ascites,DISEASE,51,58
+extra-axial hemorrhage,DISEASE,27,49
+edema,DISEASE,51,56
+infarction,DISEASE,144,154
+white matter hypodensities,DISEASE,16,42
+microvascular ischemic disease,DISEASE,78,108
+hematoma,DISEASE,25,33
+preseptal swelling,DISEASE,58,76
+hematoma,DISEASE,62,70
+fracture,DISEASE,85,93
+pleural effusions,DISEASE,16,33
+hemorrhage,DISEASE,3,13
+infarction,DISEASE,33,43
+edema,DISEASE,45,50
+atrophy,DISEASE,73,80
+hypodensities,DISEASE,40,53
+subgaleal hematoma,DISEASE,3,21
+fractures,DISEASE,3,12
+trauma,DISEASE,11,17
+fractures,DISEASE,19,28
+pneumothorax,DISEASE,23,35
+pneumothorax,DISEASE,27,39
+effusion,DISEASE,9,17
+atelectasis,DISEASE,50,61
+fracture,DISEASE,12,20
+erosion,DISEASE,24,31
+pleural effusion,DISEASE,3,19
+pneumothorax,DISEASE,23,35
+pleural effusion,DISEASE,24,40
+pulmonary edema,DISEASE,44,59
+vascular congestion,DISEASE,45,64
+pleural effusion,DISEASE,68,84
+Streaks of atelectasis,DISEASE,0,22
+pneumonia,DISEASE,51,60
+intracranial hemorrhage,DISEASE,55,78
+edema,DISEASE,105,110
+hydrocephalus,DISEASE,115,128
+White matter hypodensity,DISEASE,0,24
+vessel ischemic disease,DISEASE,73,96
+calcifications,DISEASE,15,29
+opacification,DISEASE,34,47
+opacification,DISEASE,14,27
+pleural effusion,DISEASE,3,19
+fracture,DISEASE,20,28
+fracture,DISEASE,31,39
+osseous abnormalities,DISEASE,9,30
+fracture,DISEASE,19,27
+atelectasis,DISEASE,142,153
+intracranial hemorrhage,DISEASE,38,61
+infarct,DISEASE,149,156
+pleural or pericardial effusion,DISEASE,24,55
+gynecomastia,DISEASE,10,22
+pleural effusion,DISEASE,3,19
+pneumothorax,DISEASE,23,35
+GDA,CHEMICAL,0,3
+pseudoaneurysm,DISEASE,56,70
+pseudoaneurysm,DISEASE,27,41
+pseudoaneurysm,DISEASE,102,116
+edema,DISEASE,13,18
+pleural effusion,DISEASE,3,19
+pneumothorax,DISEASE,3,15
+opacification,DISEASE,40,53
+opacity,DISEASE,13,20
+pleural effusion,DISEASE,3,19
+pneumothorax,DISEASE,12,24
+pleural effusion,DISEASE,12,28
+pneumothorax,DISEASE,32,44
+pneumothorax,DISEASE,50,62
+pleural effusion,DISEASE,33,49
+pneumothorax,DISEASE,53,65
+hemorrhage,DISEASE,152,162
+hemorrhage,DISEASE,21,31
+hemorrhage,DISEASE,18,28
+cerebral atrophy,DISEASE,41,57
+herniation of the cerebellar tonsils,DISEASE,12,48
+edema,DISEASE,5,10
+cerebellar hemorrhage,DISEASE,27,48
+supratentorial edema,DISEASE,12,32
+pneumocephalus,DISEASE,13,27
+trauma,DISEASE,90,96
+hemorrhage,DISEASE,37,47
+hydrocephalus,DISEASE,91,104
+infarct,DISEASE,142,149
+atrophy,DISEASE,26,33
+swelling,DISEASE,33,41
+fractures,DISEASE,22,31
+fracture,DISEASE,33,41
+swelling,DISEASE,105,113
+effusion,DISEASE,41,49
+acute osseous abnormalities,DISEASE,3,30
+hyperintensity,DISEASE,47,61
+hyperintensity,DISEASE,46,60
+infarct,DISEASE,141,148
+encephalomalacia,DISEASE,11,27
+infarct,DISEASE,144,151
+encephalomalacia,DISEASE,15,31
+hemosiderin,DISEASE,48,59
+Left cerebellar encephalomalacia,DISEASE,0,32
+hemosiderin,DISEASE,46,57
+pleural effusion,DISEASE,77,93
+pneumonia,DISEASE,110,119
+fracture,DISEASE,25,33
+pneumothorax,DISEASE,37,49
+thyroid enlargement,DISEASE,31,50
+height loss,DISEASE,39,50
+disc degenerative,DISEASE,30,47
+stenosis,DISEASE,76,84
+bulge indents,DISEASE,28,41
+stenosis,DISEASE,130,138
+stenosis,DISEASE,36,44
+high-grade,DISEASE,48,58
+sacroiliac joints,DISEASE,4,21
+degenerative disease,DISEASE,5,25
+lower lumbar spine,DISEASE,50,68
+arthroplasty,DISEASE,20,32
+lucency,DISEASE,55,62
+heterotopic ossification,DISEASE,127,151
+heterotopic ossification,DISEASE,12,36
+lucency,CHEMICAL,25,32
+knee effusion,DISEASE,12,25
+bibasilar atelectasis,DISEASE,23,44
+pericardial effusion,DISEASE,35,55
+atelectasis,DISEASE,21,32
+pleural effusion,DISEASE,9,25
+pneumothorax,DISEASE,12,24
+calcifications,DISEASE,12,26
+pulmonary edema,DISEASE,12,27
+DEID,CHEMICAL,1,5
+AML,DISEASE,18,21
+DEID,CHEMICAL,1,5
+fistula,DISEASE,94,101
+fever,DISEASE,21,26
+vomiting,DISEASE,28,36
+abdominal pain,DISEASE,41,55
+DEID,CHEMICAL,1,5
+R/O,DISEASE,49,52
+Preeclampsia,DISEASE,0,12
+DEID,CHEMICAL,1,5
+decreased breath sounds // ?,DISEASE,61,89
+volume overload,DISEASE,89,104
+opacity,DISEASE,106,113
+volume overload,DISEASE,115,130
+DEID,CHEMICAL,1,5
+abdominal pain,DISEASE,48,62
+"biliary
+dilatation//",DISEASE,64,84
+Hemoptysis,DISEASE,0,10
+DEID,CHEMICAL,1,5
+syncope,DISEASE,18,25
+"vomiting, question head
+bleed or fracture",DISEASE,33,74
+DEID,CHEMICAL,1,5
+hemopneumo,DISEASE,35,45
+hepatitis,DISEASE,6,15
+thrombosis,DISEASE,25,35
+pain,DISEASE,50,54
+pneumonia,DISEASE,9,18
+left-sided headache,DISEASE,17,36
+DEID,CHEMICAL,1,5
+pneumothorax,DISEASE,12,24
+DEID,CHEMICAL,1,5
+chest pain,DISEASE,18,28
+PE,CHEMICAL,119,121
+left knee injury,DISEASE,17,33
+fracture,DISEASE,106,114
+DEID,CHEMICAL,1,5
+right hemiparesis,DISEASE,16,33
+aphasia,DISEASE,38,45
+infarction,DISEASE,13,23
+DEID,CHEMICAL,1,5
+chornic prostatitis,DISEASE,12,31
+pain,DISEASE,44,48
+NO_PO contrast//,DISEASE,50,66
+chest pain// r/o infecton,DISEASE,21,46
+DEID,CHEMICAL,1,5
+brain aneurysm,DISEASE,37,51
+DEID,CHEMICAL,1,5
+chest pain,DISEASE,16,26
+heroin,CHEMICAL,33,39
+cocaine,CHEMICAL,44,51
+DEID,CHEMICAL,1,5
+right cerebellar hemorrhage,DISEASE,17,44
+DEID,CHEMICAL,1,5
+epigastric pain,DISEASE,12,27
+R/O congestive heart failure,DISEASE,47,75
+pneumonia,DISEASE,77,86
+confusion,DISEASE,21,30
+aphasia,DISEASE,32,39
+numbness/tingling,DISEASE,27,44
+C6/C7 herniation,DISEASE,6,22
+DEID,CHEMICAL,3,7
+chest pain,DISEASE,20,30
+CMT,DISEASE,40,43
+DEID,CHEMICAL,76,80
+DEID,CHEMICAL,1,5
+pleural effusion,DISEASE,20,36
+Cough,DISEASE,0,5
+pneumonia,DISEASE,11,20

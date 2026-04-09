@@ -46,7 +46,7 @@ def main():
     output_file = os.path.join(output_dir, "entities.csv")
     merged_entities.to_csv(output_file, index=False)
     
-    print(f"✅ Stage 2 Complete! Cleaned entities saved to: {output_file}")
+    print(f"Stage 2 Complete! Cleaned entities saved to: {output_file}")
 
 if __name__ == "__main__":
     main()

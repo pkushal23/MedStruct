@@ -24,8 +24,15 @@ def extract_sections(text: str, note_type: str) -> dict:
     """
     if not isinstance(text, str):
         return {"full_text": ""}
-        
-    section_map = DS_SECTIONS if note_type == 'DS' else RR_SECTIONS
+
+    normalized_note_type = str(note_type).strip().lower()
+    if normalized_note_type in {"ds", "discharge"}:
+        section_map = DS_SECTIONS
+    elif normalized_note_type in {"rr", "radiology"}:
+        section_map = RR_SECTIONS
+    else:
+        section_map = DS_SECTIONS
+
     extracted = {}
     
     for canonical_name, patterns in section_map.items():

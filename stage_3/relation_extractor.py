@@ -1,7 +1,7 @@
 import pandas as pd
 from tqdm import tqdm
 from transformers import pipeline
-from proximity_rules import get_cooccurring_entities
+from .proximity_rules import get_cooccurring_entities
 from dotenv import load_dotenv
 
 load_dotenv()

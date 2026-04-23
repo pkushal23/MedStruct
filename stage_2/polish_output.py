@@ -6,27 +6,32 @@ def final_polish(df):
     1. Removes persistent subword artifacts.
     2. Resolves overlapping spans by keeping the longest word.
     """
-
-    df = df[~df['word'].str.contains('##', na=False)].copy()
+    if df.empty:
+        return df
     
-
-    df['word_len'] = df['word'].str.len()
-    df = df.sort_values(['note_id', 'sentence_index', 'word_len'], ascending=[True, True, False])
+    df_clean = df.copy()
+    df_clean = df_clean[~df_clean['word'].astype(str).str.contains('##', na=False)]
+    df_clean = df_clean[df_clean['word'].astype(str).str.len() > 2]
+    df_clean = df_clean[~df_clean['entity_group'].astype(str).str.contains('LABEL', na=False)]
+    df_clean['word'] = df_clean['word'].astype(str).str.lower().str.strip()
+    df_clean = df_clean.sort_values(['note_id', 'sentence_index', 'word'])
     
-    final_rows = []
-    for (note_id, sent_idx), group in df.groupby(['note_id', 'sentence_index']):
-        occupied_positions = set()
+    return df_clean
+
+
+if __name__ == "__main__":
+    input_path = '../data/processed/entities.csv'
+    output_path = '../data/processed/entities_refined.csv'
+    
+    print(f"Loading raw entities from {input_path}...")
+    try:
+        df_entities = pd.read_csv(input_path)
+        print(f"Original entities count: {len(df_entities)}")
         
-        for _, row in group.iterrows():
-            current_span = set(range(row['start'], row['end']))
-            
-            if not (current_span & occupied_positions):
-                final_rows.append(row)
-                occupied_positions.update(current_span)
-                
-    return pd.DataFrame(final_rows).drop(columns=['word_len'])
-
-
-df_entities = pd.read_csv('../data/processed/entities.csv')
-clean_entities = final_polish(df_entities)
-clean_entities.to_csv('../data/processed/entities_refined.csv', index=False)
+        clean_entities = final_polish(df_entities)
+        
+        clean_entities.to_csv(output_path, index=False)
+        print(f"Polished down to {len(clean_entities)} high-quality entities.")
+        print(f"Saved to {output_path}")
+    except FileNotFoundError:
+        print(f"Error: Could not find {input_path}. Run stage 2 first.")

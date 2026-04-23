@@ -15,7 +15,15 @@ def main():
     os.makedirs(output_dir, exist_ok=True)
 
     print("\nLoading verified relations from Stage 3...")
-    df_relations = pd.read_csv(input_file)
+    df_raw = pd.read_csv(input_file)
+
+    # Filter for high-confidence Adverse Drug Events (CAUSES)
+    df_relations = df_raw[
+        (df_raw['relation_type'] == 'CAUSES') & 
+        (df_raw['model_confidence'] >= 0.75)
+    ].copy()
+    
+    print(f"Filtered down to {len(df_relations)} high-confidence ADEs for UMLS mapping.")
 
     # 3. Initialize components
     linker = OntologyLinker()

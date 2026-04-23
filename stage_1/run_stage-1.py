@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(me
 
 def main():
     PROJECT_ID = os.getenv("GOOGLE_CLOUD_PROJECT")
-    OUTPUT_DIR = "data/processed"
+    OUTPUT_DIR = "../data/processed"
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     
     # Initialize classes

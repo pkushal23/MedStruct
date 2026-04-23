@@ -1,14 +1,28 @@
 import pandas as pd
-from transformers import pipeline, AutoTokenizer
+import warnings
 from tqdm import tqdm
 
 class RadBERTNER:
     def __init__(self, model_name="StanfordAIMI/RadBERT", device=-1):
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.nlp = pipeline("ner", model=model_name, aggregation_strategy="simple", device=device)
+        self.model_name = model_name
+        self.device = device
+        self.nlp = None
+
+        try:
+            from transformers import AutoTokenizer, pipeline
+            self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+            self.nlp = pipeline("ner", model=model_name, aggregation_strategy="simple", device=device)
+        except Exception as exc:
+            self.tokenizer = None
+            warnings.warn(
+                "RadBERTNER could not be loaded and will be disabled for this run. "
+                "Install torch>=2.6 or use a safetensors-backed checkpoint to enable it. "
+                f"Original error: {exc}",
+                RuntimeWarning,
+            )
 
     def extract_entities(self, text):
-        if not isinstance(text, str) or not text.strip():
+        if self.nlp is None or not isinstance(text, str) or not text.strip():
             return []
         tokens = self.tokenizer.encode(text, truncation=True, max_length=510, add_special_tokens=False)
         safe_text = self.tokenizer.decode(tokens)

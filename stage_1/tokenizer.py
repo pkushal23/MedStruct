@@ -20,34 +20,41 @@ class ClinicalTokenizer:
 
     def tokenize_dataframe(self, df_segmented: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
         """
-        Takes the segmented dataframe, melts it into sections, and tokenizes into sentences.
+        Takes a segmented dataframe and tokenizes section text into sentences.
         Returns:
             df_sections: (note_id, hadm_id, section_name, section_text)
             df_sentences: (note_id, hadm_id, section_name, sentence_index, sentence_text)
         """
-        logger.info("Melting section columns into rows...")
-       
-        # Identify identifier columns vs section columns
-        id_cols = ['subject_id', 'hadm_id', 'note_id']
-        section_cols = [c for c in df_segmented.columns if c not in id_cols]
-       
-        # Melt dataframe so we have one row per section per note
-        # Melt dataframe so we have one row per section per note
-        df_melted = df_segmented.melt(
-            id_vars=id_cols,
-            value_vars=section_cols,
-            var_name='section_name',
-            value_name='section_text'
-        )
-       
+        logger.info("Preparing section rows for sentence tokenization...")
+
+        # The current segmenter already emits long-format rows with section_name and section_text.
+        # Keep compatibility with older wide-format inputs by melting only when needed.
+        if {'section_name', 'section_text'}.issubset(df_segmented.columns):
+            df_sections = df_segmented.copy()
+        else:
+            id_cols = [c for c in ['subject_id', 'hadm_id', 'note_id'] if c in df_segmented.columns]
+            section_cols = [c for c in df_segmented.columns if c not in id_cols]
+
+            if 'section_text' in section_cols:
+                section_cols.remove('section_text')
+            if 'section_name' in section_cols:
+                section_cols.remove('section_name')
+
+            df_sections = df_segmented.melt(
+                id_vars=id_cols,
+                value_vars=section_cols,
+                var_name='section_name',
+                value_name='section_text'
+            )
+
         # 1. Drop true missing values (NaNs)
-        df_melted = df_melted.dropna(subset=['section_text'])
-       
+        df_sections = df_sections.dropna(subset=['section_text'])
+
         # 2. Force the column to be strings (prevents float errors)
-        df_melted['section_text'] = df_melted['section_text'].astype(str)
-       
+        df_sections['section_text'] = df_sections['section_text'].astype(str)
+
         # 3. Drop empty string sections
-        df_sections = df_melted[df_melted['section_text'].str.strip() != ""].copy()
+        df_sections = df_sections[df_sections['section_text'].str.strip() != ""].copy()
        
         logger.info("Running SciSpaCy sentence tokenization (this may take a while)...")
         sentences_data = []

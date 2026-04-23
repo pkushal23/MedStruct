@@ -1,8 +1,13 @@
 import pandas as pd
 
-def get_cooccurring_entities(df_entities, target_types, max_sentence_window):
+def get_cooccurring_entities(df_entities, df_sentences, target_types, max_sentence_window, valid_sections=None):
+    if not isinstance(target_types, (list, tuple, set, pd.Series)):
+        raise TypeError(f"target_types must be list-like, got {type(target_types).__name__}")
+
+    label_col = 'entity_group' if 'entity_group' in df_entities.columns else 'entity_type'
+
     # Filter only for the entity types we care about
-    df_filtered = df_entities[df_entities['entity_group'].isin(target_types)].copy()
+    df_filtered = df_entities[df_entities[label_col].isin(target_types)].copy()
     
     # Merge the dataframe with itself to create pairs of entities
     merged = pd.merge(
@@ -19,8 +24,16 @@ def get_cooccurring_entities(df_entities, target_types, max_sentence_window):
     merged['sentence_diff'] = (merged['sentence_index_1'] - merged['sentence_index_2']).abs()
     
     # Keep only the pairs that fall within our window
-    valid_relations = merged[merged['sentence_diff'] <= max_sentence_window]
+    valid_relations = merged[merged['sentence_diff'] <= max_sentence_window].copy()
     
+    if valid_sections and not valid_relations.empty:
+        section_map = df_sentences.set_index(['note_id', 'sentence_index'])['section_name'].to_dict()
+        
+        valid_relations['section_name'] = valid_relations.apply(
+            lambda x: section_map.get((x['note_id'], x['sentence_index_1']), "unknown"), axis=1
+        )
+        
+        valid_relations = valid_relations[valid_relations['section_name'].isin(valid_sections)]
     return valid_relations.drop_duplicates(
         subset=['note_id', 'start_1', 'start_2']
     ).reset_index(drop=True)

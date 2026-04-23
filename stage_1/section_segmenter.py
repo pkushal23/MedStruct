@@ -1,20 +1,21 @@
 import re
 import pandas as pd
 
-# Canonical mappings defined in MedStruct
+# Canonical mappings defined in MedStruct - UPDATED FOR MIMIC-IV FLEXIBILITY
 DS_SECTIONS = {
-    "Chief Complaint": [r"CHIEF COMPLAINT\s*:", r"C/C\s*:"],
-    "HPI": [r"HISTORY OF PRESENT ILLNESS\s*:", r"HPI\s*:"],
-    "PMH": [r"PAST MEDICAL HISTORY\s*:", r"PMH\s*:"],
-    "Medications": [r"DISCHARGE MEDICATIONS\s*:", r"MEDICATIONS ON ADMISSION\s*:"],
-    "Assessment/Plan": [r"ASSESSMENT AND PLAN\s*:", r"A/P\s*:"],
-    "Discharge Dx": [r"DISCHARGE DIAGNOSIS\s*:", r"DISCHARGE DIAGNOSES\s*:"]
+    "Chief Complaint": [r"(?i)chief complaint\s*:?", r"(?i)c/c\s*:?"],
+    "HPI": [r"(?i)history of present illness\s*:?", r"(?i)hpi\s*:?"],
+    "PMH": [r"(?i)past medical history\s*:?", r"(?i)pmh\s*:?"],
+    "Medications": [r"(?i)discharge medications\s*:?", r"(?i)medications on admission\s*:?"],
+    "Assessment/Plan": [r"(?i)assessment and plan\s*:?", r"(?i)a/p\s*:?"],
+    "Discharge Dx": [r"(?i)discharge diagnos(is|es)\s*:?"],
+    "Hospital Course": [r"(?i)brief hospital course\s*:?", r"(?i)hospital course\s*:?"]
 }
 
 RR_SECTIONS = {
-    "Indication": [r"INDICATION\s*:", r"REASON FOR EXAM\s*:"],
-    "Findings": [r"FINDINGS\s*:"],
-    "Impression": [r"IMPRESSION\s*:", r"CONCLUSIONS\s*:"]
+    "Indication": [r"(?i)indication\s*:?", r"(?i)reason for exam\s*:?"],
+    "Findings": [r"(?i)findings\s*:?"],
+    "Impression": [r"(?i)impression\s*:?", r"(?i)conclusions\s*:?"]
 }
 
 def extract_sections(text: str, note_type: str) -> dict:
@@ -26,40 +27,69 @@ def extract_sections(text: str, note_type: str) -> dict:
         return {"full_text": ""}
 
     normalized_note_type = str(note_type).strip().lower()
-    if normalized_note_type in {"ds", "discharge"}:
-        section_map = DS_SECTIONS
-    elif normalized_note_type in {"rr", "radiology"}:
-        section_map = RR_SECTIONS
-    else:
-        section_map = DS_SECTIONS
-
-    extracted = {}
     
-    for canonical_name, patterns in section_map.items():
-        for pattern in patterns:
-            # Look for the header, grab everything until the next All-Caps header or end of string
-            regex = rf"{pattern}\s*(.*?)(?=\n[A-Z\s/]+:|$)"
-            match = re.search(regex, text, re.IGNORECASE | re.DOTALL)
-            
-            if match:
-                extracted[canonical_name] = match.group(1).strip()
-                break # Found the section, move to the next canonical name
-                
-    # Fallback to full_text if no sections matched (Step 1.3 spec)
-    if not extracted:
-        extracted["full_text"] = text.strip()
+    if normalized_note_type == 'discharge':
+        target_sections = DS_SECTIONS
+    elif normalized_note_type == 'radiology':
+        target_sections = RR_SECTIONS
+    else:
+        return {"full_text": text}
+
+    print(f"[DEBUG] extract_sections: note_type='{note_type}' -> normalized='{normalized_note_type}'")
+    print(f"[DEBUG] Using sections: {list(target_sections.keys())}")
+    
+    extracted = {}
+    current_section = "full_text"
+    current_text = []
+
+    # Split text by lines to parse headers
+    lines = text.split('\n')
+    print(f"[DEBUG] Text has {len(lines)} lines")
+    
+    for line_idx, line in enumerate(lines):
+        matched_section = None
+        # Check if the line matches any known section header
+        for sec_name, patterns in target_sections.items():
+            for pattern in patterns:
+                # Use re.match to ensure the header is at the start of the line
+                if re.match(pattern, line.strip()):
+                    matched_section = sec_name
+                    print(f"[DEBUG] Line {line_idx}: '{line[:50]}...' matched section '{sec_name}'")
+                    break
+            if matched_section:
+                break
         
+        if matched_section:
+            # Save the previous section
+            if current_text:
+                extracted[current_section] = "\n".join(current_text).strip()
+            # Start tracking the new section
+            current_section = matched_section
+            current_text = []
+        else:
+            current_text.append(line)
+
+    # Catch the final section
+    if current_text:
+        extracted[current_section] = "\n".join(current_text).strip()
+
+    print(f"[DEBUG] Final extracted sections: {[(k, len(v)) for k, v in extracted.items()]}")
     return extracted
 
 def segment_dataframe(df: pd.DataFrame, note_type: str) -> pd.DataFrame:
-    """Applies section segmentation and flattens the dictionary into columns."""
-    df_segmented = df.copy()
-    
-    # Apply extraction
-    section_dicts = df_segmented['cleaned_text'].apply(lambda x: extract_sections(x, note_type))
-    
-    # Expand dictionary keys into new dataframe columns
-    sections_df = pd.DataFrame(section_dicts.tolist(), index=df_segmented.index)
-    
-    # Merge back
-    return pd.concat([df_segmented, sections_df], axis=1).drop(columns=['text', 'cleaned_text'])
+    """Applies section extraction to the entire dataframe."""
+    records = []
+    for _, row in df.iterrows():
+        sections_dict = extract_sections(row.get('text', ''), note_type)
+        print(f"[DEBUG] segment_dataframe: Extracted sections: {list(sections_dict.keys())}")
+        for sec_name, sec_text in sections_dict.items():
+            if sec_text and len(sec_text) > 0:
+                print(f"[DEBUG]   Section '{sec_name}': {len(sec_text)} chars")
+            # Only keep sections that actually have text
+            if sec_text.strip():
+                record = row.to_dict()
+                record['section_name'] = sec_name
+                record['section_text'] = sec_text
+                records.append(record)
+                
+    return pd.DataFrame(records)

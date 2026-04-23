@@ -15,12 +15,20 @@ class OntologyLinker:
         text = str(text).lower().strip()
         doc = self.nlp(text)
         
-        # If no entities found
-        if not doc.ents or not doc.ents[0]._.kb_ents:
-            return "UNMAPPED", "UNMAPPED"
-        
-        # Extract the highest scoring Concept Unique Identifier (CUI)
-        cui, score = doc.ents[0]._.kb_ents[0]
-        concept = self.linker.kb.cui_to_entity[cui]
-        
-        return cui, concept.canonical_name
+        best_cui = "UNMAPPED"
+        best_concept_name = "UNMAPPED"
+        highest_score = 0.0
+
+        # Check every entity SciSpacy found in the string
+        for ent in doc.ents:
+            if ent._.kb_ents:
+                # Get the top matching CUI for this specific entity
+                cui, score = ent._.kb_ents[0]
+                
+                # Keep it if it's the highest confidence match in the text
+                if score > highest_score:
+                    highest_score = score
+                    best_cui = cui
+                    best_concept_name = self.linker.kb.cui_to_entity[cui].canonical_name
+                    
+        return best_cui, best_concept_name

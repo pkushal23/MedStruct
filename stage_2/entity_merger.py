@@ -1,50 +1,60 @@
 import pandas as pd
 
 
+def calculate_iou(span1, span2):
+    start1, end1 = span1
+    start2, end2 = span2
+    
+    # Calculate intersection
+    intersection = max(0, min(end1,end2) - max(start1, start2))
+    
+    # Calculate union
+    union = max(end1, end2) - min(start1, start2)
+    
+    if union == 0:
+        return 0.0
+    
+    return intersection / union
+
 def merge_and_deduplicate(df_list):
-    combined_df = pd.concat(df_list, ignore_index=True)
-    combined_df = combined_df.sort_values(by=['note_id', 'score'], ascending=[True, False])
+    combined_df = pd.concat(df_list, ignore_index=True) if isinstance(df_list, list) else df_list
+
+    if combined_df.empty:
+        return combined_df
+
+    # Normalize schema across NER modules (some use entity_group, others entity_type).
+    if 'entity_type' not in combined_df.columns and 'entity_group' in combined_df.columns:
+        combined_df = combined_df.copy()
+        combined_df['entity_type'] = combined_df['entity_group']
     
     final_entities = []
     for (note_id, sent_idx), group in combined_df.groupby(['note_id', 'sentence_index']):
-        seen_spans = set()
+        accepted_entities = []
         for _, row in group.iterrows():
-            span = (row['start'], row['end'])
-            if span not in seen_spans:
-                final_entities.append(row)
-                seen_spans.add(span)
+            current_span = (row['start'], row['end'])
+            is_overlap = False
             
-    return pd.DataFrame(final_entities)
+            for i, accepted in enumerate(accepted_entities):
+                accepted_span = (accepted['start'], accepted['end'])
+                iou = calculate_iou(current_span, accepted_span)
+                
+                if iou > 0.40:  # Threshold for considering as same entity
+                    is_overlap = True
+                    current_entity_type = row.get('entity_type', row.get('entity_group', ''))
+                    accepted_entity_type = accepted.get('entity_type', accepted.get('entity_group', ''))
 
-def stitch_subwords(df):
-    if df.empty:
-        return df
-    
-    # Ensure entities are sorted by appearance
-    df = df.sort_values(['note_id', 'sentence_index', 'start'])
-    final_entities = []
-    
-    for _, group in df.groupby(['note_id', 'sentence_index']):
-        current_entity = None
-        
-        for _, row in group.iterrows():
-            if current_entity is None:
-                current_entity = row.to_dict()
-                continue
-            
-            # Check if current word is a subword and physically touches the previous word
-            if str(row['word']).startswith('##') and row['start'] == current_entity['end']:
-                # Stitch word (remove ##) and update the end boundary
-                current_entity['word'] += row['word'][2:]
-                current_entity['end'] = row['end']
-                # Keep the higher score of the two
-                current_entity['score'] = max(current_entity['score'], row['score'])
-            else:
-                # No stitch possible; move the current entity to final list
-                final_entities.append(current_entity)
-                current_entity = row.to_dict()
-        
-        if current_entity:
-            final_entities.append(current_entity)
+                    is_current_med7 = row['source_model'] == 'Med7' and current_entity_type == 'DRUG'
+                    is_accepted_med7 = accepted['source_model'] == 'Med7' and accepted_entity_type == 'DRUG'
+                    
+                    if is_current_med7 and not is_accepted_med7:
+                        accepted_entities[i] = row
+                    elif not is_current_med7 and is_accepted_med7:
+                        
+                        if len(str(row['word'])) > len(str(accepted['word'])):
+                            accepted_entities[i] = row
+                    break
+            if not is_overlap:
+                accepted_entities.append(row)
+        final_entities.extend(accepted_entities)
             
     return pd.DataFrame(final_entities)

@@ -4,7 +4,7 @@ class CrossNoteJoiner:
     def build_longitudinal_edges(self, df):
         # 1. Filter out the NLP noise
         clean_df = df[(df['cui_1'] != 'UNMAPPED') & (df['cui_2'] != 'UNMAPPED')].copy()
-
+        clean_df = clean_df[clean_df['cui_1'] != clean_df['cui_2']]
         # 2. Group by admission and specific entity pairs
         grouped = clean_df.groupby(['hadm_id', 'cui_1', 'canonical_name_1', 'cui_2', 'canonical_name_2', 'relation_type'])
 

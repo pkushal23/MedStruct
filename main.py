@@ -1,4 +1,7 @@
-from fastapi import FastAPI, UploadFile, File, Form
+from fastapi import FastAPI, UploadFile, File, Form, HTTPException
+from fastapi.concurrency import run_in_threadpool
+import asyncio
+import uuid
 import fitz
 import pandas as pd
 import numpy as np
@@ -25,6 +28,11 @@ from stage_5.alignment_scorer import AlignmentScorer
 from stage_5.entity_graph_builder import EntityGraphBuilder
 
 app = FastAPI()
+
+# ---------------------------------------------------------------------------
+# Background job store  {job_id: {"status": str, "result": dict|None, "error": str|None}}
+# ---------------------------------------------------------------------------
+_JOBS: dict[str, dict] = {}
 
 # --- INITIALIZE PIPELINE COMPONENTS ---
 tokenizer = ClinicalTokenizer()
@@ -160,36 +168,30 @@ def _validate_target_semantic_type(linker, cui, relation_type):
     except Exception:
         return False
 
-@app.post("/process-pdf")
-async def process_pdf(
-    file: UploadFile = File(...),
-    subject_id: int = Form(...),
-    hadm_id: int = Form(...),
-    note_type: str = Form(...)
-):
-    
-    pdf_bytes = await file.read()
+# ---------------------------------------------------------------------------
+# Core pipeline logic (runs in a thread so it doesn't block the event loop)
+# ---------------------------------------------------------------------------
+def _run_pipeline(pdf_bytes: bytes, filename: str, subject_id: int, hadm_id: int, note_type: str) -> dict:
+    """Synchronous pipeline – called via run_in_threadpool from the background task."""
     doc = fitz.open(stream=pdf_bytes, filetype="pdf")
     text = "\n".join(page.get_text() for page in doc)
     print(f"[DEBUG] Raw PDF text length: {len(text)} chars")
     print(f"[DEBUG] First 500 chars: {text[:500]}")
-    
+
     text = _normalize_text_for_ocr_noise(text)
     print(f"[DEBUG] After normalization: {len(text)} chars")
 
     df_raw = pd.DataFrame([{
-        "subject_id": subject_id, 
-        "hadm_id": hadm_id, 
-        "note_id": file.filename, 
+        "subject_id": subject_id,
+        "hadm_id": hadm_id,
+        "note_id": filename,
         "text": text
     }])
 
-    # FIX 2: Map shorthand types to full words expected by the segmenter
-    # Handle both short codes (DS, RR) and full names from UI (Discharge Summary, Radiology Report)
     type_map = {
-        "DS": "discharge", 
-        "RR": "radiology", 
-        "discharge": "discharge", 
+        "DS": "discharge",
+        "RR": "radiology",
+        "discharge": "discharge",
         "radiology": "radiology",
         "Discharge Summary": "discharge",
         "Radiology Report": "radiology"
@@ -197,86 +199,43 @@ async def process_pdf(
     mapped_type = type_map.get(note_type, "discharge")
     print(f"[DEBUG] Input note_type: '{note_type}' -> Mapped to: '{mapped_type}'")
 
-    # --- STAGE 1: Text Processing ---
+    # --- STAGE 1 ---
     df_clean = clean_dataframe(df_raw)
-    print(f"[DEBUG] After clean_dataframe: {len(df_clean)} rows")
-    if not df_clean.empty:
-        print(f"[DEBUG] Clean text sample: {df_clean.iloc[0]['text'][:300] if 'text' in df_clean.columns else 'NO TEXT'}")
-    
-    df_seg = segment_dataframe(df_clean, mapped_type) # CRITICAL: Use mapped_type
-    print(f"[DEBUG] After segment_dataframe: {len(df_seg)} rows")
-    
+    df_seg = segment_dataframe(df_clean, mapped_type)
     df_sections, df_sentences = tokenizer.tokenize_dataframe(df_seg)
-    print(f"[DEBUG] After tokenize: {len(df_sections)} sections, {len(df_sentences)} sentences")
 
-    # --- STAGE 2: NER ---
-    # Note: RadBERT model checkpoint lacks pre-trained NER classifier (missing classifier.weight/bias)
-    # so it returns generic LABEL_* tags. Using clinical NER ensemble for all document types instead.
+    # --- STAGE 2 ---
     df_clin = clinical_model.process_dataframe(df_sentences)
-    print(f"[DEBUG] After ClinicalNER: {len(df_clin)} entities")
-    if not df_clin.empty:
-        print(f"[DEBUG] ClinicalNER columns: {df_clin.columns.tolist()}")
-        sample_cols = ['word', 'entity_group'] if 'entity_group' in df_clin.columns else df_clin.columns.tolist()[:3]
-        print(f"[DEBUG] ClinicalNER sample: {df_clin[sample_cols].head(3).to_dict('records')}")
-    
     df_med7 = med7_model.process_dataframe(df_sentences)
-    print(f"[DEBUG] After Med7NER: {len(df_med7)} entities")
-    
     df_entities = pd.concat([df_clin, df_med7], ignore_index=True)
-    print(f"[DEBUG] After concat: {len(df_entities)} total entities")
 
     if df_entities.empty:
-        print("[DEBUG] No entities found - returning empty result")
         return {"entities": [], "relations": [], "graph": {}, "edges": []}
 
     merged_entities = merge_and_deduplicate(df_entities)
-    print(f"[DEBUG] After merge_and_deduplicate: {len(merged_entities)} entities")
     if not merged_entities.empty:
-        print(f"[DEBUG] Merged columns: {merged_entities.columns.tolist()}")
-        sample_cols = ['word', 'entity_group'] if 'entity_group' in merged_entities.columns else merged_entities.columns.tolist()[:3]
-        print(f"[DEBUG] Merged sample: {merged_entities[sample_cols].head(3).to_dict('records')}")
-        # Removes wordpiece artifacts and short token fragments from API output.
         merged_entities = final_polish(merged_entities)
-        print(f"[DEBUG] After final_polish: {len(merged_entities)} entities")
-        if not merged_entities.empty:
-            print(f"[DEBUG] Polished sample: {merged_entities[sample_cols].head(3).to_dict('records')}")
 
-    # --- STAGE 3: Semantic Extraction ---
-    # Note: Radiology reports are purely diagnostic (findings + impression) with no medications,
-    # so drug-disease relation extraction is not applicable. Return entities only.
+    # --- STAGES 3-5 ---
     df_normalized_dict = []
     graph_payload = {}
     edges_dict = []
 
     if mapped_type != "radiology":
-        # Only extract drug-disease relations for discharge summaries
-        # Primary threshold is 0.50
         df_relations = rel_extractor.extract_drug_disease(
-            merged_entities, 
-            df_sentences, 
-            window=2, 
-            valid_sections=ACTIVE_SECTIONS, 
-            threshold=0.50
+            merged_entities, df_sentences, window=2,
+            valid_sections=ACTIVE_SECTIONS, threshold=0.50
         )
-
         if df_relations.empty:
-            print("No relations found with strict filters; retrying with relaxed window/sections...")
             df_relations = rel_extractor.extract_drug_disease(
-                merged_entities,
-                df_sentences,
-                window=4,
-                valid_sections=None,
-                threshold=0.50,
+                merged_entities, df_sentences, window=4,
+                valid_sections=None, threshold=0.50,
             )
-
-        # --- STAGES 4 & 5: UMLS Mapping & Graph Building ---
         if not df_relations.empty:
-            # FIX 3: Lower secondary filter to 0.60 to capture more NLI results
             df_relations_filtered = df_relations[
-                (df_relations['relation_type'].isin(['CAUSES', 'TREATS'])) & 
+                (df_relations['relation_type'].isin(['CAUSES', 'TREATS'])) &
                 (df_relations['model_confidence'] >= 0.60)
             ].copy()
-
             if not df_relations_filtered.empty:
                 df_normalized = mapper.map_dataframe(df_relations_filtered)
                 if 'section_name' not in df_normalized.columns:
@@ -286,10 +245,8 @@ async def process_pdf(
                     axis=1,
                 )
                 df_normalized_dict = df_normalized.to_dict(orient="records")
-                
                 if not df_normalized.empty and 'cui_1' in df_normalized.columns:
                     df_joined = joiner.build_longitudinal_edges(df_normalized)
-                    
                     if not df_joined.empty:
                         df_scored = scorer.score_edges(df_joined)
                         graph_payload = graph_builder.build_json_graph(df_scored)
@@ -301,8 +258,7 @@ async def process_pdf(
         "graph": graph_payload,
         "edges": edges_dict
     }
-    
-    # For radiology reports, add enhanced structured data
+
     if mapped_type == "radiology":
         rad_data = rad_enhancer.enhance_entities_dataframe(merged_entities, df_sentences, df_raw)
         finding_relations = rad_data.get("finding_relationships", [])
@@ -311,14 +267,10 @@ async def process_pdf(
             for k, v in (rad_data.get("severity_classification", {}) or {}).items()
         }
         radiology_edges = _build_radiology_edges(
-            relations=finding_relations,
-            hadm_id=hadm_id,
-            note_id=file.filename,
-            subject_id=subject_id,
-            severity_map=severity_map,
-            confidence_threshold=0.50,  # Only include relations with >= 50% confidence
+            relations=finding_relations, hadm_id=hadm_id,
+            note_id=filename, subject_id=subject_id,
+            severity_map=severity_map, confidence_threshold=0.50,
         )
-
         result["relations"] = finding_relations
         result["edges"] = radiology_edges
         result["graph"] = {
@@ -339,11 +291,76 @@ async def process_pdf(
                 ],
             }
         }
-
         result["measurements"] = rad_data.get("measurements", [])
         result["negations"] = rad_data.get("negations", [])
         result["finding_relationships"] = finding_relations
         result["section_summary"] = rad_data.get("section_summary", {})
         result["severity_classification"] = rad_data.get("severity_classification", {})
-    
+
     return _to_builtin_types(result)
+
+
+# ---------------------------------------------------------------------------
+# Background task wrapper
+# ---------------------------------------------------------------------------
+async def _pipeline_task(job_id: str, pdf_bytes: bytes, filename: str,
+                         subject_id: int, hadm_id: int, note_type: str):
+    _JOBS[job_id]["status"] = "running"
+    try:
+        result = await run_in_threadpool(
+            _run_pipeline, pdf_bytes, filename, subject_id, hadm_id, note_type
+        )
+        _JOBS[job_id]["result"] = result
+        _JOBS[job_id]["status"] = "done"
+    except Exception as exc:
+        _JOBS[job_id]["status"] = "error"
+        _JOBS[job_id]["error"] = str(exc)
+        print(f"[ERROR] Job {job_id} failed: {exc}")
+
+
+# ---------------------------------------------------------------------------
+# Endpoints
+# ---------------------------------------------------------------------------
+@app.post("/process-pdf")
+async def process_pdf(
+    file: UploadFile = File(...),
+    subject_id: int = Form(...),
+    hadm_id: int = Form(...),
+    note_type: str = Form(...)
+):
+    """Submit a document for processing. Returns a job_id immediately."""
+    job_id = str(uuid.uuid4())
+    pdf_bytes = await file.read()
+    _JOBS[job_id] = {"status": "pending", "result": None, "error": None}
+    asyncio.create_task(
+        _pipeline_task(job_id, pdf_bytes, file.filename, subject_id, hadm_id, note_type)
+    )
+    return {"job_id": job_id}
+
+
+@app.get("/job/{job_id}")
+async def get_job(job_id: str):
+    """Poll for job status. Returns {status, result, error}."""
+    job = _JOBS.get(job_id)
+    if job is None:
+        raise HTTPException(status_code=404, detail="Job not found")
+    return job
+
+
+# ---------------------------------------------------------------------------
+# Legacy synchronous endpoint kept for direct testing
+# ---------------------------------------------------------------------------
+@app.post("/process-pdf-sync")
+async def process_pdf_sync(
+    file: UploadFile = File(...),
+    subject_id: int = Form(...),
+    hadm_id: int = Form(...),
+    note_type: str = Form(...)
+):
+    
+    """Blocking version kept for direct curl/testing. Same logic as async job."""
+    pdf_bytes = await file.read()
+    result = await run_in_threadpool(
+        _run_pipeline, pdf_bytes, file.filename, subject_id, hadm_id, note_type
+    )
+    return result

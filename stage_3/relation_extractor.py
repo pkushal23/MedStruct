@@ -16,16 +16,43 @@ load_dotenv()
 warnings.filterwarnings("ignore", category=UserWarning, module="transformers")
 
 class RelationExtractor:
-    def __init__(self, drug_labels, disease_labels, model_name="facebook/bart-large-mnli", device=0):
+    def __init__(self, drug_labels, disease_labels, threshold=0.75, model_name="facebook/bart-large-mnli", device=0):
         self.drug_labels = drug_labels
         self.disease_labels = disease_labels
+        self.threshold = threshold
         self.classifier = None
+        self.device = -1
+        self.relation_hypotheses = {
+            "TREATS": "is a medication used specifically to treat",
+            "CAUSES": "is a direct side effect or complication caused by",
+            "UNRELATED": "is completely unrelated and mentioned in a different context",
+        }
+        self.evidence_hypotheses = {
+            "exact synonym": "The sentence expresses an exact synonym relationship between the clinical terms.",
+            "clinical abbreviation": "The sentence links a clinical abbreviation to its expanded meaning.",
+            "direct implication": "The sentence directly implies this clinical relationship.",
+            "hyponym/subtype": "The sentence indicates one term is a subtype or specific kind of the other.",
+        }
 
         try:
+            import torch
             from transformers import pipeline
 
-            print(f"Loading Zero-Shot Classifier: {model_name} on GPU (device {device})...")
-            self.classifier = pipeline("zero-shot-classification", model=model_name, device=device)
+            if device >= 0 and torch.cuda.is_available() and torch.cuda.device_count() > device:
+                self.device = device
+                device_desc = f"GPU (device {self.device}: {torch.cuda.get_device_name(self.device)})"
+            else:
+                self.device = -1
+                device_desc = "CPU"
+                if device >= 0:
+                    warnings.warn(
+                        "CUDA device requested for relation extraction but not available in the active torch build. "
+                        "Falling back to CPU. Install a CUDA-enabled torch wheel to run on GPU.",
+                        RuntimeWarning,
+                    )
+
+            print(f"Loading Zero-Shot Classifier: {model_name} on {device_desc}...")
+            self.classifier = pipeline("zero-shot-classification", model=model_name, device=self.device)
         except Exception as exc:
             warnings.warn(
                 "Zero-shot relation classifier could not be loaded. "
@@ -33,6 +60,46 @@ class RelationExtractor:
                 f"Original error: {exc}",
                 RuntimeWarning,
             )
+
+    def _classify_relation(self, context, drug, disease):
+        if self.classifier is None:
+            return "UNRELATED", 0.0
+
+        candidate_hypotheses = {
+            label: f"The medication {drug} {template} the condition {disease}."
+            for label, template in self.relation_hypotheses.items()
+        }
+
+        result = self.classifier(
+            context,
+            candidate_labels=list(candidate_hypotheses.values()),
+            hypothesis_template="{}",
+        )
+
+        top_hypothesis = result['labels'][0]
+        top_score = float(result['scores'][0])
+        mapped_label = next(
+            (label for label, hypothesis in candidate_hypotheses.items() if hypothesis == top_hypothesis),
+            "UNRELATED",
+        )
+        return mapped_label, top_score
+
+    def _classify_evidence_type(self, context):
+        if self.classifier is None:
+            return "direct implication", 0.55
+
+        result = self.classifier(
+            context,
+            candidate_labels=list(self.evidence_hypotheses.values()),
+            hypothesis_template="{}",
+        )
+        top_hypothesis = result['labels'][0]
+        top_score = float(result['scores'][0])
+        evidence_type = next(
+            (label for label, hypothesis in self.evidence_hypotheses.items() if hypothesis == top_hypothesis),
+            "direct implication",
+        )
+        return evidence_type, top_score
 
     def _keyword_fallback_relation(self, context):
         text = (context or "").lower()
@@ -62,9 +129,11 @@ class RelationExtractor:
             return "TREATS", 0.66
         return "UNRELATED", 0.0
 
-    def extract_drug_disease(self, df_entities, df_sentences, window, valid_sections=None, threshold=0.85):
+    def extract_drug_disease(self, df_entities, df_sentences, window, valid_sections=None, threshold=None, threshold_by_section=None):
+        default_threshold = self.threshold if threshold is None else threshold
+
         all_types = self.drug_labels + self.disease_labels
-        co_occurring = get_cooccurring_entities(
+        candidates = get_cooccurring_entities(
             df_entities=df_entities,
             df_sentences=df_sentences,
             target_types=all_types,
@@ -72,85 +141,87 @@ class RelationExtractor:
             valid_sections=valid_sections,
         )
 
-        is_drug_1 = co_occurring['entity_group_1'].isin(self.drug_labels)
-        is_disease_2 = co_occurring['entity_group_2'].isin(self.disease_labels)
-        is_disease_1 = co_occurring['entity_group_1'].isin(self.disease_labels)
-        is_drug_2 = co_occurring['entity_group_2'].isin(self.drug_labels)
-
-        candidates = co_occurring[(is_drug_1 & is_disease_2) | (is_disease_1 & is_drug_2)].copy()
-
         if candidates.empty:
             print("No valid candidates found within the specified window and sections.")
             return pd.DataFrame()
 
         sentence_map = df_sentences.set_index(['note_id', 'sentence_index'])['sentence_text'].to_dict()
 
-        contexts = []
-        valid_indices = []
-        
-        for idx, row in candidates.iterrows():
-            text_context = sentence_map.get((row['note_id'], row['sentence_index_1']), "")
-            if row['sentence_index_1'] != row['sentence_index_2']:
-                text_context += " " + sentence_map.get((row['note_id'], row['sentence_index_2']), "")
-
-            drug  = row['word_1'] if row['entity_group_1'] in self.drug_labels else row['word_2']
-            disease = row['word_2'] if row['entity_group_1'] in self.drug_labels else row['word_1']
-            
-            contexts.append(text_context)
-            valid_indices.append(idx)
-
         verified_results = []
 
         if self.classifier is not None:
-            # --- CHUNKED BATCHING WITH PROGRESS BAR ---
-            results = []
-            batch_size = 16
+            print(f"Running directional inference on {len(candidates)} candidates...")
 
-            print(f"Running inference on {len(contexts)} candidates in batches of {batch_size}...")
+            for _, row in tqdm(candidates.iterrows(), total=len(candidates), desc="Classifying Relations"):
+                type_1 = row['entity_group_1']
+                type_2 = row['entity_group_2']
 
-            for i in tqdm(range(0, len(contexts), batch_size), desc="Classifying Relations"):
-                batch_contexts = contexts[i:i + batch_size]
-
-                batch_results = self.classifier(
-                    batch_contexts,
-                    # Speak like a doctor to catch ADEs
-                    candidate_labels=["is used to treat", "resulted in an adverse side effect or complication called", "is completely unrelated to"],
-                    # The zero-shot pipeline expects exactly one positional placeholder: {}
-                    hypothesis_template="Based on the text, {}.",
-                    batch_size=batch_size,
+                is_valid_pair = (
+                    (type_1 in self.drug_labels and type_2 in self.disease_labels) or
+                    (type_1 in self.disease_labels and type_2 in self.drug_labels)
                 )
 
-                # The pipeline returns a single dict if the batch size happens to be exactly 1 at the end
-                if isinstance(batch_results, dict):
-                    batch_results = [batch_results]
+                if not is_valid_pair:
+                    continue
 
-                results.extend(batch_results)
+                drug = row['word_1'] if type_1 in self.drug_labels else row['word_2']
+                disease = row['word_2'] if type_1 in self.drug_labels else row['word_1']
 
-            # --- MAP RESULTS BACK TO DATAFRAME ---
-            for i, res in enumerate(results):
-                top_label = res['labels'][0]
-                top_score = res['scores'][0]
+                text_context = sentence_map.get((row['note_id'], row['sentence_index_1']), "")
+                if row['sentence_index_1'] != row['sentence_index_2']:
+                    text_context += " " + sentence_map.get((row['note_id'], row['sentence_index_2']), "")
 
-                if top_label == "is used to treat":
-                    mapped_label = "TREATS"
-                elif top_label == "resulted in an adverse side effect or complication called":
-                    mapped_label = "CAUSES"
-                else:
-                    mapped_label = "UNRELATED"
+                section_name = row.get('section_name', 'unknown')
+                effective_threshold = (
+                    float(threshold_by_section(section_name))
+                    if callable(threshold_by_section)
+                    else default_threshold
+                )
 
-                if mapped_label in ["TREATS", "CAUSES"] and top_score >= threshold:
-                    original_row = candidates.loc[valid_indices[i]].copy()
+                mapped_label, top_score = self._classify_relation(text_context, drug, disease)
+
+                if mapped_label in ["TREATS", "CAUSES"] and top_score >= effective_threshold:
+                    evidence_type, evidence_confidence = self._classify_evidence_type(text_context)
+                    original_row = row.copy()
                     original_row['relation_type'] = mapped_label
                     original_row['model_confidence'] = top_score
+                    original_row['evidence_type'] = evidence_type
+                    original_row['evidence_confidence'] = evidence_confidence
                     verified_results.append(original_row)
         else:
             print("Running keyword fallback relation extraction...")
-            for i, context in enumerate(contexts):
-                mapped_label, score = self._keyword_fallback_relation(context)
-                if mapped_label in ["TREATS", "CAUSES"] and score >= threshold:
-                    original_row = candidates.loc[valid_indices[i]].copy()
+            for _, row in candidates.iterrows():
+                type_1 = row['entity_group_1']
+                type_2 = row['entity_group_2']
+
+                is_valid_pair = (
+                    (type_1 in self.drug_labels and type_2 in self.disease_labels) or
+                    (type_1 in self.disease_labels and type_2 in self.drug_labels)
+                )
+
+                if not is_valid_pair:
+                    continue
+
+                text_context = sentence_map.get((row['note_id'], row['sentence_index_1']), "")
+                if row['sentence_index_1'] != row['sentence_index_2']:
+                    text_context += " " + sentence_map.get((row['note_id'], row['sentence_index_2']), "")
+
+                section_name = row.get('section_name', 'unknown')
+                effective_threshold = (
+                    float(threshold_by_section(section_name))
+                    if callable(threshold_by_section)
+                    else default_threshold
+                )
+
+                mapped_label, score = self._keyword_fallback_relation(text_context)
+                if mapped_label in ["TREATS", "CAUSES"] and score >= effective_threshold:
+                    evidence_type = "direct implication"
+                    evidence_confidence = 0.55
+                    original_row = row.copy()
                     original_row['relation_type'] = mapped_label
                     original_row['model_confidence'] = score
+                    original_row['evidence_type'] = evidence_type
+                    original_row['evidence_confidence'] = evidence_confidence
                     verified_results.append(original_row)
 
         return pd.DataFrame(verified_results)

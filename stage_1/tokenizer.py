@@ -56,12 +56,12 @@ class ClinicalTokenizer:
         # 3. Drop empty string sections
         df_sections = df_sections[df_sections['section_text'].str.strip() != ""].copy()
        
-        logger.info("Running SciSpaCy sentence tokenization (this may take a while)...")
+        logger.info("Running SciSpaCy sentence tokenization on 1,000 notes...")
         sentences_data = []
        
         # We use nlp.pipe for rapid batch processing
         texts = df_sections['section_text'].tolist()
-        docs = self.nlp.pipe(texts, batch_size=50)
+        docs = self.nlp.pipe(texts, batch_size=256) 
        
         for idx, doc in enumerate(docs):
             base_row = df_sections.iloc[idx]

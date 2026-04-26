@@ -17,15 +17,17 @@ class MimicLoader:
             raise ValueError("table_type must be 'discharge' or 'radiology'")
 
         query = f"""
-        SELECT 
-            subject_id,
-            hadm_id,
-            note_id,
-            text
+        SELECT subject_id, hadm_id, note_id, text
         FROM `physionet-data.mimiciv_note.{table_type}`
-        WHERE text IS NOT NULL
-          AND hadm_id IS NOT NULL
-        LIMIT {limit} OFFSET {offset}
+        WHERE subject_id IN (
+            SELECT subject_id FROM `physionet-data.mimiciv_note.{table_type}`
+            WHERE hadm_id IS NOT NULL
+            GROUP BY subject_id
+            HAVING COUNT(note_id) > 1
+            LIMIT 200  -- Targets 200 patients who have at least 2 notes each
+        )
+        AND hadm_id IS NOT NULL
+        LIMIT {limit}
         """
         
         logger.info(f"Loading {table_type} notes (Limit: {limit}, Offset: {offset})...")

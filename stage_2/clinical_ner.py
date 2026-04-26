@@ -3,7 +3,7 @@ import warnings
 from tqdm import tqdm
 
 class ClinicalNER:
-    def __init__(self, model_name="samrawal/bert-base-uncased_clinical-ner", device=-1):
+    def __init__(self, model_name="samrawal/bert-base-uncased_clinical-ner", device=0):
         self.model_name = model_name
         self.device = device
         self.nlp = None

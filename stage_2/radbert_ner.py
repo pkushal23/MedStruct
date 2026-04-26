@@ -3,7 +3,7 @@ import warnings
 from tqdm import tqdm
 
 class RadBERTNER:
-    def __init__(self, model_name="StanfordAIMI/RadBERT", device=-1):
+    def __init__(self, model_name="StanfordAIMI/RadBERT", device=0):
         self.model_name = model_name
         self.device = device
         self.nlp = None

@@ -35,6 +35,9 @@ rad_enhancer = RadiologyEnhancer()
 
 # FIX 1: Add Medications to sections and normalize case for NER labels
 ACTIVE_SECTIONS = ['HPI', 'Hospital Course', 'Assessment/Plan', 'Findings', 'Impression', 'Medications']
+VALID_TREATS_TARGETS = {'Disease or Syndrome', 'Finding', 'Sign or Symptom', 'Injury or Poisoning'}
+VALID_CAUSES_TARGETS = {'Disease or Syndrome', 'Finding', 'Sign or Symptom', 'Injury or Poisoning', 'Adverse Event'}
+REJECTED_TARGET_TYPES = {'Body Part', 'Body Location', 'Anatomical Structure'}
 
 rel_extractor = RelationExtractor(
     drug_labels=['DRUG', 'treatment', 'TREATMENT'], 
@@ -137,6 +140,25 @@ def _build_radiology_edges(
         })
 
     return edge_rows
+
+
+def _validate_target_semantic_type(linker, cui, relation_type):
+    if cui == "UNMAPPED":
+        return False
+
+    try:
+        entity = linker.linker.kb.cui_to_entity.get(cui)
+        if not entity:
+            return False
+
+        semantic_types = [linker.linker.kb.semantic_type_tree.get_canonical_name(t) for t in entity.types]
+        if any(rejected in semantic_types for rejected in REJECTED_TARGET_TYPES):
+            return False
+
+        valid_set = VALID_TREATS_TARGETS if relation_type == 'TREATS' else VALID_CAUSES_TARGETS
+        return any(st in valid_set for st in semantic_types) or len(semantic_types) == 0
+    except Exception:
+        return False
 
 @app.post("/process-pdf")
 async def process_pdf(
@@ -257,6 +279,12 @@ async def process_pdf(
 
             if not df_relations_filtered.empty:
                 df_normalized = mapper.map_dataframe(df_relations_filtered)
+                if 'section_name' not in df_normalized.columns:
+                    df_normalized['section_name'] = 'unknown'
+                df_normalized['target_semantic_valid'] = df_normalized.apply(
+                    lambda row: _validate_target_semantic_type(linker, row['cui_2'], row['relation_type']),
+                    axis=1,
+                )
                 df_normalized_dict = df_normalized.to_dict(orient="records")
                 
                 if not df_normalized.empty and 'cui_1' in df_normalized.columns:

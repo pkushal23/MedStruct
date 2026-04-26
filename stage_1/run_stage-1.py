@@ -24,13 +24,16 @@ def main():
 
     # --- PART A: PROCESS DISCHARGE SUMMARIES ---
     logging.info("=== Starting Discharge Summary Pipeline ===")
-    df_ds_raw = loader.fetch_notes('discharge', limit=50) # Keep limit low for initial testing
+    # Increased limit to 500 for scaling
+    df_ds_raw = loader.fetch_notes('discharge', limit=500) 
     df_ds_clean = clean_dataframe(df_ds_raw)
     df_ds_seg = segment_dataframe(df_ds_clean, 'discharge')
     
+    
     # --- PART B: PROCESS RADIOLOGY REPORTS ---
     logging.info("=== Starting Radiology Report Pipeline ===")
-    df_rr_raw = loader.fetch_notes('radiology', limit=50)
+    # Increased limit to 500 for scaling
+    df_rr_raw = loader.fetch_notes('radiology', limit=500)
     df_rr_clean = clean_dataframe(df_rr_raw)
     df_rr_seg = segment_dataframe(df_rr_clean, 'radiology')
     

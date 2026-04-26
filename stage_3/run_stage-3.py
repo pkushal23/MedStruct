@@ -2,6 +2,11 @@ import os
 import pandas as pd
 from relation_extractor import RelationExtractor
 
+
+def get_threshold(section_name):
+    strict_sections = {'HPI', 'Hospital Course'}
+    return 0.80 if section_name in strict_sections else 0.65
+
 def main():
     input_entities = "../data/processed/entities_refined.csv"
     input_sentences = "../data/processed/sentences.csv"
@@ -22,7 +27,14 @@ def main():
     
     print(f"Extracting relations from {len(ade_sections)} targetd clinical sections...")
 
-    df_relations = extractor.extract_drug_disease(df_entities=df_entities, df_sentences= df_sentences, window=1, valid_sections=ade_sections, threshold=0.50)
+    df_relations = extractor.extract_drug_disease(
+        df_entities=df_entities,
+        df_sentences=df_sentences,
+        window=1,
+        valid_sections=ade_sections,
+        threshold=0.65,
+        threshold_by_section=get_threshold,
+    )
 
     output_file = os.path.join(output_dir, "relations_verified.csv")
     
